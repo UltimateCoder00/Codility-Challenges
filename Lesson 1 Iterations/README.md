@@ -12,8 +12,8 @@ A binary gap within a positive integer N is any maximal sequence of consecutive 
 
 Number  | Binary Representation | Binary Gap
 ------------- | ------------------------------	| :-------------: |
-5 | 1111 | 0
 9 | 1001 | 2
+15 | 1111 | 0
 20 | 10100 | 1
 529 | 1000010001 | 4
 ***
