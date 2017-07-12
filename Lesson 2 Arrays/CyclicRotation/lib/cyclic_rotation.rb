@@ -1,9 +1,8 @@
-def binary_gap(number)
-  array = []
+def cyclic_rotation(a, k)
+  k.times do
+    a.unshift(a[-1])
+    a.pop
+  end
 
-  number.to_s(2).sub(/0+$/,'').split('').chunk { |n|
-    n == '0'
-  }.each { |x| array.push(x[1].count) if x[0] == true }
-
-  array.max.class == Integer ? array.max : 0
+  a
 end
