@@ -111,7 +111,7 @@ describe 'Cyclic Rotation' do
         array = Array.new(100) { rand(-1000...1000) }
         k = 5
 
-        rotated_array = array
+        rotated_array = array.dup
         rotated_array.unshift(rotated_array[-1])
         rotated_array.pop
         rotated_array.unshift(rotated_array[-1])
@@ -122,13 +122,13 @@ describe 'Cyclic Rotation' do
         rotated_array.pop
         rotated_array.unshift(rotated_array[-1])
         rotated_array.pop
-
+        
         expect(cyclic_rotation(array, k)).to eq rotated_array
       end
     end
 
     context 'maximal - maximal N and K' do
-      it '(Array.new(100) { rand(-1000...1000) }, 5) to Array.new(100) { rand(-1000...1000) }' do
+      it '(Array.new(100) { rand(-1000...1000) }, 100) to Array.new(100) { rand(-1000...1000) }' do
         array = Array.new(100) { rand(-1000...1000) }
         k = 100
         expect(cyclic_rotation(array, k)).to eq array
