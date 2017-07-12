@@ -32,3 +32,43 @@ N is an integer within the range [1..2,147,483,647].
 
 - Expected worst-case time complexity is O(log(N));
 - Expected worst-case space complexity is O(1).
+
+### Program
+
+#### Installation
+To install the program do the following:
+
+```
+- Clone this repo
+- Run cd Lesson\ 1\ Iterations/
+```
+
+#### Run tests
+To run the tests do:
+
+```
+- Run rspec
+```
+
+#### Use program
+To use the program:
+
+```
+- Run irb or pry:
+```
+
+#### Program Example
+```
+[1] pry(main)> require './lib/binary_gap'
+=> true
+[2] pry(main)> binary_gap(100)
+=> 2
+[3] pry(main)> binary_gap(1)
+=> 0
+[4] pry(main)> binary_gap(5)
+=> 1
+[5] pry(main)> binary_gap(234632)
+=> 3
+[6] pry(main)> binary_gap(16)
+=> 0
+ ```
