@@ -1,0 +1,34 @@
+# Challenge - Binary Gap
+
+### Summary
+
+Find longest sequence of zeros in binary representation of an integer.
+
+### Description
+
+A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
+
+#### Examples
+
+Number  | Binary Representation | Binary Gap
+------------- | ------------------------------	| :-------------: |
+5 | 1111 | 0
+9 | 1001 | 2
+20 | 10100 | 1
+529 | 1000010001 | 4
+***
+
+### Objective
+Write a function: def solution(n)
+that, given a positive integer N, returns the length of its longest binary gap. The function should return 0 if N doesn't contain a binary gap.
+
+For example, given N = 1041 the function should return 5, because N has binary representation 10000010001 and so its longest binary gap is of length 5.
+
+#### Assumption
+
+N is an integer within the range [1..2,147,483,647].
+
+#### Complexity
+
+- Expected worst-case time complexity is O(log(N));
+- Expected worst-case space complexity is O(1).
