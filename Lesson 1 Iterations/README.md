@@ -57,6 +57,16 @@ To check the speed of the tests, use the '--profile' command line option, for ex
 - Run rspec spec/binary_gap_spec.rb:5 --profile
 ```
 
+This will return:
+
+```
+Top 2 slowest examples (0.00155 seconds, 46.1% of total time):
+  BinaryGap Example Tests example 1: 1041=10000010001
+    0.00143 seconds ./spec/binary_gap_spec.rb:6
+  BinaryGap Example Tests example 2: 15=1111
+    0.00012 seconds ./spec/binary_gap_spec.rb:11
+```
+
 #### Use program
 To use the program, in the terminal:
 
