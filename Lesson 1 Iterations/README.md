@@ -11,7 +11,7 @@ A binary gap within a positive integer N is any maximal sequence of consecutive 
 #### Examples
 
 Number  | Binary Representation | Binary Gap
-------------- | ------------------------------	| :-------------: |
+:-------------: | :------------------------------:	| :-------------: |
 9 | 1001 | 2
 15 | 1111 | 0
 20 | 10100 | 1
@@ -60,11 +60,19 @@ To check the speed of the tests, use the '--profile' command line option, for ex
 This will return:
 
 ```
-Top 2 slowest examples (0.00155 seconds, 46.1% of total time):
+BinaryGap
+  Example Tests
+    example 1: 1041=10000010001
+    example 2: 15=1111
+
+Top 2 slowest examples (0.00131 seconds, 57.0% of total time):
   BinaryGap Example Tests example 1: 1041=10000010001
-    0.00143 seconds ./spec/binary_gap_spec.rb:6
+    0.00119 seconds ./spec/binary_gap_spec.rb:6
   BinaryGap Example Tests example 2: 15=1111
     0.00012 seconds ./spec/binary_gap_spec.rb:11
+
+Finished in 0.0023 seconds (files took 0.21073 seconds to load)
+2 examples, 0 failures
 ```
 
 #### Use program
