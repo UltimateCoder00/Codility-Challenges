@@ -1,28 +1,18 @@
-def binary_gap(n)
-  binary_string = n.to_s(2)
+def binary_gap(number)
+  number = number.to_s(2).split('')
 
-  binary_string.length.times do
-    if binary_string[-1] == "0"
-      binary_string = binary_string[0..-2]
+  number.length.times do
+    if number[-1] == "0"
+      number = number[0..-2]
     else
       break
     end
   end
 
-  count = 0
-  temp_count = 0
+  array = []
+  number.chunk { |n|
+    n == '0'
+  }.each { |x| array.push(x[1].count) if x[0] == true }
 
-  for i in 1..binary_string.length
-    if binary_string[i] == "0"
-      temp_count += 1
-    else
-      temp_count = 0
-    end
-
-    if count < temp_count
-      count = temp_count
-    end
-  end
-
-  count
+  array.max.class == Integer ? array.max : 0
 end
