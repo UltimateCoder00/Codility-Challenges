@@ -36,7 +36,7 @@ N is an integer within the range [1..2,147,483,647].
 ### Program
 
 #### Installation
-To install the program do the following:
+To install the program do the following in the terminal:
 
 ```
 - Clone this repo
@@ -44,14 +44,21 @@ To install the program do the following:
 ```
 
 #### Run tests
-To run the tests do:
+To run the tests, in the terminal do:
 
 ```
 - Run rspec
 ```
 
+#### Test speeds
+To check the speed of the tests, use the '--profile' command line option, for example:
+
+```
+- Run rspec spec/binary_gap_spec.rb:5 --profile
+```
+
 #### Use program
-To use the program:
+To use the program, in the terminal:
 
 ```
 - Run irb or pry:
