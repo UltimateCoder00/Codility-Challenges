@@ -8,7 +8,7 @@ Rotate an array to the right by a given number of steps.
 
 A zero-indexed array A consisting of N integers is given. Rotation of the array means that each element is shifted right by one index, and the last element of the array is also moved to the first place.
 
-#### Examples
+### Examples
 
 The rotation of array A = [3, 8, 9, 7, 6] is [6, 3, 8, 9, 7]. The goal is to rotate array A K times; that is, each element of A will be shifted to the right by K indexes.
 
@@ -40,7 +40,7 @@ In the solution, correctness will be the focus and not the performance.
 
 ### Program
 
-#### Installation
+##### Installation
 Clone the repo and in the terminal run:
 ```
 - cd Codility-Challenges/Lesson\ 2\ Arrays/CyclicRotation/
@@ -52,7 +52,7 @@ In the terminal type:
 - rspec
 ```
 
-#### Test speeds
+##### Checking Test Speeds
 Use the '--profile' command line option, for example run:
 
 ```

@@ -56,7 +56,7 @@ In the terminal type:
 - rspec
 ```
 
-##### Checking Test speeds
+##### Checking Test Speeds
 Use the '--profile' command line option, for example run:
 
 ```
