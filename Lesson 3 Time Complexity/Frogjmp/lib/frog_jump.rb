@@ -1,3 +1,3 @@
-def frog_jump
+def frog_jump(x, y, d)
 
 end
