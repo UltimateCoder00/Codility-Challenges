@@ -72,12 +72,35 @@ In the terminal type:
 Use the '--profile' command line option, for example run:
 
 ```
-- rspec spec/odd_occurrences_in_array_spec.rb:** --profile
+- rspec spec/frog_jump_spec.rb:10 --profile
 ```
 
 This will return the following output:
 
 ```
+Frog Jump
+  Correctness Tests
+    simple1
+      (10, 100, 10)) to 9
+    simple2
+      (5, 75, 10)) to 7
+    extreme_position - no jump needed
+      (50, 50, 5)) to 0
+    small_extreme_jump - one big jump
+      (50, 500, 1000)) to 1
+
+Top 4 slowest examples (0.00183 seconds, 49.0% of total time):
+  Frog Jump Correctness Tests simple1 (10, 100, 10)) to 9
+    0.00161 seconds ./spec/frog_jump_spec.rb:12
+  Frog Jump Correctness Tests simple2 (5, 75, 10)) to 7
+    0.00009 seconds ./spec/frog_jump_spec.rb:18
+  Frog Jump Correctness Tests extreme_position - no jump needed (50, 50, 5)) to 0
+    0.00007 seconds ./spec/frog_jump_spec.rb:24
+  Frog Jump Correctness Tests small_extreme_jump - one big jump (50, 500, 1000)) to 1
+    0.00006 seconds ./spec/frog_jump_spec.rb:30
+
+Finished in 0.00373 seconds (files took 0.19479 seconds to load)
+4 examples, 0 failures
 ```
 
 ##### Using The Program
