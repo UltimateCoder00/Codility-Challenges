@@ -1,4 +1,4 @@
-# Odd Occurrences In Array
+# Odd Occurrences In Array Challenge
 
 ### The Challenge
 
