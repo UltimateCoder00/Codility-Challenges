@@ -69,13 +69,35 @@ In the terminal type:
 Use the '--profile' command line option, for example run:
 
 ```
-- Run rspec spec/odd_occurrences_in_array_spec.rb:** --profile
+- rspec spec/odd_occurrences_in_array_spec.rb:54 --profile
 ```
 
 This will return the following output:
 
 ```
+Odd Occurrences In Array
+  Performance Tests
+    medium1 - medium random test n=2,001
+      Random Array with n=2,001
+    medium2 - medium random test n=100,003
+      Random Array with n=100,003
+    big1 - big random test n=999,999, multiple repetitions
+      Random Array with n=999,999
+    big2 - big random test n=999,999
+      Random Array with n=999,999
 
+Top 4 slowest examples (0.89376 seconds, 99.8% of total time):
+  Odd Occurrences In Array Performance Tests big2 - big random test n=999,999 Random Array with n=999,999
+    0.44764 seconds ./spec/odd_occurrences_in_array_spec.rb:86
+  Odd Occurrences In Array Performance Tests big1 - big random test n=999,999, multiple repetitions Random Array with n=999,999
+    0.40713 seconds ./spec/odd_occurrences_in_array_spec.rb:76
+  Odd Occurrences In Array Performance Tests medium2 - medium random test n=100,003 Random Array with n=100,003
+    0.03658 seconds ./spec/odd_occurrences_in_array_spec.rb:66
+  Odd Occurrences In Array Performance Tests medium1 - medium random test n=2,001 Random Array with n=2,001
+    0.00242 seconds ./spec/odd_occurrences_in_array_spec.rb:56
+
+Finished in 0.89568 seconds (files took 0.19187 seconds to load)
+4 examples, 0 failures
 ```
 
 ##### Using The Program
@@ -87,5 +109,14 @@ In the terminal run:
 
 ###### Pry Example
 ```
-
+[1] pry(main)> require './lib/odd_occurrences_in_array'
+=> true
+[2] pry(main)> odd_occurrences_in_array([1,2,1])
+=> 2
+[3] pry(main)> odd_occurrences_in_array([1,2,3,4,5,4,3,2,1])
+=> 5
+[4] pry(main)> odd_occurrences_in_array([23,56,43,12,56,23,43])
+=> 12
+[5] pry(main)> odd_occurrences_in_array([1,1,1,1,1,1,1,1,6,1,1])
+=> 6
 ```
