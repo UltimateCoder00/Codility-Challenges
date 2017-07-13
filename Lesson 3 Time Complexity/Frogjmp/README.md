@@ -112,4 +112,16 @@ In the terminal run:
 
 ###### Pry Example
 ```
+[1] pry(main)> require './lib/frog_jump'
+=> true
+[2] pry(main)> frog_jump(10, 100, 5)
+=> 18
+[3] pry(main)> frog_jump(10, 1000, 5)
+=> 198
+[4] pry(main)> frog_jump(11, 1000, 13)
+=> 77
+[5] pry(main)> frog_jump(99, 1000000, 103)
+=> 9708
+[6] pry(main)> frog_jump(2, 1000000000, 50)
+=> 20000000
 ```
