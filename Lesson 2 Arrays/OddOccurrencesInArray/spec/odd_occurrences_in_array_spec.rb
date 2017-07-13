@@ -8,7 +8,7 @@ describe 'Odd Occurrences In Array' do
     end
   end
 
-  describe 'Correctness tests' do
+  describe 'Correctness Tests' do
     context 'simple1 - simple test n=5' do
       it '[2, 5, 8, 2, 5] to 8' do
         array = [2, 5, 8, 2, 5]
@@ -43,6 +43,48 @@ describe 'Odd Occurrences In Array' do
     context 'small2- small random test n=601' do
       it 'Random Array with n=601' do
         array = Array.new(300) { rand(1...1000000000) }
+        random_number = rand(1...1000000000)
+        array = array + array + [random_number]
+        array.shuffle
+        expect(odd_occurrences_in_array(array)).to eq random_number
+      end
+    end
+  end
+
+  describe 'Performance Tests' do
+    context 'medium1 - medium random test n=2,001' do
+      it 'Random Array with n=2,001' do
+        array = Array.new(1000) { rand(1...1000000000) }
+        random_number = rand(1...1000000000)
+        array = array + array + [random_number]
+        array.shuffle
+        expect(odd_occurrences_in_array(array)).to eq random_number
+      end
+    end
+
+    context 'medium2 - medium random test n=100,003' do
+      it 'Random Array with n=100,003' do
+        array = Array.new(50000) { rand(1...1000000000) }
+        random_number = rand(1...1000000000)
+        array = array + array + [random_number]
+        array.shuffle
+        expect(odd_occurrences_in_array(array)).to eq random_number
+      end
+    end
+
+    context 'big1 - big random test n=999,999, multiple repetitions' do
+      it 'Random Array with n=999,999' do
+        array = Array.new(499999) { rand(1...1000000000) }
+        random_number = rand(1...1000000000)
+        array = array + array + [random_number]
+        array.shuffle
+        expect(odd_occurrences_in_array(array)).to eq random_number
+      end
+    end
+
+    context 'big2 - big random test n=999,999' do
+      it 'Random Array with n=999,999' do
+        array = Array.new(499999) { rand(1...1000000000) }
         random_number = rand(1...1000000000)
         array = array + array + [random_number]
         array.shuffle
