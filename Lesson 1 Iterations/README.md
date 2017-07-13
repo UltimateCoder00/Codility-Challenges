@@ -15,8 +15,6 @@ A binary gap within a positive integer N is any maximal sequence of consecutive 
 - The number 20 has binary representation 10100 and contains one binary gap of length 1.
 - The number 529 has binary representation 1000010001 and contains two binary gaps: one of length 4 and one of length 3.
 
-<center>
-
 Number  | Binary Representation | Binary Gap
 :-------------: | :------------------------------:	| :-------------: |
 9 | 1001 | 2
@@ -24,7 +22,6 @@ Number  | Binary Representation | Binary Gap
 20 | 10100 | 1
 529 | 1000010001 | 3 & 4
 
-</center>
 ### Objective
 Write a function: def binary_gap(number) that, given a positive integer N, returns the length of its longest binary gap. The function should return 0 if N doesn't contain a binary gap.
 
