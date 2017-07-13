@@ -1,6 +1,6 @@
-# Challenge - Binary Gap
+# Binary Gap Challenge
 
-### Summary
+### The Challenge
 
 Find longest sequence of zeros in binary representation of an integer.
 
@@ -8,21 +8,41 @@ Find longest sequence of zeros in binary representation of an integer.
 
 A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
 
-#### Examples
+### Examples
+
+- The number 9 has binary representation 1001 and contains a binary gap of length 2.
+- The number 15 has binary representation 1111 and has no binary gaps.
+- The number 20 has binary representation 10100 and contains one binary gap of length 1.
+- The number 529 has binary representation 1000010001 and contains two binary gaps: one of length 4 and one of length 3.
+
+<center>
 
 Number  | Binary Representation | Binary Gap
 :-------------: | :------------------------------:	| :-------------: |
 9 | 1001 | 2
 15 | 1111 | 0
 20 | 10100 | 1
-529 | 1000010001 | 4
+529 | 1000010001 | 3 & 4
+
+</center>
 ***
 
-### Objective
-Write a function: def solution(n)
-that, given a positive integer N, returns the length of its longest binary gap. The function should return 0 if N doesn't contain a binary gap.
 
-For example, given N = 1041 the function should return 5, because N has binary representation 10000010001 and so its longest binary gap is of length 5.
+### Objective
+Write a function: def binary_gap(number) that, given a positive integer N, returns the length of its longest binary gap. The function should return 0 if N doesn't contain a binary gap.
+
+##### Example
+
+- Given N = 1041 the function should return 5, because N has binary representation 10000010001 and so its longest binary gap is of length 5.
+
+<center>
+
+Number  | Binary Representation | Binary Gap
+:-------------: | :------------------------------:	| :-------------: |
+1041 | 10000010001 | 5
+
+</center>
+***
 
 #### Assumption
 
@@ -35,26 +55,23 @@ N is an integer within the range [1..2,147,483,647].
 
 ### Program
 
-#### Installation
-To install the program do the following in the terminal:
-
+##### Installation
+To install this program clone the repo and in the terminal run:
 ```
-- Clone this repo
-- Run cd Lesson\ 1\ Iterations/
+- cd Codility-Challenges/Lesson\ 1\ Iterations/
 ```
 
-#### Run tests
-To run the tests, in the terminal do:
+##### Running Tests
+In the terminal type:
+```
+- rspec
+```
+
+##### Checking Test speeds
+In order to check the speed of the tests, use the '--profile' command line option, for example run:
 
 ```
-- Run rspec
-```
-
-#### Test speeds
-To check the speed of the tests, use the '--profile' command line option, for example:
-
-```
-- Run rspec spec/binary_gap_spec.rb:5 --profile
+- rspec spec/binary_gap_spec.rb:5 --profile
 ```
 
 This will return:
@@ -75,14 +92,14 @@ Finished in 0.0023 seconds (files took 0.21073 seconds to load)
 2 examples, 0 failures
 ```
 
-#### Use program
-To use the program, in the terminal:
+##### Using The Program
+In the terminal run:
 
 ```
-- Run irb or pry:
+- irb or pry:
 ```
 
-#### Program Example
+###### Pry Example
 ```
 [1] pry(main)> require './lib/binary_gap'
 => true
