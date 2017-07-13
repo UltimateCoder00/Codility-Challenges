@@ -33,7 +33,7 @@ describe 'Frog Jump' do
     end
   end
 
-  describe 'allPerformance Tests' do
+  describe 'Performance Tests' do
     context 'many_jump1 - many jumps, D = 2' do
       it '(25, 500, 2)) to 238' do
         expect(frog_jump(25, 500, 2)).to eq 238
