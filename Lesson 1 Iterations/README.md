@@ -27,7 +27,7 @@ Write a function: def binary_gap(number) that, given a positive integer N, retur
 
 ##### Example
 
-- Given N = 1041 the function should return 5, because N has binary representation 10000010001 and so its longest binary gap is of length 5.
+Given N = 1041 the function should return 5, because N has binary representation 10000010001 and so its longest binary gap is of length 5.
 
 Number  | Binary Representation | Binary Gap
 :-------------: | :------------------------------:	| :-------------: |
