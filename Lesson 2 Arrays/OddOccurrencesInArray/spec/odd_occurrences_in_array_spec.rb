@@ -33,9 +33,8 @@ describe 'Odd Occurrences In Array' do
     context 'small1 - small random test n=201' do
       it 'Random Array with n=201' do
         array = Array.new(100) { rand(1...1000000000) }
-        array = array + array
         random_number = rand(1...1000000000)
-        array << random_number
+        array = array + array + [random_number]
         array.shuffle
         expect(odd_occurrences_in_array(array)).to eq random_number
       end
@@ -44,9 +43,8 @@ describe 'Odd Occurrences In Array' do
     context 'small2- small random test n=601' do
       it 'Random Array with n=601' do
         array = Array.new(300) { rand(1...1000000000) }
-        array = array + array
         random_number = rand(1...1000000000)
-        array << random_number
+        array = array + array + [random_number]
         array.shuffle
         expect(odd_occurrences_in_array(array)).to eq random_number
       end
