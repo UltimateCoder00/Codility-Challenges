@@ -25,9 +25,6 @@ Number  | Binary Representation | Binary Gap
 529 | 1000010001 | 3 & 4
 
 </center>
-***
-
-
 ### Objective
 Write a function: def binary_gap(number) that, given a positive integer N, returns the length of its longest binary gap. The function should return 0 if N doesn't contain a binary gap.
 
@@ -56,7 +53,7 @@ N is an integer within the range [1..2,147,483,647].
 ### Program
 
 ##### Installation
-To install this program clone the repo and in the terminal run:
+Clone the repo and in the terminal run:
 ```
 - cd Codility-Challenges/Lesson\ 1\ Iterations/
 ```
@@ -68,13 +65,13 @@ In the terminal type:
 ```
 
 ##### Checking Test speeds
-In order to check the speed of the tests, use the '--profile' command line option, for example run:
+Use the '--profile' command line option, for example run:
 
 ```
 - rspec spec/binary_gap_spec.rb:5 --profile
 ```
 
-This will return:
+This will return the following output:
 
 ```
 BinaryGap
