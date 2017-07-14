@@ -31,14 +31,16 @@ require 'tape_equilibrium'
     end
 
     context 'small_random - random small, length = 100' do
-      it '[120, 20] to 100' do
-        expect(tape_equilibrium([120, 20])).to eq 100
+      it 'Array with length=100' do
+        array = Array.new(100) { rand(-1000..1000) }
+        expect(tape_equilibrium(array)).to be_a(Integer)
       end
     end
 
     context 'small_range - range sequence, length = ~1,000' do
-      it '[1200, 1000, 100] to 100' do
-        expect(tape_equilibrium([1200, 1000, 100])).to eq 100
+      it 'Array with length=~1000' do
+        array = Array.new(1000) { rand(-1000..1000) }
+        expect(tape_equilibrium(array)).to be_a(Integer)
       end
     end
 
@@ -51,27 +53,45 @@ require 'tape_equilibrium'
 
   describe 'Performance Tests' do
     context 'medium_random1 - random medium, numbers from 0 to 100, length = ~10,000' do
-
+      it 'Array with length=~10000' do
+        array = Array.new(1000) { rand(0..100) }
+        expect(tape_equilibrium(array)).to be_a(Integer)
+      end
     end
 
     context 'medium_random2 - random medium, numbers from -1,000 to 50, length = ~10,000' do
-
+      it 'Array with length=~10000' do
+        array = Array.new(1000) { rand(-1000..50) }
+        expect(tape_equilibrium(array)).to be_a(Integer)
+      end
     end
 
     context 'large_ones - large sequence, numbers from -1 to 1, length = ~100,000' do
-
+      it 'Array with length=~100000' do
+        array = Array.new(100000) { rand(-1..1) }
+        expect(tape_equilibrium(array)).to be_a(Integer)
+      end
     end
 
     context 'large_random - random large, length = ~100,000' do
-
+      it 'Array with length=~100000' do
+        array = Array.new(100000) { rand(-100..100) }
+        expect(tape_equilibrium(array)).to be_a(Integer)
+      end
     end
 
     context 'large_sequence - large sequence, length = ~100,000' do
-
+      it 'Array with length=~100000' do
+        array = Array.new(100000) { rand(-500..500) }
+        expect(tape_equilibrium(array)).to be_a(Integer)
+      end
     end
 
     context 'large_extreme - large test with maximal and minimal values, length = ~100,000' do
-
+      it 'Array with length=~100000' do
+        array = Array.new(100000) { rand(-1000..1000) }
+        expect(tape_equilibrium(array)).to be_a(Integer)
+      end
     end
   end
 end
