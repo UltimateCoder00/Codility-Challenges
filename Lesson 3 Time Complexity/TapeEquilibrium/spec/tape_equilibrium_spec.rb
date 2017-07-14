@@ -31,11 +31,15 @@ require 'tape_equilibrium'
     end
 
     context 'small_random - random small, length = 100' do
-
+      it '[120, 20] to 100' do
+        expect(tape_equilibrium([120, 20])).to eq 100
+      end
     end
 
     context 'small_range - range sequence, length = ~1,000' do
-
+      it '[1200, 1000, 100] to 100' do
+        expect(tape_equilibrium([1200, 1000, 100])).to eq 100
+      end
     end
 
     context 'small - small elements' do
