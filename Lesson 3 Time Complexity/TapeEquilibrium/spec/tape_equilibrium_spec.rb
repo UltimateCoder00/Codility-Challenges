@@ -12,10 +12,16 @@ require 'tape_equilibrium'
       it '[3, 1] to 2' do
         expect(tape_equilibrium([3, 1])).to eq 2
       end
+
+      it '[4, 10] to 6' do
+        expect(tape_equilibrium([4, 10])).to eq 6
+      end
     end
 
     context 'simple_positive - simple test with positive numbers, length = 5' do
-
+      it '[10, 8, 6, 4, 3] to 5' do
+        expect(tape_equilibrium([10, 8, 6, 4, 3])).to eq 5
+      end
     end
 
     context 'simple_negative - simple test with negative numbers, length = 5' do
