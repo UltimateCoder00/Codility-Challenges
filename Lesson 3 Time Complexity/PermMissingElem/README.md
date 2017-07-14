@@ -60,7 +60,7 @@ In the terminal type:
 Use the '--profile' command line option, for example run:
 
 ```
-- rspec spec/perm_missing_elem.rb:** --profile
+- rspec spec/perm_missing_elem.rb:62 --profile
 ```
 
 This will return the following output:
