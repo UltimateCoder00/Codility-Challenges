@@ -48,4 +48,30 @@ require 'tape_equilibrium'
       end
     end
   end
+
+  describe 'Performance Tests' do
+    context 'medium_random1 - random medium, numbers from 0 to 100, length = ~10,000' do
+
+    end
+
+    context 'medium_random2 - random medium, numbers from -1,000 to 50, length = ~10,000' do
+
+    end
+
+    context 'large_ones - large sequence, numbers from -1 to 1, length = ~100,000' do
+
+    end
+
+    context 'large_random - random large, length = ~100,000' do
+
+    end
+
+    context 'large_sequence - large sequence, length = ~100,000' do
+
+    end
+
+    context 'large_extreme - large test with maximal and minimal values, length = ~100,000' do
+
+    end
+  end
 end
