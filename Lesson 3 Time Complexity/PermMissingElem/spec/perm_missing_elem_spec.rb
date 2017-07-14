@@ -61,23 +61,62 @@ describe 'Missing Element In Permutation' do
 
   describe 'Performance Tests' do
     context 'medium1 - medium test, length = ~10,000' do
-
+      it 'Array with ~10,000' do
+        array = (1..10000).to_a
+        missing_element = rand(10000) + 1
+        array -= [missing_element]
+        expect(perm_missing_elem(array)).to eq missing_element
+      end
     end
 
     context 'medium2 - medium test, length = ~10,000' do
-
+      it 'Array with ~10,000' do
+        array = (1..10000).to_a
+        missing_element = rand(10000) + 1
+        array -= [missing_element]
+        expect(perm_missing_elem(array)).to eq missing_element
+      end
     end
 
     context 'large_range - range sequence, length = ~100,000' do
+      it 'Array with ~100,000 1' do
+        array = (1..100000).to_a
+        missing_element = rand(100000) + 1
+        array -= [missing_element]
+        expect(perm_missing_elem(array)).to eq missing_element
+      end
 
+      it 'Array with ~100,000 2' do
+        array = (1..100000).to_a
+        missing_element = rand(100000) + 1
+        array -= [missing_element]
+        expect(perm_missing_elem(array)).to eq missing_element
+      end
+
+      it 'Array with ~100,000 3' do
+        array = (1..100000).to_a
+        missing_element = rand(100000) + 1
+        array -= [missing_element]
+        expect(perm_missing_elem(array)).to eq missing_element
+      end
     end
 
     context 'large1 - large test, length = ~100,000' do
-
+      it 'Array with ~100,000' do
+        array = (1..100000).to_a
+        missing_element = rand(100000) + 1
+        array -= [missing_element]
+        expect(perm_missing_elem(array)).to eq missing_element
+      end
     end
 
     context 'large2 - large test, length = ~100,000' do
-
+      it 'Array with ~100,000' do
+        array = (1..100000).to_a
+        missing_element = rand(100000) + 1
+        array -= [missing_element]
+        expect(perm_missing_elem(array)).to eq missing_element
+      end
     end
   end
 end
