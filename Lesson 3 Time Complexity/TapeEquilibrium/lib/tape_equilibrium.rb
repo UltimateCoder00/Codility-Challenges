@@ -1,3 +1,3 @@
-def tape_equilibrium
+def tape_equilibrium(a)
 
 end
