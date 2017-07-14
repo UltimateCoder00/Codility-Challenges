@@ -119,4 +119,16 @@ In the terminal run:
 
 ###### Pry Example
 ```
+[1] pry(main)> require './lib/tape_equilibrium'
+=> true
+[2] pry(main)> tape_equilibrium([1,2])
+=> 1
+[3] pry(main)> tape_equilibrium([1,2,3,4,5])
+=> 3
+[4] pry(main)> tape_equilibrium([10, 5, 8])
+=> 3
+[5] pry(main)> tape_equilibrium([100, 200, 300, 400, 500])
+=> 300
+[6] pry(main)> tape_equilibrium([-1000, 1000])
+=> 2000
 ```
