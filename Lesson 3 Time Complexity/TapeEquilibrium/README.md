@@ -71,12 +71,43 @@ In the terminal type:
 Use the '--profile' command line option, for example run:
 
 ```
-- rspec spec/tape_equilibrium.rb:** --profile
+- rspec spec/tape_equilibrium.rb:54 --profile
 ```
 
 This will return the following output:
 
 ```
+Tape Equilibrium
+  Performance Tests
+    medium_random1 - random medium, numbers from 0 to 100, length = ~10,000
+      Array with length=~10000
+    medium_random2 - random medium, numbers from -1,000 to 50, length = ~10,000
+      Array with length=~10000
+    large_ones - large sequence, numbers from -1 to 1, length = ~100,000
+      Array with length=~100000
+    large_random - random large, length = ~100,000
+      Array with length=~100000
+    large_sequence - large sequence, length = ~100,000
+      Array with length=~100000
+    large_extreme - large test with maximal and minimal values, length = ~100,000
+      Array with length=~100000
+
+Top 6 slowest examples (0.19169 seconds, 98.9% of total time):
+  Tape Equilibrium Performance Tests large_ones - large sequence, numbers from -1 to 1, length = ~100,000 Array with length=~100000
+    0.05492 seconds ./spec/tape_equilibrium_spec.rb:70
+  Tape Equilibrium Performance Tests large_extreme - large test with maximal and minimal values, length = ~100,000 Array with length=~100000
+    0.04688 seconds ./spec/tape_equilibrium_spec.rb:91
+  Tape Equilibrium Performance Tests large_sequence - large sequence, length = ~100,000 Array with length=~100000
+    0.04381 seconds ./spec/tape_equilibrium_spec.rb:84
+  Tape Equilibrium Performance Tests large_random - random large, length = ~100,000 Array with length=~100000
+    0.04257 seconds ./spec/tape_equilibrium_spec.rb:77
+  Tape Equilibrium Performance Tests medium_random2 - random medium, numbers from -1,000 to 50, length = ~10,000 Array with length=~10000
+    0.00178 seconds ./spec/tape_equilibrium_spec.rb:63
+  Tape Equilibrium Performance Tests medium_random1 - random medium, numbers from 0 to 100, length = ~10,000 Array with length=~10000
+    0.00172 seconds ./spec/tape_equilibrium_spec.rb:56
+
+Finished in 0.19384 seconds (files took 0.18674 seconds to load)
+6 examples, 0 failures
 ```
 
 ##### Using The Program
