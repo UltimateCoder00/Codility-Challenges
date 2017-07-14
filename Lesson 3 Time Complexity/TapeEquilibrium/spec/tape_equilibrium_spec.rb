@@ -9,7 +9,9 @@ require 'tape_equilibrium'
 
   describe 'Correctness Tests' do
     context 'double - two elements' do
-
+      it '[3, 1] to 2' do
+        expect(tape_equilibrium([3, 1])).to eq 2
+      end
     end
 
     context 'simple_positive - simple test with positive numbers, length = 5' do
