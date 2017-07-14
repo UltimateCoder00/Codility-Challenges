@@ -1,3 +1,3 @@
-def perm_missing_elem
+def perm_missing_elem(a)
 
 end
