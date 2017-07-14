@@ -102,4 +102,4 @@ In the terminal run:
 => 3
 [6] pry(main)> binary_gap(16)
 => 0
- ```
+```
