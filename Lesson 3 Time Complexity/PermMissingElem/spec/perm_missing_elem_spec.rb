@@ -58,4 +58,26 @@ describe 'Missing Element In Permutation' do
       end
     end
   end
+
+  describe 'Performance Tests' do
+    context 'medium1 - medium test, length = ~10,000' do
+
+    end
+
+    context 'medium2 - medium test, length = ~10,000' do
+
+    end
+
+    context 'large_range - range sequence, length = ~100,000' do
+
+    end
+
+    context 'large1 - large test, length = ~100,000' do
+
+    end
+
+    context 'large2 - large test, length = ~100,000' do
+
+    end
+  end
 end
