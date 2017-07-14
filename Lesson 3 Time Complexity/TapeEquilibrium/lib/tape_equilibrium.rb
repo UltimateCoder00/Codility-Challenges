@@ -10,6 +10,8 @@ def tape_equilibrium(a)
     array << [part1_sum, part2_sum]
   end
 
+  array.pop
+
   array.map! { |x| (x[0] - x[1]).abs }
 
   array.min
