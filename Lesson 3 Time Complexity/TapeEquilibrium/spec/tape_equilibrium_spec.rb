@@ -25,7 +25,9 @@ require 'tape_equilibrium'
     end
 
     context 'simple_negative - simple test with negative numbers, length = 5' do
-
+      it '[-10, -8, -6, -4, -3] to 5' do
+        expect(tape_equilibrium([-10, -8, -6, -4, -3])).to eq 5
+      end
     end
 
     context 'small_random - random small, length = 100' do
