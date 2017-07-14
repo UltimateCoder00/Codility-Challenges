@@ -43,7 +43,9 @@ require 'tape_equilibrium'
     end
 
     context 'small - small elements' do
-
+      it '[20, 15, 3, 16, 78, 100] to 32' do
+        expect(tape_equilibrium([20, 15, 3, 16, 78, 100])).to eq 32
+      end
     end
   end
 end
