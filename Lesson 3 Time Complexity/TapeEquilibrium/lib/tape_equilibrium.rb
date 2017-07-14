@@ -1,7 +1,7 @@
 def tape_equilibrium(a)
   array = []
   part1_sum = 0
-  part2_sum = a.sum
+  part2_sum = a.inject(0, :+)
 
   a.each_with_index do |value, index|
     part1_sum += value
