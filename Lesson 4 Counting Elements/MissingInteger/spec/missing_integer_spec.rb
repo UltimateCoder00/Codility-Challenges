@@ -36,7 +36,11 @@ describe 'Missing Integer' do
 
     context 'extreme_min_max_int' do
       it 'MININT and MAXINT (with minus)' do
-
+        array = Array.new(1000) { rand(-1000..1000) }
+        array << -2147483647
+        array << 2147483647
+        array.shuffle
+        expect(missing_integer(array)).to be_a Integer
       end
     end
 
