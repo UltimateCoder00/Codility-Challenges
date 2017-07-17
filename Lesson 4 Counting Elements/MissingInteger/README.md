@@ -68,7 +68,7 @@ In the terminal type:
 Use the '--profile' command line option, for example run:
 
 ```
-- rspec spec/tape_equilibrium.rb:64 --profile
+- rspec spec/missing_integer.rb:64 --profile
 ```
 
 This will return the following output:
