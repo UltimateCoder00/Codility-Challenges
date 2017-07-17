@@ -106,4 +106,16 @@ In the terminal run:
 
 ###### Pry Example
 ```
+[1] pry(main)> require './lib/missing_integer'
+=> true
+[2] pry(main)> missing_integer([-1])
+=> 1
+[3] pry(main)> missing_integer([0])
+=> 1
+[4] pry(main)> missing_integer([1])
+=> 2
+[5] pry(main)> missing_integer([1,2,3,4,5])
+=> 6
+[6] pry(main)> missing_integer([1,4,6])
+=> 2
 ```
