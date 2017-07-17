@@ -60,4 +60,44 @@ describe 'Missing Integer' do
       end
     end
   end
+
+  describe 'Performance Tests' do
+    context 'medium' do
+      it 'chaotic sequences length=10005 (with minus)' do
+        array = Array.new(10005) { rand(-100000..100000) }
+        array.shuffle
+        expect(missing_integer(array)).to be_a Integer
+      end
+    end
+
+    context 'large_1' do
+      it 'chaotic + sequence 1, 2, ..., 40000 (without minus)' do
+        array1 = Array.new(50000) { rand(0..1000000) }
+        array2 = [*1..40000]
+        array = array1 + array2
+        array.shuffle
+        expect(missing_integer(array)).to be_a Integer
+      end
+    end
+
+    context 'large_2' do
+      it 'shuffled sequence 1, 2, ..., 100000 (without minus)' do
+        array1 = Array.new(50000) { rand(0..1000000) }
+        array2 = [*1..100000]
+        array = array1 + array2
+        array.shuffle
+        expect(missing_integer(array)).to be_a Integer
+      end
+    end
+
+    context 'large_3' do
+      it 'chaotic + many -1, 1, 2, 3 (with minus)' do
+        array1 = Array.new(100000) { rand(-2147483647..2147483647) }
+        array2 = [-1, 1, 2, 3]*rand(1000)
+        array = array1 + array2
+        array.shuffle
+        expect(missing_integer(array)).to be_a Integer
+      end
+    end
+  end
 end
