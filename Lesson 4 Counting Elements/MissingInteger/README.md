@@ -66,12 +66,35 @@ In the terminal type:
 Use the '--profile' command line option, for example run:
 
 ```
-- rspec spec/tape_equilibrium.rb:** --profile
+- rspec spec/tape_equilibrium.rb:64 --profile
 ```
 
 This will return the following output:
 
 ```
+Missing Integer
+  Performance Tests
+    medium
+      chaotic sequences length=10005 (with minus)
+    large_1
+      chaotic + sequence 1, 2, ..., 40000 (without minus)
+    large_2
+      shuffled sequence 1, 2, ..., 100000 (without minus)
+    large_3
+      chaotic + many -1, 1, 2, 3 (with minus)
+
+Top 4 slowest examples (0.18295 seconds, 99.0% of total time):
+  Missing Integer Performance Tests large_2 shuffled sequence 1, 2, ..., 100000 (without minus)
+    0.07679 seconds ./spec/missing_integer_spec.rb:84
+  Missing Integer Performance Tests large_3 chaotic + many -1, 1, 2, 3 (with minus)
+    0.05282 seconds ./spec/missing_integer_spec.rb:94
+  Missing Integer Performance Tests large_1 chaotic + sequence 1, 2, ..., 40000 (without minus)
+    0.04715 seconds ./spec/missing_integer_spec.rb:74
+  Missing Integer Performance Tests medium chaotic sequences length=10005 (with minus)
+    0.00619 seconds ./spec/missing_integer_spec.rb:66
+
+Finished in 0.18478 seconds (files took 0.2019 seconds to load)
+4 examples, 0 failures
 ```
 
 ##### Using The Program
