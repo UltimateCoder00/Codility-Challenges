@@ -6,7 +6,7 @@ Find the minimal positive integer not occurring in a given sequence.
 
 ### Description
 
-A non-empty zero-indexed array A of N integers is given. The array contains integers in the range [1..N], with missing elements.
+A non-empty zero-indexed array A of N integers is given. The array contains integers in the range [−2,147,483,648..2,147,483,647], with missing elements.
 
 Your goal is to find the minimal positive integer missing element.
 
@@ -20,7 +20,9 @@ The element 4 is missing from the array.
 
 Array  | Missing Integer
 :-------------: | :------------------------------:
+[-1] | 1
 [2] | 1
+[-1, 1] | 2
 [1, 1, 3] | 2
 [3, 4, 2, 7] | 1
 [3, 1, 2, 5, 6] | 4
