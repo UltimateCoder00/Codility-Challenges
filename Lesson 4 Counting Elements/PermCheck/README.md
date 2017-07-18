@@ -72,12 +72,39 @@ In the terminal type:
 Use the '--profile' command line option, for example run:
 
 ```
-- rspec spec/permutation_check.rb:** --profile
+- rspec spec/permutation_check.rb:69 --profile
 ```
 
 This will return the following output:
 
 ```
+Permutation Check
+  Performance Tests
+    medium_permutation
+      permutation + few elements occur twice, N = ~10,000
+    antiSum2
+      total sum is correct, but it is not a permutation, N = ~100,000
+    large_permutation
+      permutation + one element occurs three times, N = ~100,000
+    large_range
+      sequence 1, 2, ..., N, N = ~100,000
+    extreme_values
+      all the same values, N = ~100,000
+
+Top 5 slowest examples (0.11745 seconds, 98.3% of total time):
+  Permutation Check Performance Tests large_permutation permutation + one element occurs three times, N = ~100,000
+    0.03763 seconds ./spec/permutation_check_spec.rb:115
+  Permutation Check Performance Tests antiSum2 total sum is correct, but it is not a permutation, N = ~100,000
+    0.03688 seconds ./spec/permutation_check_spec.rb:93
+  Permutation Check Performance Tests large_range sequence 1, 2, ..., N, N = ~100,000
+    0.01936 seconds ./spec/permutation_check_spec.rb:135
+  Permutation Check Performance Tests extreme_values all the same values, N = ~100,000
+    0.01801 seconds ./spec/permutation_check_spec.rb:145
+  Permutation Check Performance Tests medium_permutation permutation + few elements occur twice, N = ~10,000
+    0.00556 seconds ./spec/permutation_check_spec.rb:71
+
+Finished in 0.11944 seconds (files took 0.19117 seconds to load)
+5 examples, 0 failures
 ```
 
 ##### Using The Program
