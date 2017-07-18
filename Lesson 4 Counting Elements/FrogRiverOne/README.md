@@ -98,4 +98,14 @@ In the terminal run:
 
 ###### Pry Example
 ```
+[1] pry(main)> require './lib/frog_river_one'
+=> true
+[2] pry(main)> frog_river_one(3, [3, 1, 2])
+=> 2
+[3] pry(main)> frog_river_one(2, [1, 1, 2, 2, 2, 1])
+=> 2
+[4] pry(main)> frog_river_one(4, [1, 2, 3])
+=> -1
+[5] pry(main)> frog_river_one(4, [1, 2, 3, 3, 2, 1, 4])
+=> 6
 ```
