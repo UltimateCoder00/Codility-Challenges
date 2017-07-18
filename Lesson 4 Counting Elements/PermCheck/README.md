@@ -26,8 +26,8 @@ Array  | Permutation?
 :-------------: | :------------------------------:
 [1] | Yes
 [2, 1] | Yes
-[2, 5, 3, 1] | No value 4 is missing
-[1, 2, 3, 4, 5, 6, 7, 9] | No value 8 is missing
+[2, 5, 3, 1] | No because value 4 is missing
+[1, 2, 3, 4, 5, 6, 7, 9] | No because value 8 is missing
 
 ### Objective
 Write a function: def permutation_check(a) that, given a zero-indexed array A, returns 1 if array A is a permutation and 0 if it is not.
