@@ -11,6 +11,7 @@ describe 'Frog River One' do
     context "simple" do
       it "simple test" do
         expect(frog_river_one(2, [1, 2])).to eq 1
+        expect(frog_river_one(2, [2, 1])).to eq 1
       end
     end
 
@@ -80,7 +81,7 @@ describe 'Frog River One' do
 
     context "large_random" do
       it "10 and 100 random permutation, X = ~10,000" do
-        array = [*1..99999]
+        array = [*1..9999]
         array.shuffle
         array << 10000
         expect(frog_river_one(10000, array)).to eq 9999
@@ -88,7 +89,7 @@ describe 'Frog River One' do
     end
 
     context "large_permutation" do
-      xit "permutation tests" do
+      it "permutation tests" do
         array = [*1..100000]
         expect(frog_river_one(100000, array)).to eq 99999
 
