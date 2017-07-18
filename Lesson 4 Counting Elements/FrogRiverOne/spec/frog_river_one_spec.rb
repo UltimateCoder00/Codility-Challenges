@@ -64,31 +64,45 @@ describe 'Frog River One' do
   describe 'Correctness Tests' do
     context "medium_random" do
       it "6 and 2 random permutations, X = ~5,000" do
-
+        array = [*1..4999]
+        array.shuffle
+        array << 5000
+        expect(frog_river_one(5000, array)).to eq 4999
       end
     end
 
     context "medium_range" do
       it "arithmetic sequences, X = 5,000" do
-
+        array = [*1..5000]
+        expect(frog_river_one(5000, array)).to eq 4999
       end
     end
 
     context "large_random" do
       it "10 and 100 random permutation, X = ~10,000" do
-
+        array = [*1..99999]
+        array.shuffle
+        array << 10000
+        expect(frog_river_one(10000, array)).to eq 9999
       end
     end
 
     context "large_permutation" do
-      it "permutation tests" do
+      xit "permutation tests" do
+        array = [*1..100000]
+        expect(frog_river_one(100000, array)).to eq 99999
 
+        array2 = [*1..99999]
+        array2.shuffle
+        array2 << 100000
+        expect(frog_river_one(100000, array2)).to eq 99999
       end
     end
 
     context "large_range" do
       it "arithmetic sequences, X = 30,000" do
-
+        array = [*1..30000]
+        expect(frog_river_one(30000, array)).to eq 29999
       end
     end
   end
