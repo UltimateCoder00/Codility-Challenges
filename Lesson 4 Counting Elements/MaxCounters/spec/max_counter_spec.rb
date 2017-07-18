@@ -32,4 +32,36 @@ describe 'Max Counter' do
       end
     end
   end
+
+  describe 'Performance Tests' do
+    context "medium_random1" do
+      it "medium random test, 50 max_counter operations" do
+
+      end
+    end
+
+    context "medium_random2" do
+      it "medium random test, 500 max_counter operations" do
+
+      end
+    end
+
+    context "large_random1" do
+      it "large random test, 2120 max_counter operations" do
+
+      end
+    end
+
+    context "large_random2" do
+      it "large random test, 10000 max_counter operations" do
+
+      end
+    end
+
+    context "extreme_large" do
+      it "all max_counter operations" do
+
+      end
+    end
+  end
 end
