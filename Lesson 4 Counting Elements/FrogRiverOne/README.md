@@ -66,12 +66,27 @@ In the terminal type:
 Use the '--profile' command line option, for example run:
 
 ```
-- rspec spec/frog_river_one.rb:** --profile
+- rspec spec/frog_river_one.rb:65 --profile
 ```
 
 This will return the following output:
 
 ```
+Frog River One
+  Performance Tests
+    medium_random
+      6 and 2 random permutations, X = ~5,000
+    medium_range
+      arithmetic sequences, X = 5,000
+    large_random
+      10 and 100 random permutation, X = ~10,000
+    large_permutation
+      permutation tests
+    large_range
+      arithmetic sequences, X = 30,000
+
+Finished in 0.06938 seconds (files took 0.19987 seconds to load)
+5 examples, 0 failures
 ```
 
 ##### Using The Program
