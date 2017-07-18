@@ -62,7 +62,7 @@ describe 'Frog River One' do
     end
   end
 
-  describe 'Correctness Tests' do
+  describe 'Performance Tests' do
     context "medium_random" do
       it "6 and 2 random permutations, X = ~5,000" do
         array = [*1..4999]
