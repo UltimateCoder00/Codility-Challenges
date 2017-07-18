@@ -1,5 +1,3 @@
 def permutation_check(a)
-  array = [*1..a.length]
-
-  a.sort == array ? 1 : 0
+  a.sort == [*1..a.length] ? 1 : 0
 end
