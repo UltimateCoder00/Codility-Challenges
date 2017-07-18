@@ -37,45 +37,51 @@ describe 'Max Counter' do
     context "medium_random1" do
       it "medium random test, 50 max_counter operations" do
         array1 = Array.new(50) { rand(1..100000) }
-        random_number = rand(100000) + 1
-        array = [random_number+1]*50 + array1
+        number = array1.max
+        array = [number+1]*50 + array1
         array.shuffle
-        expect(max_counter(random_number, array)).to be_a Array
+        expect(max_counter(number, array)).to be_a Array
       end
     end
 
     context "medium_random2" do
       it "medium random test, 500 max_counter operations" do
         array1 = Array.new(500) { rand(1..100000) }
-        random_number = rand(100000) + 1
-        array = [random_number+1]*500 + array1
+        number = array1.max
+        array = [number+1]*500 + array1
         array.shuffle
-        expect(max_counter(random_number, array)).to be_a Array
+        expect(max_counter(number, array)).to be_a Array
       end
     end
 
     context "large_random1" do
       it "large random test, 2120 max_counter operations" do
-        array1 = Array.new(2120) { rand(1..100000) }
-        random_number = rand(100000) + 1
-        array = [random_number+1]*2120 + array1
+        array1 = Array.new(950000) { rand(1..100000) }
+        number = array1.max
+        array = [number+1]*2120 + array1
         array.shuffle
-        expect(max_counter(random_number, array)).to be_a Array
+        expect(max_counter(number, array)).to be_a Array
       end
     end
 
     context "large_random2" do
       it "large random test, 10000 max_counter operations" do
-        array1 = Array.new(50000) { rand(1..100000) }
-        random_number = rand(100000) + 1
-        array = [random_number+1]*50000 + array1
+        array1 = Array.new(900000) { rand(1..100000) }
+        number = array1.max
+        array = [number+1]*10000 + array1
         array.shuffle
-        expect(max_counter(random_number, array)).to be_a Array
+        expect(max_counter(number, array)).to be_a Array
       end
     end
 
     context "extreme_large" do
-      it "all max_counter operations" do
+      it "all max_counter operations 1" do
+        number = 100000
+        array = [number+1]*100000
+        expect(max_counter(number, array)).to be_a Array
+      end
+
+      it "all max_counter operations 2" do
         random_number = rand(100000) + 1
         array = [random_number+1]*100000
         expect(max_counter(random_number, array)).to be_a Array
