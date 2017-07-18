@@ -1,9 +1,7 @@
 def frog_river_one(x, a)
-  array = []
+  array = [*1..x]
+  b = a.uniq
+  c = b.sort
 
-  for i in 1..x
-    array << a.index(i)
-  end
-
-  array.include?(nil) ? -1 : array.max
+  array == c ? a.index(b.last) : -1
 end
