@@ -17,6 +17,7 @@ describe 'Max Counter' do
     context "single" do
       it "only one counter" do
         expect(max_counter(3, [1])).to eq [1,0,0]
+        expect(max_counter(1, [2,1,2,1,2,1,2])).to eq [3]
       end
     end
 
