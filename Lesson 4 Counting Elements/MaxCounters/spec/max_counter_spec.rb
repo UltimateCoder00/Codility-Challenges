@@ -56,7 +56,7 @@ describe 'Max Counter' do
 
     context "large_random1" do
       it "large random test, 2120 max_counter operations" do
-        array1 = Array.new(1000000) { rand(1..100000) }
+        array1 = Array.new(100000) { rand(1..100000) }
         number = array1.max
         array = [number+1]*2120 + array1
         array.shuffle
@@ -66,7 +66,7 @@ describe 'Max Counter' do
 
     context "large_random2" do
       it "large random test, 10000 max_counter operations" do
-        array1 = Array.new(1000000) { rand(1..100000) }
+        array1 = Array.new(100000) { rand(1..100000) }
         number = array1.max
         array = [number+1]*10000 + array1
         array.shuffle
