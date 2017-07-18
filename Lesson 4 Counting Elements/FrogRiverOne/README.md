@@ -33,6 +33,7 @@ Given integer X = 5 and array A = [1, 3, 1, 4, 2, 3, 5, 4], the function should 
 Array  | X | Earliest time
 :-------------: | :------------------------------: | :-------------:
 [1, 3, 1, 4, 2, 3, 5, 4] | 5 | 6
+[1, 3, 1, 2, 3] | 4 | -1
 
 #### Assumption
 
