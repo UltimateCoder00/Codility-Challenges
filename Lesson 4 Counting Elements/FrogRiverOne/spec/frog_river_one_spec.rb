@@ -60,4 +60,36 @@ describe 'Frog River One' do
       end
     end
   end
+
+  describe 'Correctness Tests' do
+    context "medium_random" do
+      it "6 and 2 random permutations, X = ~5,000" do
+
+      end
+    end
+
+    context "medium_range" do
+      it "arithmetic sequences, X = 5,000" do
+
+      end
+    end
+
+    context "large_random" do
+      it "10 and 100 random permutation, X = ~10,000" do
+
+      end
+    end
+
+    context "large_permutation" do
+      it "permutation tests" do
+
+      end
+    end
+
+    context "large_range" do
+      it "arithmetic sequences, X = 30,000" do
+
+      end
+    end
+  end
 end
