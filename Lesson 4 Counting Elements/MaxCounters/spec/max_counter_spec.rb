@@ -39,7 +39,7 @@ describe 'Max Counter' do
         array1 = Array.new(50) { rand(1..100000) }
         number = array1.max
         array = [number+1]*50 + array1
-        array.shuffle
+        array.shuffle!
         expect(max_counter(number, array)).to be_a Array
       end
     end
@@ -49,27 +49,27 @@ describe 'Max Counter' do
         array1 = Array.new(500) { rand(1..100000) }
         number = array1.max
         array = [number+1]*500 + array1
-        array.shuffle
+        array.shuffle!
         expect(max_counter(number, array)).to be_a Array
       end
     end
 
     context "large_random1" do
       it "large random test, 2120 max_counter operations" do
-        array1 = Array.new(100000) { rand(1..100000) }
+        array1 = Array.new(97880) { rand(1..100000) }
         number = array1.max
         array = [number+1]*2120 + array1
-        array.shuffle
+        array.shuffle!
         expect(max_counter(number, array)).to be_a Array
       end
     end
 
     context "large_random2" do
       it "large random test, 10000 max_counter operations" do
-        array1 = Array.new(100000) { rand(1..100000) }
+        array1 = Array.new(90000) { rand(1..100000) }
         number = array1.max
         array = [number+1]*10000 + array1
-        array.shuffle
+        array.shuffle!
         expect(max_counter(number, array)).to be_a Array
       end
     end
