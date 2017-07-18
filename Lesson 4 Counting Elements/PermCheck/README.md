@@ -116,4 +116,14 @@ In the terminal run:
 
 ###### Pry Example
 ```
+[1] pry(main)> require './lib/permutation_check.rb'
+=> true
+[2] pry(main)> permutation_check([1])
+=> 1
+[3] pry(main)> permutation_check([2])
+=> 0
+[4] pry(main)> permutation_check([1,2,3,4,5])
+=> 1
+[5] pry(main)> permutation_check([1,2,3,4,5,6,7,8,10])
+=> 0
 ```
