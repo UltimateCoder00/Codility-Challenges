@@ -79,12 +79,45 @@ In the terminal type:
 Use the '--profile' command line option, for example run:
 
 ```
-- rspec spec/max_counter.rb:** --profile
+- rspec spec/max_counter.rb:37 --profile
 ```
 
 This will return the following output:
 
 ```
+Max Counter
+  Performance Tests
+    medium_random1
+      medium random test, 50 max_counter operations
+    medium_random2
+      medium random test, 500 max_counter operations
+    large_random1
+      large random test, 2120 max_counter operations
+    large_random2
+      large random test, 10000 max_counter operations
+    extreme_large
+      all max_counter operations 1
+      all max_counter operations 2
+      no max_counters
+
+Top 7 slowest examples (0.78092 seconds, 99.8% of total time):
+  Max Counter Performance Tests large_random1 large random test, 2120 max_counter operations
+    0.3881 seconds ./spec/max_counter_spec.rb:59
+  Max Counter Performance Tests large_random2 large random test, 10000 max_counter operations
+    0.15018 seconds ./spec/max_counter_spec.rb:69
+  Max Counter Performance Tests extreme_large all max_counter operations 2
+    0.13513 seconds ./spec/max_counter_spec.rb:85
+  Max Counter Performance Tests extreme_large no max_counters
+    0.08792 seconds ./spec/max_counter_spec.rb:91
+  Max Counter Performance Tests extreme_large all max_counter operations 1
+    0.01637 seconds ./spec/max_counter_spec.rb:79
+  Max Counter Performance Tests medium_random1 medium random test, 50 max_counter operations
+    0.00175 seconds ./spec/max_counter_spec.rb:39
+  Max Counter Performance Tests medium_random2 medium random test, 500 max_counter operations
+    0.00146 seconds ./spec/max_counter_spec.rb:49
+
+Finished in 0.78281 seconds (files took 0.1967 seconds to load)
+7 examples, 0 failures
 ```
 
 ##### Using The Program
