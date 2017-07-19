@@ -1,5 +1,3 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.txt)
-
 # [Binary Gap Challenge](https://codility.com/programmers/lessons/1-iterations/binary_gap/)
 
 ### The Challenge
@@ -111,13 +109,3 @@ In the terminal run:
 
 ### Resources
 - [Iterations](https://codility.com/media/train/Iterations.pdf)
-
-### Authors
-- [Hasan Sonmez](https://github.com/UltimateCoder00)
-
-### Acknowledgements
-I will like to thank [Codility](https://codility.com/programmers/) for providing this challenge.
-
-### License
-
-This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
