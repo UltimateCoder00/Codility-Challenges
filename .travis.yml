@@ -1,4 +1,3 @@
 language: ruby
 rvm:
   - 2.4.0
-script: cd Lesson\ 1\ Iterations/

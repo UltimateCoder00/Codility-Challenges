@@ -1,4 +1,4 @@
-require 'binary_gap'
+require './lib/Lesson 1 Iterations/BinaryGap/binary_gap'
 
 describe 'BinaryGap' do
 
