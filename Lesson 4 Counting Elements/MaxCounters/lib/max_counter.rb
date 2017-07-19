@@ -1,26 +1,47 @@
 def max_counter(n, a)
-  a.size.times { a[0] == n+1 ? a.shift : break  }
-
-  (a.length-1).downto(1) { |i| a.delete_at(i) if a[i] == a[i-1] && a[i] > n }
-
   array = [0]*n
 
+  a = remove_redundant_max_counters(n, a)
   return array if a.empty?
 
-  max_counters = a.each_index.select{ |i| a[i] == n+1 }
+  max_counters = get_array_indices_of_max_counters(n, a)
 
   if max_counters.empty?
-    a.each_with_object(Hash.new(0)){ |m,h| h[m] += 1 }.sort_by{ |k,v| v }.each { |element| array[element[0]-1] += element[1] }
-
+    a = increment_counters_for_array_with_no_max_counters(a, array)
     return array
   end
 
+  max_counter_range = get_range_between_max_counter_elements_in_array(max_counters)
+
+  increment_counters(max_counter_range, array, a)
+end
+
+def remove_redundant_max_counters(n, a)
+  (a.length-1).downto(1) { |i| a.delete_at(i) if a[i] == a[i-1] && a[i] > n }
+  a.shift if a[0] == n+1
+  a
+end
+
+def get_array_indices_of_max_counters(n, a)
+  a.each_index.select{ |i| a[i] == n+1 }
+end
+
+def increment_counters_for_array_with_no_max_counters(a, array)
+  a.each_with_object(Hash.new(0)){ |m,h| h[m] += 1 }.sort_by{ |k,v| v }.each { |element| array[element[0]-1] += element[1] }
+  array
+end
+
+def get_range_between_max_counter_elements_in_array(max_counters)
   max_counter_range = [[0,max_counters[0]-1]]
 
   for i in 0...(max_counters.length-1)
     max_counter_range << [max_counters[i]+1, max_counters[i+1]-1]
   end
 
+  max_counter_range
+end
+
+def increment_counters(max_counter_range, array, a)
   counting = []
 
   max_counter_range.each do |x|
