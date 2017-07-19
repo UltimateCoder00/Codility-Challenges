@@ -1,13 +1,7 @@
 def max_counter(n, a)
   number = a.count(n+1)
 
-  a.size.times do
-    if a[0] == n+1
-      a.shift
-    else
-      break
-    end
-  end
+  a.size.times { a[0] == n+1 ? a.shift : break  }
 
   if (number / (a.size*1.0)) >= ((a.size * 0.1) / a.size)
     (a.length-1).downto(1) do |x|
@@ -16,6 +10,7 @@ def max_counter(n, a)
       end
     end
   end
+
 
   array = [0]*n
 
