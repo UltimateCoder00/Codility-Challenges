@@ -45,7 +45,7 @@ N is an integer within the range [1..2,147,483,647].
 - Expected worst-case space complexity is O(1).
 
 ### Attempt The Challenge
-To attempt the challenge go to [BinaryGap](https://codility.com/programmers/lessons/1-iterations/binary_gap/)
+To attempt the challenge go to [BinaryGap](https://codility.com/programmers/lessons/1-iterations/binary_gap/).
 
 ### Program
 
