@@ -106,6 +106,9 @@ In the terminal run:
 => 0
 ```
 
-## License
+### Acknowledgements
+I will like to thank [Codility](https://codility.com/programmers/) for providing this challenge.
+
+### License
 
 This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details
