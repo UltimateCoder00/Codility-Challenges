@@ -1,4 +1,4 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.txt)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.txt) [![Build Status](https://travis-ci.org/UltimateCoder00/Codility-Challenges.svg?branch=master)](https://travis-ci.org/UltimateCoder00/Codility-Challenges)
 
 # Codility Challenges
 
