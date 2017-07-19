@@ -38,18 +38,13 @@ def get_range_between_max_counter_elements_in_array(max_counters)
 end
 
 def increment_counters(max_counter_range, array, a)
-  counting = []
+  max_counter_values = []
 
   max_counter_range.each do |x|
-    counting << a[x[0]..x[1]].count(a[x[0]..x[1]].max_by { |i| a[x[0]..x[1]].count(i) })
+    max_counter_values << a[x[0]..x[1]].count(a[x[0]..x[1]].max_by { |i| a[x[0]..x[1]].count(i) })
   end
 
-  counts = 0
-
-  counting.each do |x|
-    counts += x
-    array.fill(counts)
-  end
+  array.fill(max_counter_values.sum)
 
   for i in (max_counter_range.last[1] + 2)...a.length
     array[a[i]-1] += 1
