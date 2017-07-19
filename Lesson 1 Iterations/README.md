@@ -2,6 +2,9 @@
 
 # Binary Gap Challenge
 
+### Original Challenge Link
+- [BinaryGap](https://codility.com/programmers/lessons/1-iterations/binary_gap/)
+
 ### The Challenge
 
 Find longest sequence of zeros in binary representation of an integer.
