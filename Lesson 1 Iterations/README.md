@@ -103,3 +103,7 @@ In the terminal run:
 [6] pry(main)> binary_gap(16)
 => 0
 ```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details
