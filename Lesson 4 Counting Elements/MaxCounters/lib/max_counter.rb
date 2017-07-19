@@ -3,14 +3,7 @@ def max_counter(n, a)
 
   a.size.times { a[0] == n+1 ? a.shift : break  }
 
-  if (number / (a.size*1.0)) >= ((a.size * 0.1) / a.size)
-    (a.length-1).downto(1) do |x|
-      if a[x] > n
-        a.delete_at(x) if a[x] == a[x-1]
-      end
-    end
-  end
-
+  (a.length-1).downto(1) { |i| a.delete_at(i) if a[i] == a[i-1] && a[i] > n }
 
   array = [0]*n
 
