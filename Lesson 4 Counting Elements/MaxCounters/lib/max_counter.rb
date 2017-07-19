@@ -44,7 +44,7 @@ def increment_counters(max_counter_range, array, a)
     max_counter_values << a[x[0]..x[1]].count(a[x[0]..x[1]].max_by { |i| a[x[0]..x[1]].count(i) })
   end
 
-  array.fill(max_counter_values.sum)
+  array.fill(max_counter_values.inject(0, &:+) )
 
   for i in (max_counter_range.last[1] + 2)...a.length
     array[a[i]-1] += 1
