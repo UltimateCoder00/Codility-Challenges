@@ -106,6 +106,9 @@ In the terminal run:
 => 0
 ```
 
+### Authors
+- [Hasan Sonmez](https://github.com/UltimateCoder00)
+
 ### Acknowledgements
 I will like to thank [Codility](https://codility.com/programmers/) for providing this challenge.
 
