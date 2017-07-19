@@ -87,6 +87,11 @@ describe 'Max Counter' do
         array = [random_number+1]*1000000
         expect(max_counter(random_number, array)).to be_a Array
       end
+
+      it "No max_counters" do
+        array = Array.new(100000) { rand(1..100000) }
+        expect(max_counter(1000000, array)).to be_a Array
+      end
     end
   end
 end
