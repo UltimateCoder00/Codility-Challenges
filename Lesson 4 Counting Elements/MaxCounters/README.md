@@ -129,4 +129,16 @@ In the terminal run:
 
 ###### Pry Example
 ```
+[1] pry(main)> require './lib/max_counter'
+=> true
+[2] pry(main)> max_counter(3, [1,2,3])
+=> [1, 1, 1]
+[3] pry(main)> max_counter(3, [1,2,2,2,3])
+=> [1, 3, 1]
+[4] pry(main)> max_counter(3, [1,2,2,2,3,4])
+=> [3, 3, 3]
+[5] pry(main)> max_counter(5, [1,2,2,2,3,4])
+=> [1, 3, 1, 1, 0]
+[6] pry(main)> max_counter(5, [1,2,2,2,3,4,6])
+=> [3, 3, 3, 3, 3]
 ```
