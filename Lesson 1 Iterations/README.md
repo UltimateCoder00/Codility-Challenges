@@ -106,6 +106,9 @@ In the terminal run:
 => 0
 ```
 
+### Resources
+- [Iterations](https://codility.com/media/train/Iterations.pdf)
+
 ### Authors
 - [Hasan Sonmez](https://github.com/UltimateCoder00)
 
@@ -114,4 +117,4 @@ I will like to thank [Codility](https://codility.com/programmers/) for providing
 
 ### License
 
-This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details
+This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
