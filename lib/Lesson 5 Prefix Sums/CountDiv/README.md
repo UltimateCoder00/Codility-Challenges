@@ -67,4 +67,17 @@ In the terminal run:
 
 ###### Pry Example
 ```
+=> true
+[2] pry(main)> count_divisibles(1,10,2)
+=> 5
+[3] pry(main)> count_divisibles(1,10,3)
+=> 3
+[4] pry(main)> count_divisibles(1,10,4)
+=> 2
+[5] pry(main)> count_divisibles(5,100,4)
+=> 24
+[6] pry(main)> count_divisibles(5,100,5)
+=> 20
+[7] pry(main)> count_divisibles(5,100000,5)
+=> 20000
 ```
