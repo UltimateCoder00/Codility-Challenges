@@ -44,25 +44,28 @@ describe 'Count Divisibles' do
   describe "Performance Tests" do
     context 'big_values' do
       it 'A = 100, B=123M+, K=2' do
-
+        expect(count_divisibles(100, 125000000, 2)).to be_a(Integer)
       end
     end
 
     context 'big_values2' do
       it 'A = 101, B = 123M+, K = 10K' do
-
+        expect(count_divisibles(100, 125000000, 10000)).to be_a(Integer)
       end
     end
 
     context 'big_values3' do
       it 'A = 0, B = MAXINT, K in {1,MAXINT}' do
-
+        k = rand(2000000001)
+        expect(count_divisibles(0, 2000000000, k)).to be_a(Integer)
       end
     end
 
     context 'big_values4' do
       it 'A, B, K in {1,MAXINT}' do
-
+        b = rand(200000000)
+        k = rand(a..b)
+        expect(count_divisibles(1, b, k)).to be_a(Integer)
       end
     end
   end
