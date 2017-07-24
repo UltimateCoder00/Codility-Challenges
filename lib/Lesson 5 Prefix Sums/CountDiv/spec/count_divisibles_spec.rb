@@ -64,7 +64,7 @@ describe 'Count Divisibles' do
     context 'big_values4' do
       it 'A, B, K in {1,MAXINT}' do
         b = rand(200000000)
-        k = rand(a..b)
+        k = rand(1..b)
         expect(count_divisibles(1, b, k)).to be_a(Integer)
       end
     end
