@@ -2,7 +2,7 @@ require 'count_divisibles'
 
 describe 'Count Divisibles' do
   describe 'Example Tests' do
-    it 'example: ((6, 11, 2)) to 3' do
+    it 'example: A = 6, B = 11, K = 2 to 3' do
       expect(count_divisibles(6, 11, 2)).to eq 3
     end
   end
@@ -10,25 +10,33 @@ describe 'Count Divisibles' do
   describe 'Correctness Tests' do
     context 'simple' do
       it 'A = 11, B = 345, K = 17' do
-
+        expect(count_divisibles(11, 345, 17)).to eq 20
       end
     end
 
-    context 'minimal'
+    context 'minimal' do
       it 'A = B in {0,1}, K = 11' do
-
+        expect(count_divisibles(0, 0, 11)).to eq 1
+        expect(count_divisibles(0, 1, 11)).to eq 1
       end
     end
 
-    context 'extreme_ifempty'
+    context 'extreme_ifempty' do
       it 'A = 10, B = 10, K in {5,7,20}' do
-
+        expect(count_divisibles(10, 10, 5)).to eq 1
+        expect(count_divisibles(10, 10, 7)).to eq 0
+        expect(count_divisibles(10, 10, 20)).to eq 0
       end
     end
 
-    context 'extreme_endpoints'
+    context 'extreme_endpoints' do
       it 'verify handling of range endpoints, multiple runs' do
-
+        expect(count_divisibles(0, 1000, 2)).to eq 501
+        expect(count_divisibles(10, 10000, 20)).to eq 500
+        expect(count_divisibles(100, 100000, 20)).to eq 4996
+        expect(count_divisibles(100, 1000000, 500)).to eq 2000
+        expect(count_divisibles(1000, 1000000, 80000)).to eq 12
+        expect(count_divisibles(10000, 1000000, 300)).to eq 3300
       end
     end
   end
