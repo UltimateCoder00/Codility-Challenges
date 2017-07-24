@@ -32,4 +32,30 @@ describe 'Count Divisibles' do
       end
     end
   end
+
+  describe "Performance Tests" do
+    context 'big_values' do
+      it 'A = 100, B=123M+, K=2' do
+
+      end
+    end
+
+    context 'big_values2' do
+      it 'A = 101, B = 123M+, K = 10K' do
+
+      end
+    end
+
+    context 'big_values3' do
+      it 'A = 0, B = MAXINT, K in {1,MAXINT}' do
+
+      end
+    end
+
+    context 'big_values4' do
+      it 'A, B, K in {1,MAXINT}' do
+
+      end
+    end
+  end
 end
