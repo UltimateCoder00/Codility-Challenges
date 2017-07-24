@@ -50,12 +50,35 @@ In the terminal type:
 Use the '--profile' command line option, for example run:
 
 ```
-- Run rspec spec/count_divisibles.rb: --profile
+- Run rspec spec/count_divisibles.rb44: --profile
 ```
 
 This will return the following output:
 
 ```
+Count Divisibles
+  Performance Tests
+    big_values
+      A = 100, B=123M+, K=2
+    big_values2
+      A = 101, B = 123M+, K = 10K
+    big_values3
+      A = 0, B = MAXINT, K in {1,MAXINT}
+    big_values4
+      A, B, K in {1,MAXINT}
+
+Top 4 slowest examples (0.00122 seconds, 47.7% of total time):
+  Count Divisibles Performance Tests big_values A = 100, B=123M+, K=2
+    0.001 seconds ./spec/count_divisibles_spec.rb:46
+  Count Divisibles Performance Tests big_values2 A = 101, B = 123M+, K = 10K
+    0.00008 seconds ./spec/count_divisibles_spec.rb:52
+  Count Divisibles Performance Tests big_values4 A, B, K in {1,MAXINT}
+    0.00007 seconds ./spec/count_divisibles_spec.rb:65
+  Count Divisibles Performance Tests big_values3 A = 0, B = MAXINT, K in {1,MAXINT}
+    0.00007 seconds ./spec/count_divisibles_spec.rb:58
+
+Finished in 0.00256 seconds (files took 0.19533 seconds to load)
+4 examples, 0 failures
 ```
 
 ##### Using The Program
