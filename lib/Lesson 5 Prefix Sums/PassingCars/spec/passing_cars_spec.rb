@@ -77,6 +77,8 @@ describe 'Passing Cars' do
       it '0101..01, length = ~100,000' do
         array = [0,1]*50000
         expect(passing_cars(array)).to be_a Integer
+        array = [1,0]*50000
+        expect(passing_cars(array)).to be_a Integer
       end
     end
 
