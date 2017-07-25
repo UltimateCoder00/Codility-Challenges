@@ -5,6 +5,9 @@ def passing_cars(a)
 
   count = 0
 
-  array.each_with_index { |element,index| count += a[index+1...a.size].select { |x| x == 1 }.count }
+  array.each do |element|
+    count += a[element...a.size].select { |x| x == 1 }.count
+  end
+
   count
 end
