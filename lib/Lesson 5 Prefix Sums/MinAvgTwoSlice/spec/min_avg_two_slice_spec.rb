@@ -74,31 +74,48 @@ describe 'Minimum Average of Two Slice' do
   describe 'Performance Test' do
     context 'medium_random' do
       it 'random, N = ~700' do
-
+        array = Array.new(700) { rand(-10000..10000) }
+        expect(min_avg_two_slice(array)).to be_a Integer
       end
     end
 
     context 'large_ones' do
       it 'numbers from -1 to 1, N = ~100,000' do
+        array = Array.new(100000) { rand(-1..1) }
+        expect(min_avg_two_slice(array)).to be_a Integer
 
+        array = Array.new(100000) { rand(-1..1) }
+        expect(min_avg_two_slice(array)).to be_a Integer
       end
     end
 
     context 'large_random' do
       it 'random, N = ~100,000' do
-
+        array = Array.new(100000) { rand(-10000..10000) }
+        expect(min_avg_two_slice(array)).to be_a Integer
       end
     end
 
     context 'extreme_values' do
       it 'all maximal values, N = ~100,000' do
+        array = Array.new(100000) { rand(-10000..10000) }
+        expect(min_avg_two_slice(array)).to be_a Integer
 
+        array = Array.new(100000) { rand(-10000..10000) }
+        expect(min_avg_two_slice(array)).to be_a Integer
+
+        array = Array.new(100000) { rand(-10000..10000) }
+        expect(min_avg_two_slice(array)).to be_a Integer
       end
     end
 
     context 'large_sequence' do
       it 'many seqeneces, N = ~100,000' do
+        array = Array.new(100000) { rand(-10000..10000) }
+        expect(min_avg_two_slice(array)).to be_a Integer
 
+        array = Array.new(100000) { rand(-10000..10000) }
+        expect(min_avg_two_slice(array)).to be_a Integer
       end
     end
   end
