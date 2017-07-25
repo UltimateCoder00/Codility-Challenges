@@ -1,4 +1,4 @@
-# Count Divisibles
+# Count Divisibles Challenge
 
 ### The Challenge
 
