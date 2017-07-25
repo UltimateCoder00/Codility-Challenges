@@ -21,5 +21,5 @@ def passing_cars(a)
     end
   end
 
-  count
+  count <= 1000000000 ? count : -1
 end
