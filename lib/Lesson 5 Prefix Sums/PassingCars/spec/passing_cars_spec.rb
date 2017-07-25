@@ -52,31 +52,40 @@ describe 'Passing Cars' do
   describe 'Performance Tests' do
     context 'medium_random' do
       it 'random, length = ~10,000' do
-
+        array = Array.new(10000) { rand(2) }
+        expect(passing_cars(array)).to be_a Integer
       end
     end
 
     context 'large_random' do
       it 'random, length = ~100,000' do
-
+        array = Array.new(100000) { rand(2) }
+        expect(passing_cars(array)).to be_a Integer
       end
     end
 
     context 'large_big_answer' do
       it '0..01..1, length = ~100,000' do
-
+        array = [0]
+        array += [0]*49999
+        array += [1]*50000
+        expect(passing_cars(array)).to be_a Integer
       end
     end
 
     context 'large_alternate' do
       it '0101..01, length = ~100,000' do
-
+        array = [0,1]*50000
+        expect(passing_cars(array)).to be_a Integer
       end
     end
 
     context 'large_extreme' do
       it 'large test with all 1s/0s, length = ~100,000' do
-
+        array = [0]*100000
+        expect(passing_cars(array)).to be_a Integer
+        array = [1]*100000
+        expect(passing_cars(array)).to be_a Integer
       end
     end
   end
