@@ -9,12 +9,17 @@ def passing_cars(a)
     a.last == 0 ? a.pop : break
   end
 
-  a.each_with_index { |element,index| array << index if element == 0}
-
   count = 0
+  count_ones = 0
 
-  array.each do |element|
-    count += a[element...a.size].select { |x| x == 1 }.count
+  (a.size-1).downto(0) do |i|
+    if a[i] == 1
+      count_ones += 1
+    else
+      array << count_ones
+      count += array.inject(0, :+)
+      count_ones = 0
+    end
   end
 
   count
