@@ -48,4 +48,36 @@ describe 'Passing Cars' do
       end
     end
   end
+
+  describe 'Performance Tests' do
+    context 'medium_random' do
+      it 'random, length = ~10,000' do
+
+      end
+    end
+
+    context 'large_random' do
+      it 'random, length = ~100,000' do
+
+      end
+    end
+
+    context 'large_big_answer' do
+      it '0..01..1, length = ~100,000' do
+
+      end
+    end
+
+    context 'large_alternate' do
+      it '0101..01, length = ~100,000' do
+
+      end
+    end
+
+    context 'large_extreme' do
+      it 'large test with all 1s/0s, length = ~100,000' do
+
+      end
+    end
+  end
 end
