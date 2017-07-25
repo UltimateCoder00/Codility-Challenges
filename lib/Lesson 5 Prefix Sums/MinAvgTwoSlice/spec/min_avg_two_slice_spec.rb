@@ -70,4 +70,36 @@ describe 'Minimum Average of Two Slice' do
       end
     end
   end
+
+  describe 'Performance Test' do
+    context 'medium_random' do
+      it 'random, N = ~700' do
+
+      end
+    end
+
+    context 'large_ones' do
+      it 'numbers from -1 to 1, N = ~100,000' do
+
+      end
+    end
+
+    context 'large_random' do
+      it 'random, N = ~100,000' do
+
+      end
+    end
+
+    context 'extreme_values' do
+      it 'all maximal values, N = ~100,000' do
+
+      end
+    end
+
+    context 'large_sequence' do
+      it 'many seqeneces, N = ~100,000' do
+
+      end
+    end
+  end
 end
