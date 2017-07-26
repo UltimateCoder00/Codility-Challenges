@@ -6,3 +6,4 @@ describe 'Genomic Range Query' do
       expect(genomic_range_query('CAGCCTA', [2,5,0], [4,5,6])).to eq [2,4,1]
     end
   end
+end
