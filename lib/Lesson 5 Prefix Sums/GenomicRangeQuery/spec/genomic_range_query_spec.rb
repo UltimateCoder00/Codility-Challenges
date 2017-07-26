@@ -52,19 +52,50 @@ describe 'Genomic Range Query' do
   describe 'Performance Tests' do
     context 'almost_all_same_letters' do
       it 'GGGGGG..??..GGGGGG..??..GGGGGG' do
+        small_random_string = 'A'
+        100000.times do
+          small_random_string += 'G'
+        end
+        expect(genomic_range_query(small_random_string, [0], [100000])).to eq [1]
+
+        small_random_string = 'A'
+        100000.times do
+          small_random_string += 'C'
+        end
+        expect(genomic_range_query(small_random_string, [0], [100000])).to eq [1]
+
+        small_random_string = 'A'
+        100000.times do
+          small_random_string += 'G'
+        end
+        expect(genomic_range_query(small_random_string, [0], [100000])).to eq [1]
+
+        small_random_string = 'A'
+        100000.times do
+          small_random_string += 'T'
+        end
+        expect(genomic_range_query(small_random_string, [0], [100000])).to eq [1]
 
       end
     end
 
     context 'large_random' do
       it 'large random string, length' do
-
+        small_random_string = 'A'
+        100000.times do
+          small_random_string += ['A' 'C' 'G' 'T'].sample
+        end
+        expect(genomic_range_query(small_random_string, [0], [100000])).to eq [1]
       end
     end
 
     context 'extreme_large' do
       it 'all max ranges' do
-
+        small_random_string = 'A'
+        100000.times do
+          small_random_string += ['A' 'C' 'G' 'T'].sample
+        end
+        expect(genomic_range_query(small_random_string, [0]*50000, [100000]*50000)).to eq [1]*50000
       end
     end
   end
