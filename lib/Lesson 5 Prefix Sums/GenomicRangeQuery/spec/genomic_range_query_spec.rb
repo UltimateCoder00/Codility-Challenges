@@ -48,4 +48,24 @@ describe 'Genomic Range Query' do
       end
     end
   end
+
+  describe 'Performance Tests' do
+    context 'almost_all_same_letters' do
+      it 'GGGGGG..??..GGGGGG..??..GGGGGG' do
+
+      end
+    end
+
+    context 'large_random' do
+      it 'large random string, length' do
+
+      end
+    end
+
+    context 'extreme_large' do
+      it 'all max ranges' do
+
+      end
+    end
+  end
 end
