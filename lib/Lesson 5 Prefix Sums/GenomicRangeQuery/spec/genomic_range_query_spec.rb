@@ -7,34 +7,44 @@ describe 'Genomic Range Query' do
     end
   end
 
-  describe 'Correctness Tests'
+  describe 'Correctness Tests' do
     context 'extreme_sinlge' do
       it 'single character string' do
-
+        expect(genomic_range_query('A', [0], [0])).to eq [1]
+        expect(genomic_range_query('C', [0], [0])).to eq [2]
+        expect(genomic_range_query('G', [0], [0])).to eq [3]
+        expect(genomic_range_query('T', [0], [0])).to eq [4]
       end
     end
 
     context 'extreme_double' do
       it 'double character string' do
-
+        expect(genomic_range_query('AT', [0,1], [0,1])).to eq [1,4]
+        expect(genomic_range_query('CG', [0,0], [0,1])).to eq [2,2]
+        expect(genomic_range_query('GC', [0,1], [0,1])).to eq [3,2]
+        expect(genomic_range_query('TC', [0,0], [0,1])).to eq [4,2]
       end
     end
 
     context 'simple' do
       it 'simple tests' do
-
+        expect(genomic_range_query('CATGCCTAT', [0,2,5,0], [8,5,7,3])).to eq [1,2,1,1]
       end
     end
 
     context 'small_length_string' do
       it 'small length simple string' do
-
+        expect(genomic_range_query('ATC', [0,1], [2,1])).to eq [1,4]
       end
     end
 
     context 'small_random' do
       it 'small random string, length = ~300' do
-
+        small_random_string = 'A'
+        299.times do
+          small_random_string += ['A' 'C' 'G' 'T'].sample
+        end
+        expect(genomic_range_query(small_random_string, [0], [300])).to eq [1]
       end
     end
   end
