@@ -70,7 +70,8 @@ describe 'Distinct' do
   describe 'Perforamnce Tests' do
     context 'large1' do
       it 'chaotic sequence of values from [0..100K], length=10K' do
-
+        array = Array.new(10000) { rand(0..100000) }
+        expect(distinct(array)).to be_a Integer
       end
     end
 
