@@ -46,13 +46,14 @@ describe 'Distinct' do
     end
 
     context 'medium1' do
-      it 'chaotic sequence of value sfrom [0..1K], length=100' do
-
+      it 'chaotic sequence of values from [0..1K], length=100' do
+        array = [*1..100]
+        expect(distinct(array)).to eq 100
       end
     end
 
     context 'medium2' do
-      it 'chaotic sequence of value sfrom [0..1K], length=200' do
+      it 'chaotic sequence of values from [0..1K], length=200' do
 
       end
     end
