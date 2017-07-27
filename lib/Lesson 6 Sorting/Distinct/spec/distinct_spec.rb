@@ -61,7 +61,8 @@ describe 'Distinct' do
 
     context 'medium3' do
       it 'chaotic sequence of values from [0..10], length=200' do
-
+        array = [*0..10]*18
+        expect(distinct(array + [1,2])).to eq 11
       end
     end
   end
