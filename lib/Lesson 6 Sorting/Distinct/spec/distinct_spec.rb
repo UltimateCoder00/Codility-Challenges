@@ -54,7 +54,8 @@ describe 'Distinct' do
 
     context 'medium2' do
       it 'chaotic sequence of values from [0..1K], length=200' do
-
+        array = [*1..200]
+        expect(distinct(array)).to eq 200
       end
     end
 
