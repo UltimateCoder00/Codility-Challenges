@@ -29,7 +29,7 @@ describe 'Distinct' do
 
     context 'extreme_one_value' do
       it 'sequence of 10 equal elements' do
-
+        expect(distinct([1, 1, 1, 1, 1, 1, 1, 1, 1, 1])).to eq 1
       end
     end
 
