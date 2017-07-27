@@ -41,7 +41,7 @@ describe 'Distinct' do
 
     context 'extreme_big_values' do
       it 'sequence with big values, length=5' do
-
+        expect(distinct([1000000, 90000, 80000, 70000, 60000])).to eq 5
       end
     end
 
