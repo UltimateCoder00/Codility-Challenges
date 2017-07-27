@@ -66,4 +66,24 @@ describe 'Distinct' do
       end
     end
   end
+
+  describe 'Perforamnce Tests' do
+    context 'large1' do
+      it 'chaotic sequence of values from [0..100K], length=10K' do
+
+      end
+    end
+
+    context 'large_random1' do
+      it 'chaotic sequence of values from [-1M..1M], length=100K' do
+
+      end
+    end
+
+    context 'large_random2' do
+      it 'another chaotic sequence of values from [-1M..1M], length=100K' do
+
+      end
+    end
+  end
 end
