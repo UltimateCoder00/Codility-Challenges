@@ -10,7 +10,7 @@ describe 'Distinct' do
   describe 'Correctness Tests' do
     context 'extreme_empty' do
       it 'empty sequence' do
-
+        expect(distinct([])).to eq 0
       end
     end
 
