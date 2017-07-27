@@ -16,7 +16,8 @@ describe 'Distinct' do
 
     context 'extreme_single' do
       it 'sequence of one element' do
-
+        expect(distinct([1])).to eq 1
+        expect(distinct([5])).to eq 1
       end
     end
 
