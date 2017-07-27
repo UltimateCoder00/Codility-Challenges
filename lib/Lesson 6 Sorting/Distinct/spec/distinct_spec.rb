@@ -35,7 +35,7 @@ describe 'Distinct' do
 
     context 'extreme_negative' do
       it 'sequence of negative elements, length=5' do
-
+        expect(distinct([-50, -40, -30, -20, -10])).to eq 5
       end
     end
 
