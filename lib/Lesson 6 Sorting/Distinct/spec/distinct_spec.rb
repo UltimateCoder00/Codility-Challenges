@@ -23,7 +23,7 @@ describe 'Distinct' do
 
     context 'extreme_two_elems' do
       it 'sequence of three distinct elements' do
-
+        expect(distinct([1, 2, 3])).to eq 3
       end
     end
 
