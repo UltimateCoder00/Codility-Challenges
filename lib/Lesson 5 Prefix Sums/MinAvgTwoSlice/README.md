@@ -34,7 +34,7 @@ Given array A such that: A = [4, 2, 2, 5, 1, 5, 8], the function should return 1
 
 Array  | Return Value
 :-------------: | :------------------------------:
-[[4, 2, 2, 5, 1, 5, 8] | 1
+[4, 2, 2, 5, 1, 5, 8] | 1
 
 #### Assumption
 
