@@ -1,13 +1,9 @@
 def max_product_of_three(a)
-  maximal_product = a[0]*a[1]*a[2]
+  a.sort!
 
-  for i in 1..(a.length-3)
-    for j in (i+1)..(a.length-2)
-      for k in (j+1)..(a.length-1)
-        maximal_product = a[i]*a[j]*a[k] if maximal_product < a[i]*a[j]*a[k]
-      end
-    end
+  if a[0]*a[1] > a[-2]*a[-3]
+    return a[0]*a[1]*a[-1]
+  else
+    return a[-1]*a[-2]*a[-3]
   end
-
-  maximal_product
 end
