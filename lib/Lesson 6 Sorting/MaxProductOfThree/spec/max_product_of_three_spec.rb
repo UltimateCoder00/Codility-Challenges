@@ -73,7 +73,9 @@ describe 'Max Product of Three' do
 
     context 'large_range' do
       it '2000 * (-10..10) + [-1000, 500, -1]' do
-
+        array = Array.new(2000) { rand(-10..10) }
+        array += [-1000, 500, -1]
+        expect(max_product_of_three(array)).to be_a Integer
       end
     end
 
