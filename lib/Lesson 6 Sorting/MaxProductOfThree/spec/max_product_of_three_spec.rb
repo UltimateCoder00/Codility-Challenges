@@ -59,17 +59,14 @@ describe 'Max Product of Three' do
 
     context 'medium_random' do
       it 'random medium, length = ~10,000' do
-        it '-1000, -999, ... 1000, length = ~1,000' do
-          array = Array.new(10000) { rand(-1000..1000) }
-          expect(max_product_of_three(array)).to be_a Integer
-        end
+        array = Array.new(10000) { rand(-1000..1000) }
+        expect(max_product_of_three(array)).to be_a Integer
       end
     end
 
     context 'large_random' do
       it 'random large, length = ~100,000' do
-        it '-1000, -999, ... 1000, length = ~1,000' do
-        end
+        
       end
     end
 
