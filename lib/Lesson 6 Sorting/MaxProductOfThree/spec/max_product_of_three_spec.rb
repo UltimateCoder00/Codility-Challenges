@@ -30,6 +30,10 @@ describe 'Max Product of Three' do
         expect(max_product_of_three([1, 2, 3, -4])).to eq 6
         expect(max_product_of_three([2, -2, 2, -2, -2])).to eq 8
         expect(max_product_of_three([4, 6, 2, 8, -10, 1])).to eq 192
+        expect(max_product_of_three([-1, -7, -10, -4, -12])).to eq -28
+
+        array = [-20, -14, -14, -11, -8, -4, -2, -2, -1, -1]
+        expect(max_product_of_three(array)).to eq -2
       end
     end
 
