@@ -66,7 +66,8 @@ describe 'Max Product of Three' do
 
     context 'large_random' do
       it 'random large, length = ~100,000' do
-        
+        array = Array.new(100000) { rand(-1000..1000) }
+        expect(max_product_of_three(array)).to be_a Integer
       end
     end
 
