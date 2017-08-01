@@ -27,7 +27,9 @@ describe 'Max Product of Three' do
 
     context 'simple2' do
       it 'simple tests' do
-
+        expect(max_product_of_three([1, 2, 3, -4])).to eq 6
+        expect(max_product_of_three([2, -2, 2, -2, -2])).to eq 8
+        expect(max_product_of_three([4, 6, 2, 8, -10, 1])).to eq 192
       end
     end
 
