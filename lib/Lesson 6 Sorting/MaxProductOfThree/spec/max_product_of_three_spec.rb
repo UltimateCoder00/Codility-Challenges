@@ -48,4 +48,36 @@ describe 'Max Product of Three' do
       end
     end
   end
+
+  describe 'Performance Tests' do
+    context 'medium_range' do
+      it '-1000, -999, ... 1000, length = ~1,000' do
+
+      end
+    end
+
+    context 'medium_random' do
+      it 'random medium, length = ~10,000' do
+
+      end
+    end
+
+    context 'large_random' do
+      it 'random large, length = ~100,000' do
+
+      end
+    end
+
+    context 'large_range' do
+      it '2000 * (-10..10) + [-1000, 500, -1]' do
+
+      end
+    end
+
+    context 'extreme_large' do
+      it '(-2, .., -2, 1, .., 1) and (MAX_INT)..(MAX_INT), length = ~100,000' do
+
+      end
+    end
+  end
 end
