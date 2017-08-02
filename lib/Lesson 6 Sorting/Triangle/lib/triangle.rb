@@ -1,0 +1,3 @@
+def triangle(a)
+
+end
