@@ -221,4 +221,42 @@ describe 'Triangle' do
       end
     end
   end
+  
+  describe 'Performance Tests' do
+    context 'large1' do
+      it 'chaotic sequence with values from [0..100K], length=10K' do
+
+      end
+    end
+
+    context 'large2' do
+      it '1 followed by an ascending sequence of ~50K elements from [0..100K], length=~50K' do
+
+      end
+    end
+
+    context 'large_random' do
+      it 'chaotic sequence of values from [0..1M], length=100K' do
+
+      end
+    end
+
+    context 'large_negative' do
+      it 'chaotic sequence of negative values from [-1M..-1], length=100K' do
+
+      end
+    end
+
+    context 'large_negative2' do
+      it 'chaotic sequence of negative values from [-10..-1], length=100K' do
+
+      end
+    end
+
+    context 'large_negative3' do
+      it 'sequence of -1 value, length=100K' do
+
+      end
+    end
+  end
 end
