@@ -31,13 +31,23 @@ describe 'Triangle' do
 
     context 'extreme_two_elems' do
       it '2-element sequence' do
-
+        expect(triangle([1, 2])).to eq 0
+        expect(triangle([2, 3])).to eq 0
+        expect(triangle([3, 4])).to eq 0
+        expect(triangle([4, 5])).to eq 0
+        expect(triangle([5, 6])).to eq 0
+        expect(triangle([6, 7])).to eq 0
       end
     end
 
     context 'extreme_negative1' do
       it 'three equal negative numbers' do
-
+        expect(triangle([-1, -1, -1])).to eq 0
+        expect(triangle([-2, -2, -2])).to eq 0
+        expect(triangle([-3, -3, -3])).to eq 0
+        expect(triangle([-4, -4, -4])).to eq 0
+        expect(triangle([-5, -5, -5])).to eq 0
+        expect(triangle([-6, -6, -6])).to eq 0
       end
     end
 
