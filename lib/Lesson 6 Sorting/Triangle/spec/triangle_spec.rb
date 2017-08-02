@@ -10,11 +10,11 @@ describe 'Triangle' do
       expect(triangle([10, 50, 5, 1])).to eq 0
     end
   end
-  
+
   describe 'Correctness Tests' do
     context 'extreme_empty' do
       it 'empty sequence' do
-
+        expect(triangle([])).to eq 0
       end
     end
 
