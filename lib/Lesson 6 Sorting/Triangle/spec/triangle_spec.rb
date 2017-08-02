@@ -247,7 +247,23 @@ describe 'Triangle' do
 
     context 'large2' do
       it '1 followed by an ascending sequence of ~50K elements from [0..100K], length=~50K' do
+        array1 = [*1..50000]
+        expect(triangle(array1)).to be_a Integer
 
+        array2 = [1] + [*3..49998]
+        expect(triangle(array2)).to be_a Integer
+
+        array3 = [1] + [*10..50009]
+        expect(triangle(array3)).to be_a Integer
+
+        array4 = [1] + [*100..50099]
+        expect(triangle(array4)).to be_a Integer
+
+        array5 = [1] + [*50000..99999]
+        expect(triangle(array5)).to be_a Integer
+
+        array6 = [1] + [*25000..74999]
+        expect(triangle(array6)).to be_a Integer
       end
     end
 
