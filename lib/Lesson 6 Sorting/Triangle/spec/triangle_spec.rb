@@ -20,7 +20,12 @@ describe 'Triangle' do
 
     context 'extreme_single' do
       it '1-element sequence' do
-
+        expect(triangle([1])).to eq 0
+        expect(triangle([2])).to eq 0
+        expect(triangle([3])).to eq 0
+        expect(triangle([4])).to eq 0
+        expect(triangle([5])).to eq 0
+        expect(triangle([6])).to eq 0
       end
     end
 
