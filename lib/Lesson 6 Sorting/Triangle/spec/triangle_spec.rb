@@ -335,7 +335,8 @@ describe 'Triangle' do
 
     context 'large_negative3' do
       it 'sequence of -1 value, length=100K' do
-
+        array = [-1]*100000
+        expect(triangle(array)).to be_a Integer
       end
     end
   end
