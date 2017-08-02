@@ -313,7 +313,23 @@ describe 'Triangle' do
 
     context 'large_negative2' do
       it 'chaotic sequence of negative values from [-10..-1], length=100K' do
+        array1 = Array.new(100000) { rand(-10..-1) }
+        expect(triangle(array1)).to be_a Integer
 
+        array2 = Array.new(100000) { rand(-10..-1) }
+        expect(triangle(array2)).to be_a Integer
+
+        array3 = Array.new(100000) { rand(-10..-1) }
+        expect(triangle(array3)).to be_a Integer
+
+        array4 = Array.new(100000) { rand(-10..-1) }
+        expect(triangle(array4)).to be_a Integer
+
+        array5 = Array.new(100000) { rand(-10..-1) }
+        expect(triangle(array5)).to be_a Integer
+
+        array6 = Array.new(100000) { rand(-10..-1) }
+        expect(triangle(array6)).to be_a Integer
       end
     end
 
