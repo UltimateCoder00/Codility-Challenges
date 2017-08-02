@@ -68,7 +68,7 @@ In the terminal type:
 Use the '--profile' command line option, for example run:
 
 ```
-- rspec spec/distinct.rb:** --profile
+- rspec spec/max_product_of_three.rb:** --profile
 ```
 
 This will return the following output:
