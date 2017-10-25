@@ -21,6 +21,8 @@ def number_of_disc_intersections(a)
             count += 1
         end
       end
+
+      return -1 if count > 10000000 
     end
   end
 
