@@ -35,8 +35,8 @@ describe 'Brackets' do
     end
 
     context 'Empty' do
-      it '"" gives 0' do
-        expect(brackets("")).to eq 0
+      it '"" gives 1' do
+        expect(brackets("")).to eq 1
       end
     end
 
