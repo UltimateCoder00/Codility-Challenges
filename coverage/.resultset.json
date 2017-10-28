@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/hasansonmez/Projects/Codility-Challenges/spec/Lesson 1 Iterations/BinaryGap/binary_gap_spec.rb": [
+      "C:/Files/Dropbox/Projects/Codility-Challenges/spec/Lesson 1 Iterations/BinaryGap/binary_gap_spec.rb": [
         1,
         null,
         1,
@@ -177,7 +177,7 @@
         null,
         null
       ],
-      "/Users/hasansonmez/Projects/Codility-Challenges/lib/Lesson 1 Iterations/BinaryGap/binary_gap.rb": [
+      "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 1 Iterations/BinaryGap/binary_gap.rb": [
         1,
         27,
         null,
@@ -189,6 +189,6 @@
         null
       ]
     },
-    "timestamp": 1500481628
+    "timestamp": 1509208643
   }
 }
