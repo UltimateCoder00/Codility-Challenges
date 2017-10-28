@@ -5,5 +5,5 @@ def binary_gap(number)
     n == '0'
   }.each { |x| array.push(x[1].count) if x[0] == true }
 
-  array.max.class == Integer ? array.max : 0
+  array.max.class == Fixnum ? array.max : 0
 end
