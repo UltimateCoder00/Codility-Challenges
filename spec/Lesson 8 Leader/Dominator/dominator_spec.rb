@@ -76,5 +76,17 @@ describe 'Dominator' do
         expect(dominator(array)).to eq 100
       end
     end
+
+    context 'Extreme_empty_and_single_item' do
+      it 'Empty Array' do
+        array = []
+        expect(dominator(array)).to eq -1
+      end
+
+      it 'Single Element Array' do
+        array = [2147483647]
+        expect(dominator(array)).to eq 0
+      end
+    end
   end
 end
