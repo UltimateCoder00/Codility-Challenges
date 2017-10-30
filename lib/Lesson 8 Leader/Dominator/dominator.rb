@@ -1,0 +1,3 @@
+def dominator(a)
+  
+end
