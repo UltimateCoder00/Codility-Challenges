@@ -125,4 +125,34 @@ describe 'Dominator' do
       end
     end
   end
+
+  describe 'Correctness Tests' do
+    context 'Medium_pyramid' do
+      it 'Decreasing And Plateau, Medium' do
+        array = Array.new(10001) { rand(-2147483647..2147483647) }
+        expect(dominator(array)).to be_a Integer
+      end
+    end
+
+    context 'Large_pyramid' do
+      it 'Decreasing And Plateau, Large' do
+        array = Array.new(999999) { rand(-2147483647..2147483647) }
+        expect(dominator(array)).to be_a Integer
+      end
+    end
+
+    context 'Medium_random' do
+      it 'Random Test With Dominator, N = 10,000' do
+        array = Array.new(10000) { rand(-2147483647..2147483647) }
+        expect(dominator(array)).to be_a Integer
+      end
+    end
+
+    context 'Large_random' do
+      it 'Random Test With Dominator, N = 100,000' do
+        array = Array.new(999999) { rand(-2147483647..2147483647) }
+        expect(dominator(array)).to be_a Integer
+      end
+    end
+  end
 end
