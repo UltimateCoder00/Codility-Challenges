@@ -88,5 +88,17 @@ describe 'Dominator' do
         expect(dominator(array)).to eq 0
       end
     end
+
+    context 'Extreme_half1' do
+      it 'Array With Exactly N/2 Values 1' do
+        array = [2, 1, 1, 3]
+        expect(dominator(array)).to eq -1
+      end
+
+      it 'N Even + [0,0,1,1,1]' do
+        array = [0, 0, 1, 1, 1]
+        expect(dominator(array)).to eq 2
+      end
+    end
   end
 end
