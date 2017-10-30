@@ -1,4 +1,5 @@
 def dominator(a)
+  return -1 if a.count < 1
   b = a.uniq.sort
   c = []
 
