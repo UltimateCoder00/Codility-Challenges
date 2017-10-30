@@ -4,7 +4,7 @@ describe 'Dominator' do
 
   describe 'Example Tests' do
     it 'Example: [3,4,3,2,3,-1,3,3] to 3' do
-      expect(dominator([3,4,3,2,3,-1,3,3])).to eq 3
+      expect(dominator([3,4,3,2,3,-1,3,3])).to eq 0
     end
   end
 end
