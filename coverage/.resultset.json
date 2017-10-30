@@ -311,20 +311,33 @@
         null,
         null,
         null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 8 Leader/Dominator/dominator.rb": [
         1,
-        3,
-        3,
+        5,
+        5,
+        null,
+        5,
+        77,
+        null,
+        null,
+        5,
+        4,
         null,
         3,
-        55,
-        null,
-        null,
-        3,
-        null,
-        2,
         null
       ],
       "C:/Files/Dropbox/Projects/Codility-Challenges/spec/Lesson 8 Leader/EquiLeader/equi_leader_spec.rb": [
@@ -388,6 +401,6 @@
 
       ]
     },
-    "timestamp": 1509383231
+    "timestamp": 1509383599
   }
 }

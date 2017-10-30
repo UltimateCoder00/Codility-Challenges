@@ -7,6 +7,7 @@ def dominator(a)
   end
 
   return -1 if c.count(c.max) > 1
+  return -1 if a.count(b[c.index(c.max)]) <= a.length / 2
 
   a.index(b[c.index(c.max)])
 end
