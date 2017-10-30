@@ -38,5 +38,17 @@ describe 'Dominator' do
         expect(dominator(array)).to eq 10
       end
     end
+
+    context 'Small' do
+      it 'Small Test 1' do
+        array = [1, 2, 1]
+        expect(dominator(array)).to eq 0
+      end
+
+      it 'Small Test 2' do
+        array = [-2147483648, 2147483647, 999999, 1, 999999, 2, 999999, 3, 999999, 999999, 999999, 999999, 999999, 999999, 999999, -2147483648]
+        expect(dominator(array)).to eq 2
+      end
+    end
   end
 end
