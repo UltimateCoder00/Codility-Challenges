@@ -100,5 +100,17 @@ describe 'Dominator' do
         expect(dominator(array)).to eq 2
       end
     end
+
+    context 'Extreme_half2' do
+      it 'Array With Exactly Floor(N/2) Values 1' do
+        array = [2, 1, 1, 3, 4]
+        expect(dominator(array)).to eq -1
+      end
+
+      it 'N Odd + [0,0,1,1,1]' do
+        array = [0, 0, 1, 1, 1]
+        expect(dominator(array)).to eq 2
+      end
+    end
   end
 end
