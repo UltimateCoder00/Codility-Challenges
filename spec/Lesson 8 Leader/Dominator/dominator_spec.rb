@@ -26,5 +26,17 @@ describe 'Dominator' do
         expect(dominator(array)).to eq 0
       end
     end
+
+    context 'Small_half_positions' do
+      it 'Half Elements The Same' do
+        array = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+        expect(dominator(array)).to eq -1
+      end
+
+      it 'Half + 1 Elements The Same' do
+        array = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+        expect(dominator(array)).to eq 10
+      end
+    end
   end
 end
