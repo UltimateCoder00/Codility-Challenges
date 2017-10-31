@@ -22,5 +22,19 @@ describe 'EquiLeader' do
         expect(equi_leader([0])).to eq 0
       end
     end
+
+    context 'Double' do
+      it 'Double Element: [0,0] to 1' do
+        expect(equi_leader([0,0])).to eq 1
+      end
+
+      it 'Double Element: [1,2] to 0' do
+        expect(equi_leader([1,2])).to eq 0
+      end
+
+      it 'Double Element: [-1000000000,-1000000000] to 1' do
+        expect(equi_leader([-1000000000,-1000000000])).to eq 1
+      end
+    end
   end
 end
