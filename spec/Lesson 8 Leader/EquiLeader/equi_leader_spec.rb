@@ -102,5 +102,28 @@ describe 'EquiLeader' do
         expect(equi_leader(array)).to eq 99
       end
     end
+
+    describe 'Performance Tests' do
+      context 'Large_random' do
+        it 'Large Random Test With Two Values, Length = ~50,000' do
+          array = Array.new(50000) { rand(-1000000000..1000000000) }
+          expect(equi_leader(array)).to be_a Integer
+        end
+      end
+
+      context 'Large' do
+        it 'Random(0,1) + 50000 * [0] + Random(0, 1), Length = ~100,000' do
+          array = Array.new(100000) { rand(-1000000000..1000000000) }
+          expect(equi_leader(array)).to be_a Integer
+        end
+      end
+
+      context 'Extreme_large' do
+        it 'All The Same Values' do
+          array = [1000000000]*100000
+          expect(equi_leader(array)).to be_a Integer
+        end
+      end
+    end
   end
 end
