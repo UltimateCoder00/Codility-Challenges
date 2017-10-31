@@ -46,5 +46,16 @@ describe 'EquiLeader' do
         expect(equi_leader([1, 2, 3, 4, 5])).to eq 0
       end
     end
+
+    context 'Small_random' do
+      it 'Small Random Test With Two Values, Length = ~100' do
+        array = [0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0,
+                0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0,
+                1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0,
+                1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1,
+                0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1]
+        expect(equi_leader(array)).to eq 79
+      end
+    end
   end
 end
