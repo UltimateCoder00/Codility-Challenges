@@ -14,7 +14,9 @@
         null
       ],
       "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 9 Maximum Slice Problem/MaxDoubleSliceSum/max_double_slice_sum.rb": [
-
+        1,
+        null,
+        null
       ],
       "C:/Files/Dropbox/Projects/Codility-Challenges/spec/Lesson 9 Maximum Slice Problem/MaxProfit/max_profit_spec.rb": [
 
@@ -23,6 +25,6 @@
 
       ]
     },
-    "timestamp": 1509533055
+    "timestamp": 1509533190
   }
 }
