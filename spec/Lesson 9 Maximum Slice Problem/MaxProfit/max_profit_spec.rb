@@ -40,5 +40,11 @@ describe 'MaxProfit' do
         expect(max_profit([1000, 100000, 0, 1000, 2000, 3000])).to eq 99000
       end
     end
+
+    context 'Max_profit_after_max_and_before_min' do
+      it 'Max Profit Is After Global Maximum And Before Global Minimum' do
+        expect(max_profit([8, 9, 3, 6, 1, 2])).to eq 3
+      end
+    end
   end
 end
