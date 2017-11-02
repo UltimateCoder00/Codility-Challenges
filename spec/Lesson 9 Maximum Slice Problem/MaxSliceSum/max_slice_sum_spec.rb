@@ -22,5 +22,43 @@ describe 'MaxSliceSum' do
         expect(max_slice_sum([10])).to eq 10
       end
     end
+
+    context 'Two_elements' do
+      it '[-2,-2] to -2' do
+        expect(max_slice_sum([-2,-2])).to eq -2
+      end
+
+      it '[-2,1] to 1' do
+        expect(max_slice_sum([-2,1])).to eq 1
+      end
+
+      it '[-2,3] to 3' do
+        expect(max_slice_sum([-2,3])).to eq 3
+      end
+
+      it '[1,-2] to 1' do
+        expect(max_slice_sum([1,-2])).to eq 1
+      end
+
+      it '[1,1] to 2' do
+        expect(max_slice_sum([1,1])).to eq 2
+      end
+
+      it '[1,3] to 4' do
+        expect(max_slice_sum([1,3])).to eq 4
+      end
+
+      it '[3,-2] to 3' do
+        expect(max_slice_sum([3,-2])).to eq 3
+      end
+
+      it '[3,1] to 4' do
+        expect(max_slice_sum([3,1])).to eq 4
+      end
+
+      it '[3,3] to 6' do
+        expect(max_slice_sum([3,3])).to eq 6
+      end
+    end
   end
 end
