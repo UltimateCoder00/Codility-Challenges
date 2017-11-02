@@ -55,5 +55,12 @@ describe 'MaxProfit' do
         expect(max_profit(array)).to eq 4
       end
     end
+
+    context 'Large_1 ' do
+      it 'Large Value (99) Followed By Short Pattern (Values From [1..1]) Repeated 10K Times' do
+        array = Array.new(10000) { rand(0..200000) }
+        expect(max_profit(array)).to be_a Integer
+      end
+    end
   end
 end
