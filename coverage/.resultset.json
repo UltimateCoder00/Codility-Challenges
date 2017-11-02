@@ -29,22 +29,32 @@
         null,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 9 Maximum Slice Problem/MaxProfit/max_profit.rb": [
         1,
-        4,
+        6,
         null,
-        4,
-        19,
-        56,
+        6,
+        20,
+        57,
         null,
         null,
         null,
-        4,
+        6,
         null
       ]
     },
-    "timestamp": 1509615264
+    "timestamp": 1509615348
   }
 }

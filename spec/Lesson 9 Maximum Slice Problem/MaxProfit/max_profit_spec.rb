@@ -24,5 +24,15 @@ describe 'MaxProfit' do
         expect(max_profit([1, 2, 3, 4, 5])).to eq 4
       end
     end
+
+    context 'Simple_empty' do
+      it 'Empty Sequence' do
+        expect(max_profit([0])).to eq 0
+      end
+
+      it '[0, 200000] Sequence' do
+        expect(max_profit([0, 200000])).to eq 200000
+      end
+    end
   end
 end
