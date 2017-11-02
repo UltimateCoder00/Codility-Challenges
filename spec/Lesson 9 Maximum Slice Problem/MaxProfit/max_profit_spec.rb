@@ -47,4 +47,13 @@ describe 'MaxProfit' do
       end
     end
   end
+
+  describe 'Performance  Tests' do
+    context 'Medium_1 ' do
+      it 'Large Value (99) Followed By Short V-pattern (Values From [1..5]) Repeated 100 Times' do
+        array = [99] + [5,4,3,2,1,2,3,4,5]*100
+        expect(max_profit(array)).to eq 4
+      end
+    end
+  end
 end
