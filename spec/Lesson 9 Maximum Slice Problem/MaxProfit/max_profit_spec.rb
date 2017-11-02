@@ -14,5 +14,15 @@ describe 'MaxProfit' do
         expect(max_profit([4, 3, 2, 1, 2, 3, 4])).to eq 3
       end
     end
+
+    context 'Simple_desc' do
+      it 'Descending Sequence, Length=5' do
+        expect(max_profit([5, 4, 3, 2, 1])).to eq 0
+      end
+
+      it 'Ascending Sequence, Length=5' do
+        expect(max_profit([1, 2, 3, 4, 5])).to eq 4
+      end
+    end
   end
 end
