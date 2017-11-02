@@ -69,5 +69,12 @@ describe 'MaxProfit' do
         expect(max_profit(array)).to be_a Integer
       end
     end
+
+    context 'Large_3 ' do
+      it 'Chaotic Sequence Of 200K Values From [1..200K]' do
+        array = Array.new(200000) { rand(1..200000) }
+        expect(max_profit(array)).to be_a Integer
+      end
+    end
   end
 end
