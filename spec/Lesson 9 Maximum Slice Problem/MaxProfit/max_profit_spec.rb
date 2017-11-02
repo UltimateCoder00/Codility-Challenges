@@ -4,7 +4,7 @@ describe 'MaxProfit' do
 
   describe 'Example Tests' do
     it 'Example: [23171,21011,21123,21366,21013,21367] to 356' do
-      expect(equi_leader([23171,21011,21123,21366,21013,21367])).to eq 356
+      expect(max_profit([23171,21011,21123,21366,21013,21367])).to eq 356
     end
   end
 end
