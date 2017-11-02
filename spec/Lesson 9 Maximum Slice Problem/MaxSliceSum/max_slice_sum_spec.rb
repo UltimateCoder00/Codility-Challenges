@@ -60,5 +60,11 @@ describe 'MaxSliceSum' do
         expect(max_slice_sum([3,3])).to eq 6
       end
     end
+
+    context 'Simple' do
+      it '[1, 3, -5, 3, 7, 14, 29] to 53' do
+        expect(max_slice_sum([1, 3, -5, 3, 7, 14, 29])).to eq 53
+      end
+    end
   end
 end
