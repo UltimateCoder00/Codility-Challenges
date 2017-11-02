@@ -34,5 +34,11 @@ describe 'MaxProfit' do
         expect(max_profit([0, 200000])).to eq 200000
       end
     end
+
+    context 'Two_hills' do
+      it 'Two Increasing Subsequences' do
+        expect(max_profit([1000, 100000, 0, 1000, 2000, 3000])).to eq 99000
+      end
+    end
   end
 end
