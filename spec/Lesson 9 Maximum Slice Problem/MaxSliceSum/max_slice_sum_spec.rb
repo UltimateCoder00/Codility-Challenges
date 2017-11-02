@@ -66,5 +66,11 @@ describe 'MaxSliceSum' do
         expect(max_slice_sum([1, 3, -5, 3, 7, 14, 29])).to eq 53
       end
     end
+
+    context 'Extreme_minimum' do
+      it '[-1000000] to -1000000' do
+        expect(max_slice_sum([-1000000])).to eq -1000000
+      end
+    end
   end
 end
