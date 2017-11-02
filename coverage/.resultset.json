@@ -11,21 +11,37 @@
         1,
         null,
         null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 9 Maximum Slice Problem/MaxSliceSum/max_slice_sum.rb": [
         1,
-        1,
-        1,
-        5,
-        52,
+        4,
+        4,
+        8,
+        58,
         null,
         null,
         null,
-        1,
+        4,
         null
       ]
     },
-    "timestamp": 1509641713
+    "timestamp": 1509641925
   }
 }
