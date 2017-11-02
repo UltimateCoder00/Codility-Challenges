@@ -7,4 +7,12 @@ describe 'MaxProfit' do
       expect(max_profit([23171,21011,21123,21366,21013,21367])).to eq 356
     end
   end
+
+  describe 'Correctness Tests' do
+    context 'Simple_1' do
+      it 'V-pattern Sequence, Length=7' do
+        expect(max_profit([4, 3, 2, 1, 2, 3, 4])).to eq 3
+      end
+    end
+  end
 end
