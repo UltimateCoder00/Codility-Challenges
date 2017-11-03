@@ -184,5 +184,19 @@ describe 'CountFactors' do
         expect(count_factors(449991369)).to eq 15
       end
     end
+
+    context 'Extreme_maxint' do
+      it 'N=1000000000 to 100' do
+        expect(count_factors(1000000000)).to eq 100
+      end
+
+      it 'N=MAX_INT=2147483647 to 2' do
+        expect(count_factors(2147483647)).to eq 2
+      end
+
+      it 'N=2147395600 to 135' do
+        expect(count_factors(2147395600)).to eq 135
+      end
+    end
   end
 end
