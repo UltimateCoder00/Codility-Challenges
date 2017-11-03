@@ -121,4 +121,16 @@ describe 'CountFactors' do
       end
     end
   end
+
+  describe 'Performance Tests' do
+    context 'Medium1' do
+      it 'N=362880=9! to 160' do
+        expect(count_factors(362880)).to eq 160
+      end
+
+      it 'N=1948102 to 16' do
+        expect(count_factors(1948102)).to eq 16
+      end
+    end
+  end
 end
