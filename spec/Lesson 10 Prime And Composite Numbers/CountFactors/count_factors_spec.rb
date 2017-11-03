@@ -132,5 +132,19 @@ describe 'CountFactors' do
         expect(count_factors(1948102)).to eq 16
       end
     end
+
+    context 'Medium2' do
+      it 'N=3628800=10! to 270' do
+        expect(count_factors(3628800)).to eq 270
+      end
+
+      it 'N=5621892 to 12' do
+        expect(count_factors(5621892)).to eq 12
+      end
+
+      it 'N=4999696 to 45' do
+        expect(count_factors(4999696)).to eq 45
+      end
+    end
   end
 end

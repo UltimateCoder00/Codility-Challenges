@@ -137,20 +137,34 @@
         null,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 10 Prime And Composite Numbers/CountFactors/count_factors.rb": [
         1,
-        27,
+        30,
         null,
-        27,
-        1202927,
+        30,
+        8328121,
         null,
         null,
-        27,
+        30,
         null
       ]
     },
-    "timestamp": 1509703101
+    "timestamp": 1509703248
   }
 }
