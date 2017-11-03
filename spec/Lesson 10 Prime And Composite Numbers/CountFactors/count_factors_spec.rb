@@ -94,5 +94,15 @@ describe 'CountFactors' do
         expect(count_factors(1111)).to eq 4
       end
     end
+
+    context 'Simple4' do
+      it 'N=5040=7! to 60' do
+        expect(count_factors(5040)).to eq 60
+      end
+
+      it 'N=12345 to 8' do
+        expect(count_factors(12345)).to eq 8
+      end
+    end
   end
 end
