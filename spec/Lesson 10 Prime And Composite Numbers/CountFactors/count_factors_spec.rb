@@ -60,5 +60,15 @@ describe 'CountFactors' do
         expect(count_factors(10)).to eq 4
       end
     end
+
+    context 'Simple1' do
+      it 'N=41 (Prime) to 2' do
+        expect(count_factors(41)).to eq 2
+      end
+
+      it 'N=42 to 8' do
+        expect(count_factors(42)).to eq 8
+      end
+    end
   end
 end
