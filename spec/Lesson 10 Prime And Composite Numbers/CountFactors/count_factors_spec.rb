@@ -84,5 +84,15 @@ describe 'CountFactors' do
         expect(count_factors(120)).to eq 16
       end
     end
+
+    context 'Simple3' do
+      it 'N=720=6! to 30' do
+        expect(count_factors(720)).to eq 30
+      end
+
+      it 'N=1111 to 4' do
+        expect(count_factors(1111)).to eq 4
+      end
+    end
   end
 end
