@@ -114,5 +114,11 @@ describe 'CountFactors' do
         expect(count_factors(40320)).to eq 96
       end
     end
+
+    context 'Extreme_one' do
+      it 'N=1 to 1' do
+        expect(count_factors(1)).to eq 1
+      end
+    end
   end
 end
