@@ -170,5 +170,19 @@ describe 'CountFactors' do
         expect(count_factors(268435456)).to eq 29
       end
     end
+
+    context 'Big3' do
+      it 'N=479001600=12! to 792' do
+        expect(count_factors(479001600)).to eq 792
+      end
+
+      it 'N=780291637 to 2' do
+        expect(count_factors(780291637)).to eq 2
+      end
+
+      it 'N=449991369 to 15' do
+        expect(count_factors(449991369)).to eq 15
+      end
+    end
   end
 end
