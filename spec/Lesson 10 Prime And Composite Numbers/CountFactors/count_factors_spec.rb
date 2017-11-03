@@ -70,5 +70,19 @@ describe 'CountFactors' do
         expect(count_factors(42)).to eq 8
       end
     end
+
+    context 'Simple2' do
+      it 'N=69 to 4' do
+        expect(count_factors(69)).to eq 4
+      end
+
+      it 'N=64 to 7' do
+        expect(count_factors(64)).to eq 7
+      end
+
+      it 'N=120=5! to 16' do
+        expect(count_factors(120)).to eq 16
+      end
+    end
   end
 end
