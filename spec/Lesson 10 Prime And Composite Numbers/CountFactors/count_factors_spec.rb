@@ -146,5 +146,19 @@ describe 'CountFactors' do
         expect(count_factors(4999696)).to eq 45
       end
     end
+
+    context 'Big1' do
+      it 'N=27043111 to 4' do
+        expect(count_factors(27043111)).to eq 4
+      end
+
+      it 'N=39916800=11! to 540' do
+        expect(count_factors(39916800)).to eq 540
+      end
+
+      it 'N=39992976 to 135' do
+        expect(count_factors(39992976)).to eq 135
+      end
+    end
   end
 end
