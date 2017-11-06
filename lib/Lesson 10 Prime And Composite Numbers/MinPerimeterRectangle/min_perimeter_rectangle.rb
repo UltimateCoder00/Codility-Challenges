@@ -1,3 +1,3 @@
-def min_perimeter(n)
+def min_perimeter_rectangle(n)
 
 end
