@@ -52,5 +52,11 @@ describe 'MinPerimeterRectangle' do
         expect(min_perimeter_rectangle(15486451)).to eq 30972904
       end
     end
+
+    context 'Square' do
+      it 'N=100000000 to 40000' do
+        expect(min_perimeter_rectangle(100000000)).to eq 40000
+      end
+    end
   end
 end
