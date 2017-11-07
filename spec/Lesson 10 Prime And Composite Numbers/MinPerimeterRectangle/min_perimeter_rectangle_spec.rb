@@ -26,5 +26,11 @@ describe 'MinPerimeterRectangle' do
         expect(min_perimeter_rectangle(48)).to eq 28
       end
     end
+
+    context 'Simple3' do
+      it 'N=101 to 204' do
+        expect(min_perimeter_rectangle(101)).to eq 204
+      end
+    end
   end
 end
