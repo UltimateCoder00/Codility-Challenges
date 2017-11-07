@@ -9,9 +9,15 @@ describe 'MinPerimeterRectangle' do
   end
 
   describe 'Correctness Tests' do
-    context 'Extreme_min ' do
+    context 'Extreme_min' do
       it 'N=1 to 4' do
         expect(min_perimeter_rectangle(1)).to eq 4
+      end
+    end
+
+    context 'Simple1' do
+      it 'N=36 to 24' do
+        expect(min_perimeter_rectangle(36)).to eq 24
       end
     end
   end
