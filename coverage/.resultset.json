@@ -11,13 +11,21 @@
         1,
         null,
         null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 10 Prime And Composite Numbers/MinPerimeterRectangle/min_perimeter_rectangle.rb": [
         1,
-        1,
+        2,
         null,
-        1,
+        2,
         28,
         6,
         null,
@@ -25,10 +33,10 @@
         null,
         null,
         null,
-        1,
+        2,
         null
       ]
     },
-    "timestamp": 1510047233
+    "timestamp": 1510047467
   }
 }
