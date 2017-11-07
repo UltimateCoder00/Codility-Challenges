@@ -20,5 +20,11 @@ describe 'MinPerimeterRectangle' do
         expect(min_perimeter_rectangle(36)).to eq 24
       end
     end
+
+    context 'Simple2' do
+      it 'N=48 to 28' do
+        expect(min_perimeter_rectangle(48)).to eq 28
+      end
+    end
   end
 end
