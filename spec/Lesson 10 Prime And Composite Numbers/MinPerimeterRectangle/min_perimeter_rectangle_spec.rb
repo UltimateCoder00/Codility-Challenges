@@ -39,4 +39,12 @@ describe 'MinPerimeterRectangle' do
       end
     end
   end
+
+  describe 'Performance Tests' do
+    context 'Medium' do
+      it 'N=4564320 to 8552' do
+        expect(min_perimeter_rectangle(4564320)).to eq 8552
+      end
+    end
+  end
 end
