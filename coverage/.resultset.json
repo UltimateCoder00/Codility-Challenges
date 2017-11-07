@@ -37,24 +37,30 @@
         null,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 10 Prime And Composite Numbers/MinPerimeterRectangle/min_perimeter_rectangle.rb": [
         1,
-        5,
+        6,
         null,
-        5,
-        207,
-        21,
+        6,
+        1439,
+        23,
         null,
-        21,
+        23,
         null,
         null,
         null,
-        5,
+        6,
         null
       ]
     },
-    "timestamp": 1510047618
+    "timestamp": 1510047672
   }
 }
