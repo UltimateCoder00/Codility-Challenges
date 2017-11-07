@@ -46,5 +46,11 @@ describe 'MinPerimeterRectangle' do
         expect(min_perimeter_rectangle(4564320)).to eq 8552
       end
     end
+
+    context 'Prime1' do
+      it 'N=15486451 to 30972904' do
+        expect(min_perimeter_rectangle(15486451)).to eq 30972904
+      end
+    end
   end
 end
