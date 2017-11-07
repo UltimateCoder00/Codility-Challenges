@@ -64,5 +64,11 @@ describe 'MinPerimeterRectangle' do
         expect(min_perimeter_rectangle(982451653)).to eq 1964903308
       end
     end
+
+    context 'Extreme_max ' do
+      it 'N=1000000000 to 126500' do
+        expect(min_perimeter_rectangle(1000000000)).to eq 126500
+      end
+    end
   end
 end
