@@ -26,5 +26,14 @@ describe 'CountSemiprimes' do
         expect(count_semiprimes(n, a, b)).to eq [1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
       end
     end
+
+    context 'Small_functional' do
+      it 'Small Functional' do
+        n = 50
+        a = [1, 2, 3, 4, 10]
+        b = [50, 49, 48, 40, 30]
+        expect(count_semiprimes(n, a, b)).to eq [17, 17, 16, 15, 7]
+      end
+    end
   end
 end
