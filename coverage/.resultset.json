@@ -84,24 +84,33 @@
         null,
         null,
         null,
+        1,
+        1,
+        1,
+        30001,
+        30001,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 11 Sieve Of Eratosthenes/CountSemiprimes/count_semiprimes.rb": [
         1,
         null,
         1,
-        6,
+        7,
         null,
-        6,
-        421,
+        7,
+        30421,
         null,
         null,
-        6,
+        7,
         null,
-        6,
-        159,
+        7,
+        160,
         null,
-        159,
+        160,
         15142,
         596367,
         null,
@@ -123,6 +132,6 @@
         null
       ]
     },
-    "timestamp": 1510316703
+    "timestamp": 1510316908
   }
 }
