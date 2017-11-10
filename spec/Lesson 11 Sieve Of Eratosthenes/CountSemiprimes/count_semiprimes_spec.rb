@@ -106,5 +106,20 @@ describe 'CountSemiprimes' do
         expect(count_semiprimes(n, a, b)).to be_a Array
       end
     end
+
+    context 'Large_random2' do
+      it 'Large Random, Length = ~30,000' do
+        n = 30000
+        a = []
+        b = []
+        for i in 0...n
+          number = rand(49999)
+          a << number
+          b << rand((number+1)..50000)
+        end
+
+        expect(count_semiprimes(n, a, b)).to be_a Array
+      end
+    end
   end
 end
