@@ -96,5 +96,19 @@ describe 'ChocolatesByNumbers' do
         expect(chocolates_by_numbers(268435456, 322486272)).to eq 16384
       end
     end
+
+    context 'Extreme_large - Maximal And Minimal Values' do
+      it 'N=1000000000 And M=1 to 1000000000' do
+        expect(chocolates_by_numbers(1000000000, 1)).to eq 1000000000
+      end
+
+      it 'N=1 And M=1000000000 to 1' do
+        expect(chocolates_by_numbers(1, 1000000000)).to eq 1
+      end
+
+      it 'N=1000000000 And M=1000000000 to 1' do
+        expect(chocolates_by_numbers(1000000000, 1000000000)).to eq 1
+      end
+    end
   end
 end
