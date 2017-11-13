@@ -1,7 +1,7 @@
 def chocolates_by_numbers(n, m)
   count = 0
 
-  array = [*0...10]
+  array = [*0...n]
   i = 0
 
   loop do
@@ -10,7 +10,7 @@ def chocolates_by_numbers(n, m)
     if i + m <= n
       i = i + m
     else
-      i = i + m - n
+      i = (i + m) % n
     end
 
     break if array[i] == nil
