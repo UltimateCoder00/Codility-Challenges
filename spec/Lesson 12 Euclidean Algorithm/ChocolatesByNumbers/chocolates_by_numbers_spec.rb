@@ -28,5 +28,23 @@ describe 'ChocolatesByNumbers' do
         expect(chocolates_by_numbers(24, 18)).to eq 4
       end
     end
+
+    context 'Small1' do
+      it 'N=15 And M=3 to 5' do
+        expect(chocolates_by_numbers(15, 3)).to eq 5
+      end
+
+      it 'N=18 And M=4 to 9' do
+        expect(chocolates_by_numbers(18, 4)).to eq 9
+      end
+
+      it 'N=12 And M=21 to 4' do
+        expect(chocolates_by_numbers(12, 21)).to eq 4
+      end
+
+      it 'N=27 And M=16 to 27' do
+        expect(chocolates_by_numbers(27, 16)).to eq 27
+      end
+    end
   end
 end
