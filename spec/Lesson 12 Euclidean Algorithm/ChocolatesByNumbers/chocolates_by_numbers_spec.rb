@@ -57,4 +57,18 @@ describe 'ChocolatesByNumbers' do
       end
     end
   end
+
+  describe 'Performance Tests' do
+    it 'N=1520 And M=120 to 38' do
+      expect(chocolates_by_numbers(1520, 120)).to eq 38
+    end
+
+    it 'N=10000 And M=3300 to 100' do
+      expect(chocolates_by_numbers(10000, 3300)).to eq 100
+    end
+
+    it 'N=947853 And M=4453 to 38' do
+      expect(chocolates_by_numbers(947853, 4453)).to eq 947853
+    end
+  end
 end
