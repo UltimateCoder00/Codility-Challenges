@@ -86,5 +86,15 @@ describe 'ChocolatesByNumbers' do
         expect(chocolates_by_numbers(123000000, 789000000)).to eq 41
       end
     end
+
+    context 'Large2 - N = (3**9)*(2**14), M=(2**14)*(2**14)' do
+      it 'N=322486272 And M=268435456 to 19683' do
+        expect(chocolates_by_numbers(322486272, 268435456)).to eq 19683
+      end
+
+      it 'N=268435456 And M=322486272 to 16384' do
+        expect(chocolates_by_numbers(268435456, 322486272)).to eq 16384
+      end
+    end
   end
 end
