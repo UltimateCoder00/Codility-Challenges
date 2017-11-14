@@ -23,7 +23,7 @@ def common_prime_divisors(a, b)
 
     next if breaking == 1
 
-    for k in 2..minValue
+    for k in 1..minValue
       if Prime.prime?(k)
         if maxValue % k == 0
           if minValue % k != 0
