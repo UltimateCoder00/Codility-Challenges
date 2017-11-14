@@ -113,8 +113,16 @@ describe 'CommonPrimeDivisors' do
       end
     end
 
-    context 'Big_powers ' do
+    context 'Big_powers' do
       it 'Powers Of 2 And 3' do
+        array1 = Array.new(6000) { rand(1..2147483647) }
+        array2 = Array.new(6000) { rand(1..2147483647) }
+        expect(common_prime_divisors(array1, array2)).to be_a Integer
+      end
+    end
+
+    context 'Extreme_maximal' do
+      it 'Extreme Test With Maximal Values' do
         array1 = Array.new(6000) { rand(1..2147483647) }
         array2 = Array.new(6000) { rand(1..2147483647) }
         expect(common_prime_divisors(array1, array2)).to be_a Integer
