@@ -7,4 +7,16 @@ describe 'CommonPrimeDivisors' do
       expect(common_prime_divisors([15,10,3], [75,30,5])).to eq 1
     end
   end
+
+  describe 'Correctness Tests' do
+    context 'Extreme Test With Small Values' do
+      it '([1], [1]) to 1' do
+        expect(common_prime_divisors([1], [1])).to eq 1
+      end
+
+      it '([2, 1, 2], [1, 2, 2]) to 1' do
+        expect(common_prime_divisors([2, 1, 2], [1, 2, 2])).to eq 1
+      end
+    end
+  end
 end
