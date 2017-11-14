@@ -79,4 +79,14 @@ describe 'CommonPrimeDivisors' do
       end
     end
   end
+
+  describe 'Correctness Tests' do
+    context 'Large_all_pairs ' do
+      it 'All Pairs 1-70, Length = ~5,000' do
+        array1 = Array.new(5000) { rand(1..70) }
+        array2 = Array.new(5000) { rand(1..70) }
+        expect(common_prime_divisors(array1, array2)).to be_a Integer
+      end
+    end
+  end
 end
