@@ -36,5 +36,11 @@ describe 'CommonPrimeDivisors' do
         expect(common_prime_divisors([121, 8, 25, 81, 49], [11, 4, 125, 11, 7])).to eq 4
       end
     end
+
+    context 'Small_primes' do
+      it 'Small Primes: ([7, 17, 5, 3], [7, 11, 5, 2]) to 2' do
+        expect(common_prime_divisors([7, 17, 5, 3], [7, 11, 5, 2])).to eq 2
+      end
+    end
   end
 end
