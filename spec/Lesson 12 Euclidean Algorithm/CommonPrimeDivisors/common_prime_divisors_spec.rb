@@ -104,5 +104,13 @@ describe 'CommonPrimeDivisors' do
         expect(common_prime_divisors(array1, array2)).to be_a Integer
       end
     end
+
+    context 'Many_factors2' do
+      it 'Factorial Test' do
+        array1 = Array.new(6000) { rand(1..2147483647) }
+        array2 = Array.new(6000) { rand(1..2147483647) }
+        expect(common_prime_divisors(array1, array2)).to be_a Integer
+      end
+    end
   end
 end
