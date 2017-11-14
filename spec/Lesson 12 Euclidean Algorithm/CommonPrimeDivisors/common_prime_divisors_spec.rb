@@ -19,9 +19,15 @@ describe 'CommonPrimeDivisors' do
       end
     end
 
-    context 'Simple1 test with small values' do
+    context 'Simple_1 Test With Small Values' do
       it '([3, 9, 20, 11], [9, 81, 5, 13]) to 2' do
         expect(common_prime_divisors([3, 9, 20, 11], [9, 81, 5, 13])).to eq 2
+      end
+    end
+
+    context 'Simple_2 Test With Small Values' do
+      it '([6059, 551], [442307, 303601]) to 2' do
+        expect(common_prime_divisors([6059, 551], [442307, 303601])).to eq 2
       end
     end
   end
