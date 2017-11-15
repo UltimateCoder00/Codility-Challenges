@@ -124,19 +124,26 @@
         null,
         null,
         null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 15 Caterpillar Method/AbsDistinct/abs_distinct.rb": [
         1,
-        19,
-        141,
+        20,
+        142,
         125,
         null,
-        16,
+        17,
         null,
         null,
         null,
-        19,
+        20,
         null
       ],
       "C:/Files/Dropbox/Projects/Codility-Challenges/spec/Lesson 15 Caterpillar Method/CountDistinctSlices/count_distinct_slices_spec.rb": [
@@ -149,6 +156,6 @@
 
       ]
     },
-    "timestamp": 1510764131
+    "timestamp": 1510764184
   }
 }

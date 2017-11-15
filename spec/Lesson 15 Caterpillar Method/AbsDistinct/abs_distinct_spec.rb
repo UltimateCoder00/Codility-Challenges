@@ -119,5 +119,12 @@ describe 'abs_distinct' do
         expect(abs_distinct(array)).to eq 9
       end
     end
+
+    context 'Simple_no_negative' do
+      it '[0, 1, 2, 3, 4, 5, 6, 7, 100, 100, 200, 3000] to 11' do
+        array = [0, 1, 2, 3, 4, 5, 6, 7, 100, 100, 200, 3000]
+        expect(abs_distinct(array)).to eq 11
+      end
+    end
   end
 end
