@@ -1,1 +1,0 @@
-# Stone Wall Challenge
