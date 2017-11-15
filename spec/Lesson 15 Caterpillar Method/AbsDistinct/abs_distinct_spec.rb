@@ -22,5 +22,43 @@ describe 'abs_distinct' do
         expect(abs_distinct([10])).to eq 1
       end
     end
+
+    context 'Two_element' do
+      it '[-2,-2] to 1' do
+        expect(abs_distinct([-2,-2])).to eq 1
+      end
+
+      it '[-2,1] to 2' do
+        expect(abs_distinct([-2,1])).to eq 2
+      end
+
+      it '[-2,3] to 2' do
+        expect(abs_distinct([-2,3])).to eq 2
+      end
+
+      it '[-2,1] to 2' do
+        expect(abs_distinct([-2,1])).to eq 2
+      end
+
+      it '[1,1] to 1' do
+        expect(abs_distinct([1,1])).to eq 1
+      end
+
+      it '[1,3] to 2' do
+        expect(abs_distinct([1,3])).to eq 2
+      end
+
+      it '[-2,3] to 2' do
+        expect(abs_distinct([-2,3])).to eq 2
+      end
+
+      it '[1,3] to 2' do
+        expect(abs_distinct([1,3])).to eq 2
+      end
+
+      it '[3,3] to 1' do
+        expect(abs_distinct([3,3])).to eq 1
+      end
+    end
   end
 end
