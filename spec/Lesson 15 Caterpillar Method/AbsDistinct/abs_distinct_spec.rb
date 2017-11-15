@@ -198,5 +198,12 @@ describe 'abs_distinct' do
         expect(abs_distinct(array)).to be_a Integer
       end
     end
+
+    context 'Long_sequence_no_positive' do
+      it '[]...] to 1' do
+        array = Array.new(39902) { rand(-8000..-2) }
+        expect(abs_distinct(array)).to be_a Integer
+      end
+    end
   end
 end
