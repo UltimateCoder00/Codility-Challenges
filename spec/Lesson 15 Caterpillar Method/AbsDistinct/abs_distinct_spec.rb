@@ -190,4 +190,13 @@ describe 'abs_distinct' do
       end
     end
   end
+
+  describe 'Performance Tests' do
+    context 'Long_sequence_no_negative' do
+      it '[]...] to 1' do
+        array = Array.new(50053) { rand(1..9999) }
+        expect(abs_distinct(array)).to be_a Integer
+      end
+    end
+  end
 end
