@@ -133,5 +133,19 @@ describe 'abs_distinct' do
         expect(abs_distinct(array)).to eq 7
       end
     end
+
+    context 'Arith_overlow' do
+      it '[-2147483648, 0] to 2' do
+        expect(abs_distinct([-2147483648, 0])).to eq 2
+      end
+
+      it '[-2147483648, -1, 0, 1] to 3' do
+        expect(abs_distinct([-2147483648, -1, 0, 1])).to eq 3
+      end
+
+      it '[-2147483648, -1, 0, 1, 2147483647] to 4' do
+        expect(abs_distinct([-2147483648, -1, 0, 1, 2147483647])).to eq 4
+      end
+    end
   end
 end
