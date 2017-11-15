@@ -193,15 +193,22 @@ describe 'abs_distinct' do
 
   describe 'Performance Tests' do
     context 'Long_sequence_no_negative' do
-      it '[]...] to 1' do
+      it '[...] to x' do
         array = Array.new(50053) { rand(1..9999) }
         expect(abs_distinct(array)).to be_a Integer
       end
     end
 
     context 'Long_sequence_no_positive' do
-      it '[]...] to 1' do
+      it '[...] to x' do
         array = Array.new(39902) { rand(-8000..-2) }
+        expect(abs_distinct(array)).to be_a Integer
+      end
+    end
+
+    context 'Long_sequence' do
+      it '[...] to x' do
+        array = Array.new(90124) { rand(-10000..10000) }
         expect(abs_distinct(array)).to be_a Integer
       end
     end
