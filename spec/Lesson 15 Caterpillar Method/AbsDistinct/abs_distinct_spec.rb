@@ -112,5 +112,12 @@ describe 'abs_distinct' do
         expect(abs_distinct(array)).to eq 5
       end
     end
+
+    context 'Simple_no_same' do
+      it '[-5, -4, -3, -2, -1, 6, 7, 8, 9] to 9' do
+        array = [-5, -4, -3, -2, -1, 6, 7, 8, 9]
+        expect(abs_distinct(array)).to eq 9
+      end
+    end
   end
 end
