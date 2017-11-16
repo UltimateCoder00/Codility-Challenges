@@ -22,5 +22,19 @@ describe 'CountDistinctSlices' do
         expect(count_distinct_slices(0,[0])).to eq 1
       end
     end
+
+    context 'Double' do
+      it 'Double Elements 1' do
+        expect(count_distinct_slices(100000,[1, 1])).to eq 2
+      end
+
+      it 'Double Elements 2' do
+        expect(count_distinct_slices(100000,[100000, 10000])).to eq 3
+      end
+
+      it 'Double Elements 3' do
+        expect(count_distinct_slices(100000,[100000, 100000])).to eq 2
+      end
+    end
   end
 end
