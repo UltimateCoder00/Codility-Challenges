@@ -1,6 +1,6 @@
 require "./lib/Lesson 15 Caterpillar Method/AbsDistinct/abs_distinct"
 
-describe 'abs_distinct' do
+describe 'AbsDistinct' do
 
   describe 'Example Tests' do
     it 'Example: [-5,-3,-1,0,3,6] to 5' do
