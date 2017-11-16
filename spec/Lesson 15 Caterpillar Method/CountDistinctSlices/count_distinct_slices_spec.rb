@@ -42,5 +42,11 @@ describe 'CountDistinctSlices' do
         expect(count_distinct_slices(10000,[1, 3, 4, 1, 2, 1, 3, 2, 1])).to eq 24
       end
     end
+
+    context 'Simple2' do
+      it 'Second Simple Test' do
+        expect(count_distinct_slices(100,[2, 3, 3, 3, 2, 4, 1, 2, 5, 1, 4, 5, 1, 4])).to eq 37
+      end
+    end
   end
 end
