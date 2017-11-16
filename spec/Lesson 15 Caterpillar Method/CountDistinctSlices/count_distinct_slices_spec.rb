@@ -68,5 +68,17 @@ describe 'CountDistinctSlices' do
         expect(count_distinct_slices(500,array)).to be_a Integer
       end
     end
+
+    context 'Large' do
+      it 'Large Tests, Length = ~100,000' do
+        array = [*1..10]*10000
+        expect(count_distinct_slices(100000,array)).to be_a Integer
+      end
+
+      it 'Large Tests, Length = ~100,000' do
+        array = [100]*100000
+        expect(count_distinct_slices(100000,array)).to be_a Integer
+      end
+    end
   end
 end
