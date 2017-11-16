@@ -49,7 +49,7 @@ describe 'CountDistinctSlices' do
       end
     end
 
-    context 'Small_random ' do
+    context 'Small_random' do
       it 'Small Random Test, Length = 100' do
         array = [5, 6, 10, 5, 6, 6, 2, 6, 7, 8, 1, 4, 1, 9, 7, 1, 10, 10, 7, 7,
                   2, 1, 6, 1, 2, 3, 1, 5, 5, 9, 6, 7, 5, 7, 5, 3, 10, 10, 9, 8,
@@ -57,6 +57,15 @@ describe 'CountDistinctSlices' do
                   1, 4, 10, 8, 2, 3, 2, 1, 8, 2, 6, 5, 2, 8, 2, 7, 2, 5, 3, 3,
                   10, 9, 4, 9, 3, 4, 9, 7, 2, 10, 3, 3, 8, 4, 3, 1, 1, 6, 3, 7]
         expect(count_distinct_slices(100,array)).to eq 335
+      end
+    end
+  end
+
+  describe 'Performance Tests' do
+    context 'Medium_random' do
+      it 'Medium Random Test, Length = 500' do
+        array = Array.new(500) { 1..500 }
+        expect(count_distinct_slices(500,array)).to be_a Integer
       end
     end
   end
