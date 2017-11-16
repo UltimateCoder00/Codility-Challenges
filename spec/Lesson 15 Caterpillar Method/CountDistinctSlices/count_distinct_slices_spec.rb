@@ -48,5 +48,16 @@ describe 'CountDistinctSlices' do
         expect(count_distinct_slices(100,[2, 3, 3, 3, 2, 4, 1, 2, 5, 1, 4, 5, 1, 4])).to eq 37
       end
     end
+
+    context 'Small_random ' do
+      it 'Small Random Test, Length = 100' do
+        array = [5, 6, 10, 5, 6, 6, 2, 6, 7, 8, 1, 4, 1, 9, 7, 1, 10, 10, 7, 7,
+                  2, 1, 6, 1, 2, 3, 1, 5, 5, 9, 6, 7, 5, 7, 5, 3, 10, 10, 9, 8,
+                  4, 3, 3, 1, 8, 5, 9, 4, 10, 9, 1, 3, 10, 5, 10, 4, 1, 7, 8, 3,
+                  1, 4, 10, 8, 2, 3, 2, 1, 8, 2, 6, 5, 2, 8, 2, 7, 2, 5, 3, 3,
+                  10, 9, 4, 9, 3, 4, 9, 7, 2, 10, 3, 3, 8, 4, 3, 1, 1, 6, 3, 7]
+        expect(count_distinct_slices(100,array)).to eq 335
+      end
+    end
   end
 end

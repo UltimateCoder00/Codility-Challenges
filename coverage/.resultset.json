@@ -53,26 +53,37 @@
         null,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 15 Caterpillar Method/CountDistinctSlices/count_distinct_slices.rb": [
         1,
-        9,
+        10,
         null,
-        9,
-        37,
-        102,
-        80,
+        10,
+        137,
+        533,
+        415,
         null,
-        22,
-        null,
-        null,
+        118,
         null,
         null,
-        9,
+        null,
+        null,
+        10,
         null
       ]
     },
-    "timestamp": 1510849693
+    "timestamp": 1510849789
   }
 }
