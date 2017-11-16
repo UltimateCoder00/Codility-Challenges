@@ -92,5 +92,17 @@ describe 'CountDistinctSlices' do
         expect(count_distinct_slices(40000,array)).to be_a Integer
       end
     end
+
+    context 'Large_random' do
+      it 'Large Random Tests, Length = ~100,000 1' do
+        array = Array.new(100000) {1..100000}
+        expect(count_distinct_slices(100000,array)).to be_a Integer
+      end
+
+      it 'Large Random Tests, Length = ~100,000 2' do
+        array = Array.new(100000) {1..1000}
+        expect(count_distinct_slices(1000,array)).to be_a Integer
+      end
+    end
   end
 end
