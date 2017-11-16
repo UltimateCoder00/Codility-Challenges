@@ -104,5 +104,17 @@ describe 'CountDistinctSlices' do
         expect(count_distinct_slices(1000,array)).to be_a Integer
       end
     end
+
+    context 'Extreme_the_same' do
+      it 'All The Same Elements, Length = ~100,000 1' do
+        array = [3]*100000
+        expect(count_distinct_slices(5,array)).to be_a Integer
+      end
+
+      it 'All The Same Elements, Length = ~100,000 2' do
+        array = [100000]*100000
+        expect(count_distinct_slices(100000,array)).to be_a Integer
+      end
+    end
   end
 end
