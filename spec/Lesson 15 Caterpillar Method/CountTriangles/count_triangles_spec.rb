@@ -54,5 +54,15 @@ describe 'CountTriangles' do
         expect(count_triangles([3, 3, 5, 6])).to eq 3
       end
     end
+
+    context 'Medium1' do
+      it 'Chaotic Sequence Of Values From [1..100K], Length=30' do
+        array =[14567, 45493, 77079, 70552, 73196, 43352, 80003, 53291, 8016,
+                45595, 4789, 93297, 94708, 33536, 30941, 76802, 20387, 17847,
+                18860, 34701, 62633, 96332, 21084, 95611, 55540, 90116, 81802,
+                16043, 64855, 12410]
+        expect(count_triangles(array)).to eq 1917
+      end
+    end
   end
 end
