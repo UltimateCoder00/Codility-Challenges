@@ -38,5 +38,15 @@ describe 'CountTriangles' do
         expect(count_triangles([5, 3, 3])).to eq 1
       end
     end
+
+    context 'Extreme_arith_overflow' do
+      it 'Overflow Test, 3 MAXINTs' do
+        expect(count_triangles([1000000000, 1000000000, 1000000000])).to eq 1
+      end
+
+      it '[5,3,3]' do
+        expect(count_triangles([5, 3, 3])).to eq 1
+      end
+    end
   end
 end
