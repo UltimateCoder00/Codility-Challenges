@@ -64,7 +64,7 @@ describe 'CountDistinctSlices' do
   describe 'Performance Tests' do
     context 'Medium_random' do
       it 'Medium Random Test, Length = 500' do
-        array = Array.new(500) { 1..500 }
+        array = Array.new(500) { rand(1..500) }
         expect(count_distinct_slices(500,array)).to be_a Integer
       end
     end
@@ -95,12 +95,12 @@ describe 'CountDistinctSlices' do
 
     context 'Large_random' do
       it 'Large Random Tests, Length = ~100,000 1' do
-        array = Array.new(100000) {1..100000}
+        array = Array.new(100000) { rand(1..100000) }
         expect(count_distinct_slices(100000,array)).to be_a Integer
       end
 
       it 'Large Random Tests, Length = ~100,000 2' do
-        array = Array.new(100000) {1..1000}
+        array = Array.new(100000) { rand(1..1000) }
         expect(count_distinct_slices(1000,array)).to be_a Integer
       end
     end
