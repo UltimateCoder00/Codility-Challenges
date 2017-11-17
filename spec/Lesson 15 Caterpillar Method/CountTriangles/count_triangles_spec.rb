@@ -28,5 +28,15 @@ describe 'CountTriangles' do
         expect(count_triangles([5, 3, 3])).to eq 1
       end
     end
+
+    context 'Extreme_two_elems' do
+      it '2-Element Sequence' do
+        expect(count_triangles([1,2])).to eq 0
+      end
+
+      it '[5,3,3]' do
+        expect(count_triangles([5, 3, 3])).to eq 1
+      end
+    end
   end
 end
