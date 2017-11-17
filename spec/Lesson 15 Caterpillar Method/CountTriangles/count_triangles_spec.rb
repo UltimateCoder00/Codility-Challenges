@@ -93,6 +93,14 @@ describe 'CountTriangles' do
           number += rand(1..2)
           array << number
         end
+
+        expect(count_triangles(array)).to be_a Integer
+      end
+    end
+
+    context 'Large_random' do
+      it 'Chaotic Sequence Of Values From [1..1M], Length=1K' do
+        array = Array.new(1000) { rand(1..1000000) }
         expect(count_triangles(array)).to be_a Integer
       end
     end
