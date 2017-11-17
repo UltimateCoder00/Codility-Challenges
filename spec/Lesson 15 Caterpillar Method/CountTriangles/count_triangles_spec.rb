@@ -48,5 +48,11 @@ describe 'CountTriangles' do
         expect(count_triangles([5, 3, 3])).to eq 1
       end
     end
+
+    context 'Simple' do
+      it '[3, 3, 5, 6]' do
+        expect(count_triangles([3, 3, 5, 6])).to eq 3
+      end
+    end
   end
 end
