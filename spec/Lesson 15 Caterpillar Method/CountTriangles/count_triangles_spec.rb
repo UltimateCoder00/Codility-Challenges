@@ -78,8 +78,21 @@ describe 'CountTriangles' do
 
   describe 'Performance Tests' do
     context 'Large' do
-      it 'Empty Sequence' do
+      it 'Chaotic Sequence With Values From [1..10], Length=200' do
         array = Array.new(200) { rand(1..10) }
+        expect(count_triangles(array)).to be_a Integer
+      end
+    end
+
+    context 'Large2' do
+      it '1 Followed By An Ascending Sequence Of ~1K Elements From [1..2K]' do
+        number = 1
+        array = [1]
+
+        999.times do
+          number += rand(1..2)
+          array << number
+        end
         expect(count_triangles(array)).to be_a Integer
       end
     end
