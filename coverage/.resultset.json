@@ -2,9 +2,23 @@
   "RSpec": {
     "coverage": {
       "C:/Files/Dropbox/Projects/Codility-Challenges/spec/Lesson 15 Caterpillar Method/CountTriangles/count_triangles_spec.rb": [
-
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 15 Caterpillar Method/CountTriangles/count_triangles.rb": [
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1510937178
+    "timestamp": 1510937357
   }
 }
