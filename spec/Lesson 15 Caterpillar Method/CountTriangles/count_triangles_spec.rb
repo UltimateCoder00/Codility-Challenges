@@ -75,4 +75,13 @@ describe 'CountTriangles' do
       end
     end
   end
+
+  describe 'Performance Tests' do
+    context 'Large' do
+      it 'Empty Sequence' do
+        array = Array.new(200) { rand(1..10) }
+        expect(count_triangles(array)).to be_a Integer
+      end
+    end
+  end
 end
