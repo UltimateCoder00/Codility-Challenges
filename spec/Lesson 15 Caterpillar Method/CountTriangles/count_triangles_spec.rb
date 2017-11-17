@@ -104,5 +104,17 @@ describe 'CountTriangles' do
         expect(count_triangles(array)).to be_a Integer
       end
     end
+
+    context 'Large_the_same' do
+      it 'Sequence Of The Same Value:' do
+        array = [1]*1000
+        expect(count_triangles(array)).to be_a Integer
+      end
+
+      it 'Sequence Of The Same Value:' do
+        array = [1000000000]*1000
+        expect(count_triangles(array)).to be_a Integer
+      end
+    end
   end
 end
