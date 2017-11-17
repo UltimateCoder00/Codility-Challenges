@@ -18,5 +18,15 @@ describe 'CountTriangles' do
         expect(count_triangles([5, 3, 3])).to eq 1
       end
     end
+
+    context 'Extreme_single' do
+      it '1-Element Sequence' do
+        expect(count_triangles([1])).to eq 0
+      end
+
+      it '[5,3,3]' do
+        expect(count_triangles([5, 3, 3])).to eq 1
+      end
+    end
   end
 end
