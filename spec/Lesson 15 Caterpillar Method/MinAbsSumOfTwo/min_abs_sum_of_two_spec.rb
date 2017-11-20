@@ -96,5 +96,12 @@ describe 'MinAbsSumOfTwo' do
         expect(min_abs_sum_of_two(array)).to be_a Integer
       end
     end
+
+    context 'Constant_distance' do
+      it 'Constant Distance Between All Elements, Length = 100,000' do
+        array = Array.new(100000) { rand(-500105..500090) }
+        expect(min_abs_sum_of_two(array)).to be_a Integer
+      end
+    end
   end
 end
