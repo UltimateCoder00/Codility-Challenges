@@ -69,7 +69,7 @@ describe 'MinAbsSumOfTwo' do
       end
     end
 
-    context 'Arithmetic_medium ' do
+    context 'Arithmetic_medium' do
       it 'Arithmetic Sequence, Length = ~10,000' do
         array = Array.new(10000) { rand(-120000..100009999) }
         expect(min_abs_sum_of_two(array)).to be_a Integer
@@ -86,6 +86,13 @@ describe 'MinAbsSumOfTwo' do
     context 'Extreme_large' do
       it 'Sequence Of MAX_INT, Length = ~100,000' do
         array = Array.new(100000) { 1000000000 }
+        expect(min_abs_sum_of_two(array)).to be_a Integer
+      end
+    end
+
+    context 'Arithmetic_large' do
+      it 'Arithmetic Sequence, Length = ~100,000' do
+        array = Array.new(99900) { rand(-99999000..99998000) }
         expect(min_abs_sum_of_two(array)).to be_a Integer
       end
     end
