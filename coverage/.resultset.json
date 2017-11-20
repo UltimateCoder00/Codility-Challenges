@@ -51,22 +51,37 @@
         null,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1001,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 15 Caterpillar Method/MinAbsSumOfTwo/min_abs_sum_of_two.rb": [
         1,
-        9,
+        11,
         null,
-        9,
-        23,
-        54,
+        11,
+        1029,
+        500575,
         null,
         null,
         null,
-        9,
+        11,
         null
       ]
     },
-    "timestamp": 1511186077
+    "timestamp": 1511186614
   }
 }

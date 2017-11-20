@@ -53,4 +53,13 @@ describe 'MinAbsSumOfTwo' do
       end
     end
   end
+
+  describe 'Performance Tests' do
+    context 'Random_small' do
+      it 'Random Sequence, Length = ~1000' do
+        array = Array.new(1000) { rand(-1000000000..1000000000) }
+        expect(min_abs_sum_of_two(array)).to be_a Integer
+      end
+    end
+  end
 end
