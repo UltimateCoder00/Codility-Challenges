@@ -13,16 +13,32 @@ describe 'MinAbsSumOfTwo' do
   end
 
   describe 'Correctness Tests' do
-    it 'Extreme_single' do
-      expect(min_abs_sum_of_two([-1000000000])).to eq 2000000000
+    context 'Extreme_single' do
+      it 'Sequences Of 1 Elements 1' do
+        expect(min_abs_sum_of_two([-1000000000])).to eq 2000000000
+      end
+
+      it 'Sequences Of 1 Elements 2' do
+        expect(min_abs_sum_of_two([0])).to eq 0
+      end
+
+      it 'Sequences Of 1 Elements 3' do
+        expect(min_abs_sum_of_two([1000000000])).to eq 2000000000
+      end
     end
 
-    it 'Extreme_single' do
-      expect(min_abs_sum_of_two([0])).to eq 0
-    end
+    context 'Extreme_double' do
+      it 'Sequences Of 2 Elements 1' do
+        expect(min_abs_sum_of_two([-1000000000, 1000000000])).to eq 0
+      end
 
-    it 'Extreme_single' do
-      expect(min_abs_sum_of_two([1000000000])).to eq 2000000000
+      it 'Sequences Of 2 Elements 2' do
+        expect(min_abs_sum_of_two([-1000000000, -999999999])).to eq 1999999998
+      end
+
+      it 'Sequences Of 2 Elements 3' do
+        expect(min_abs_sum_of_two([-98, 99])).to eq 1
+      end
     end
   end
 end
