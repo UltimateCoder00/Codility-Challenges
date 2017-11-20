@@ -68,5 +68,12 @@ describe 'MinAbsSumOfTwo' do
         expect(min_abs_sum_of_two(array)).to be_a Integer
       end
     end
+
+    context 'Arithmetic_medium ' do
+      it 'Arithmetic Sequence, Length = ~10000' do
+        array = Array.new(10000) { rand(-120000..100009999) }
+        expect(min_abs_sum_of_two(array)).to be_a Integer
+      end
+    end
   end
 end
