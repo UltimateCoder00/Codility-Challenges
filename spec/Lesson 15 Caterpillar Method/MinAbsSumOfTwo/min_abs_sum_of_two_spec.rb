@@ -46,5 +46,11 @@ describe 'MinAbsSumOfTwo' do
         expect(min_abs_sum_of_two([8, 5, 3, 4, 6, 8])).to eq 6
       end
     end
+
+    context 'Negative_small' do
+      it 'Only Negative Numbers' do
+        expect(min_abs_sum_of_two([-8, -5, -4, -10, -12, -18])).to eq 8
+      end
+    end
   end
 end
