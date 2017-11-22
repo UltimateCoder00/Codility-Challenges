@@ -86,14 +86,28 @@
         null,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 92 Tasks From Indeed Prime 2016 College Coders Challenge/TennisTournament/tennis_tournament.rb": [
         1,
-        15,
+        18,
         null
       ]
     },
-    "timestamp": 1511363582
+    "timestamp": 1511363651
   }
 }
