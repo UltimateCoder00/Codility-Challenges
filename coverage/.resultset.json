@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "C:/Files/Dropbox/Projects/Codility-Challenges/spec/Lesson 16 Greedy Algorithms/TieRopes/tie_ropes_spec.rb": [
+      "C:/Files/Dropbox/Projects/Codility-Challenges/spec/Lesson 16 Greedy Algorithms/MaxNonoverlappingSegments/max_nonoverlapping_segments_spec.rb": [
         1,
         null,
         1,
@@ -13,12 +13,12 @@
         null,
         null
       ],
-      "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 16 Greedy Algorithms/TieRopes/tie_ropes.rb": [
+      "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 16 Greedy Algorithms/MaxNonoverlappingSegments/max_nonoverlapping_segments.rb": [
         1,
         null,
         null
       ]
     },
-    "timestamp": 1511276941
+    "timestamp": 1511361736
   }
 }
