@@ -86,5 +86,19 @@ describe 'TennisTournament' do
         expect(tennis_tournament(29901, 14949)).to eq 14949
       end
     end
+
+    context 'Odd_player_more_courts' do
+      it 'Odd Player More Courts 1' do
+        expect(tennis_tournament(5, 9)).to eq 2
+      end
+
+      it 'Odd Player More Courts 2' do
+        expect(tennis_tournament(29999, 15003)).to eq 14999
+      end
+
+      it 'Odd Player More Courts 3' do
+        expect(tennis_tournament(14999, 30000)).to eq 7499
+      end
+    end
   end
 end
