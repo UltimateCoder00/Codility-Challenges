@@ -100,5 +100,15 @@ describe 'TennisTournament' do
         expect(tennis_tournament(14999, 30000)).to eq 7499
       end
     end
+
+    context 'Everybody_plays' do
+      it 'Everybody Plays 1' do
+        expect(tennis_tournament(10, 5)).to eq 5
+      end
+
+      it 'Everybody Plays 2' do
+        expect(tennis_tournament(30000, 15000)).to eq 15000
+      end
+    end
   end
 end
