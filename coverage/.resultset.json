@@ -1,24 +1,37 @@
 {
   "RSpec": {
     "coverage": {
-      "C:/Files/Dropbox/Projects/Codility-Challenges/spec/Lesson 16 Greedy Algorithms/MaxNonoverlappingSegments/max_nonoverlapping_segments_spec.rb": [
+      "C:/Files/Dropbox/Projects/Codility-Challenges/spec/Lesson 92 Tasks From Indeed Prime 2016 College Coders Challenge/ArrayRecovery/array_recovery_spec.rb": [
+
+      ],
+      "C:/Files/Dropbox/Projects/Codility-Challenges/spec/Lesson 92 Tasks From Indeed Prime 2016 College Coders Challenge/DiamondsCount/diamonds_court_spec.rb": [
+
+      ],
+      "C:/Files/Dropbox/Projects/Codility-Challenges/spec/Lesson 92 Tasks From Indeed Prime 2016 College Coders Challenge/SocksLaundering/socks_laundering_spec.rb": [
+
+      ],
+      "C:/Files/Dropbox/Projects/Codility-Challenges/spec/Lesson 92 Tasks From Indeed Prime 2016 College Coders Challenge/TennisTournament/tennis_tournament_spec.rb": [
         1,
         null,
         1,
         null,
         1,
+        1,
+        1,
+        null,
+        null,
         1,
         1,
         null,
         null,
         null
       ],
-      "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 16 Greedy Algorithms/MaxNonoverlappingSegments/max_nonoverlapping_segments.rb": [
+      "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 92 Tasks From Indeed Prime 2016 College Coders Challenge/TennisTournament/tennis_tournament.rb": [
         1,
         null,
         null
       ]
     },
-    "timestamp": 1511361814
+    "timestamp": 1511362889
   }
 }
