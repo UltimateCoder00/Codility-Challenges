@@ -110,5 +110,23 @@ describe 'TennisTournament' do
         expect(tennis_tournament(30000, 15000)).to eq 15000
       end
     end
+
+    context 'Random_tests' do
+      it 'Random Test 1' do
+        expect(tennis_tournament(1, 1)).to eq 0
+      end
+
+      it 'Random Test 2' do
+        expect(tennis_tournament(1, 3)).to eq 0
+      end
+
+      it 'Random Test 3' do
+        expect(tennis_tournament(29330, 18815)).to eq 14665
+      end
+
+      it 'Random Test 4' do
+        expect(tennis_tournament(29997, 29990)).to eq 14998
+      end
+    end
   end
 end
