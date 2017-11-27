@@ -32,5 +32,11 @@ describe 'CountNonDivisible' do
         expect(count_non_divisible([2,4])).to eq [1,0]
       end
     end
+
+    context 'Simple' do
+      it 'Simples Tests' do
+        expect(count_non_divisible([6,7,2,1,4,7,4,4,1,8,10,15])).to eq [8,8,9,10,6,8,6,6,10,5,8,9]
+      end
+    end
   end
 end
