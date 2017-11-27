@@ -8,7 +8,7 @@ describe 'CountNonDivisible' do
     end
   end
 
-  describe 'Correctness Test' do
+  describe 'Correctness Tests' do
     context 'Extreme_simple' do
       it 'Extreme Simple 1' do
         expect(count_non_divisible([2])).to eq [0]
@@ -83,6 +83,20 @@ describe 'CountNonDivisible' do
                         37, 37]
 
         expect(count_non_divisible(array)).to eq output_array
+      end
+    end
+  end
+
+  describe 'Performance Tests' do
+    context 'Medium_random' do
+      it 'Medium, Random Numbers Length = 5,000 1' do
+        array = Array.new(5000) { rand(1..10000) }
+        expect(array).to be_a Array
+      end
+
+      it 'Medium, Random Numbers Length = 5,000 2' do
+        array = Array.new(5000) { rand(1..10000) }
+        expect(array).to be_a Array
       end
     end
   end
