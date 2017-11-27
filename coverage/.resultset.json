@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "C:/Files/Dropbox/Projects/Codility-Challenges/spec/Lesson 14 Binary Search Algorithm/MinMaxDivision/min_max_division_spec.rb": [
+      "C:/Files/Dropbox/Projects/Codility-Challenges/spec/Lesson 11 Sieve Of Eratosthenes/CountNonDivisible/count_non_divisible_spec.rb": [
         1,
         null,
         1,
@@ -13,15 +13,12 @@
         null,
         null
       ],
-      "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 14 Binary Search Algorithm/MinMaxDivision/min_max_division.rb": [
+      "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 11 Sieve Of Eratosthenes/CountNonDivisible/count_non_divisible.rb": [
         1,
         null,
         null
-      ],
-      "C:/Files/Dropbox/Projects/Codility-Challenges/spec/Lesson 14 Binary Search Algorithm/NailingPlanks/nailing_planks_spec.rb": [
-
       ]
     },
-    "timestamp": 1511533010
+    "timestamp": 1511793482
   }
 }
