@@ -18,5 +18,19 @@ describe 'CountNonDivisible' do
         expect(count_non_divisible([1]*9)).to eq [0]*9
       end
     end
+
+    context 'Double' do
+      it 'Two Elements 1' do
+        expect(count_non_divisible([3,4])).to eq [1,1]
+      end
+
+      it 'Two Elements 2' do
+        expect(count_non_divisible([4,4])).to eq [0,0]
+      end
+
+      it 'Two Elements 3' do
+        expect(count_non_divisible([2,4])).to eq [1,0]
+      end
+    end
   end
 end
