@@ -38,5 +38,11 @@ describe 'CountNonDivisible' do
         expect(count_non_divisible([6,7,2,1,4,7,4,4,1,8,10,15])).to eq [8,8,9,10,6,8,6,6,10,5,8,9]
       end
     end
+
+    context 'Primes' do
+      it 'Prime Numbers' do
+        expect(count_non_divisible([2,2,2,2,2,2,3,5,7,11,13,17,19,23,29])).to eq [9,9,9,9,9,9,14,14,14,14,14,14,14,14,14]
+      end
+    end
   end
 end
