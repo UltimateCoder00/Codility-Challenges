@@ -99,5 +99,17 @@ describe 'CountNonDivisible' do
         expect(array).to be_a Array
       end
     end
+
+    context 'Large_range' do
+      it '1, 2, ..., N, Length = ~20,000 1' do
+        array = Array.new(20000) { rand(1..20000) }
+        expect(array).to be_a Array
+      end
+
+      it '1, 2, ..., N, Length = ~20,000 2' do
+        array = Array.new(20000) { rand(1..20000) }
+        expect(array).to be_a Array
+      end
+    end
   end
 end
