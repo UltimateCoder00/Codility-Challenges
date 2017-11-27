@@ -91,53 +91,53 @@ describe 'CountNonDivisible' do
     context 'Medium_random' do
       it 'Medium, Random Numbers Length = 5,000 1' do
         array = Array.new(5000) { rand(1..10000) }
-        expect(array).to be_a Array
+        expect(count_non_divisible(array)).to be_a Array
       end
 
       it 'Medium, Random Numbers Length = 5,000 2' do
         array = Array.new(5000) { rand(1..1000) }
-        expect(array).to be_a Array
+        expect(count_non_divisible(array)).to be_a Array
       end
     end
 
     context 'Large_range' do
       it '1, 2, ..., N, Length = ~20,000 1' do
         array = Array.new(20000) { rand(1..20000) }
-        expect(array).to be_a Array
+        expect(count_non_divisible(array)).to be_a Array
       end
 
       it '1, 2, ..., N, Length = ~20,000 2' do
         array = Array.new(20000) { rand(1..10000) }
-        expect(array).to be_a Array
+        expect(count_non_divisible(array)).to be_a Array
       end
     end
 
     context 'Large_random' do
       it 'Large, Random Numbers, Length = ~30,000 1' do
         array = Array.new(30000) { rand(1..60000) }
-        expect(array).to be_a Array
+        expect(count_non_divisible(array)).to be_a Array
       end
 
       it 'Large, Random Numbers, Length = ~30,000 2' do
         array = Array.new(30000) { rand(59898..59998) }
-        expect(array).to be_a Array
+        expect(count_non_divisible(array)).to be_a Array
       end
     end
 
     context 'Large_extreme' do
       it 'Large, All The Same Values, Length = 50,000 1' do
         array = [100000]*50000
-        expect(array).to be_a Array
+        expect(count_non_divisible(array)).to be_a Array
       end
 
       it 'Large, All The Same Values, Length = 50,000 2' do
         array = Array.new(30000) { rand(1..3) }
-        expect(array).to be_a Array
+        expect(count_non_divisible(array)).to be_a Array
       end
 
       it 'Large, All The Same Values, Length = 50,000 3' do
         array = Array.new(40000) { rand(2..16) }
-        expect(array).to be_a Array
+        expect(count_non_divisible(array)).to be_a Array
       end
     end
   end
