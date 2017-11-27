@@ -95,7 +95,7 @@ describe 'CountNonDivisible' do
       end
 
       it 'Medium, Random Numbers Length = 5,000 2' do
-        array = Array.new(5000) { rand(1..10000) }
+        array = Array.new(5000) { rand(1..1000) }
         expect(array).to be_a Array
       end
     end
@@ -107,7 +107,19 @@ describe 'CountNonDivisible' do
       end
 
       it '1, 2, ..., N, Length = ~20,000 2' do
-        array = Array.new(20000) { rand(1..20000) }
+        array = Array.new(20000) { rand(1..10000) }
+        expect(array).to be_a Array
+      end
+    end
+
+    context 'Large_random' do
+      it 'Large, Random Numbers, Length = ~30,000 1' do
+        array = Array.new(30000) { rand(1..60000) }
+        expect(array).to be_a Array
+      end
+
+      it 'Large, Random Numbers, Length = ~30,000 2' do
+        array = Array.new(30000) { rand(59898..59998) }
         expect(array).to be_a Array
       end
     end
