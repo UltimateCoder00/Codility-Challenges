@@ -123,5 +123,22 @@ describe 'CountNonDivisible' do
         expect(array).to be_a Array
       end
     end
+
+    context 'Large_extreme' do
+      it 'Large, All The Same Values, Length = 50,000 1' do
+        array = [100000]*50000
+        expect(array).to be_a Array
+      end
+
+      it 'Large, All The Same Values, Length = 50,000 2' do
+        array = Array.new(30000) { rand(1..3) }
+        expect(array).to be_a Array
+      end
+
+      it 'Large, All The Same Values, Length = 50,000 3' do
+        array = Array.new(40000) { rand(2..16) }
+        expect(array).to be_a Array
+      end
+    end
   end
 end
