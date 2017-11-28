@@ -39,5 +39,27 @@ describe 'Brackets' do
         expect(brackets("")).to eq 1
       end
     end
+
+    context 'Simple_grouped' do
+      it 'Simple Grouped Positive And Negative Test, Length=22 1' do
+        expect(brackets("()(()())((()())(()()))")).to eq 1
+      end
+
+      it 'Simple Grouped Positive And Negative Test, Length=22 2' do
+        expect(brackets("()(()()(((()())(()()))")).to eq 0
+      end
+
+      it 'Simple Grouped Positive And Negative Test, Length=22 3' do
+        expect(brackets(")(")).to eq 0
+      end
+
+      it 'Simple Grouped Positive And Negative Test, Length=22 4' do
+        expect(brackets("}{")).to eq 0
+      end
+
+      it 'Simple Grouped Positive And Negative Test, Length=22 5' do
+        expect(brackets("({{({}[]{})}}[]{})")).to eq 1
+      end
+    end
   end
 end
