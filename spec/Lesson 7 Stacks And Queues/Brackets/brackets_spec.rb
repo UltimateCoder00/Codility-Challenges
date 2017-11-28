@@ -94,5 +94,17 @@ describe 'Brackets' do
         expect(brackets("()")).to be_a Integer
       end
     end
+
+    context 'Large_full_ternary_tree' do
+      it 'Tree Of The Form T=(TTT) And Depth 11, Length=177K+' do
+        s = ''
+
+        177146.times do
+          s << ['(', '[', '{', ')', ']', '}'].sample
+        end
+
+        expect(brackets(s)).to be_a Integer
+      end
+    end
   end
 end
