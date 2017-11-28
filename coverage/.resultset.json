@@ -38,11 +38,17 @@
         null,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 7 Stacks And Queues/Brackets/brackets.rb": [
         1,
-        7,
+        8,
         null,
         7,
         7,
@@ -87,6 +93,6 @@
 
       ]
     },
-    "timestamp": 1511888368
+    "timestamp": 1511888440
   }
 }

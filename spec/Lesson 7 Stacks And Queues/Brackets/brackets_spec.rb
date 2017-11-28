@@ -33,5 +33,11 @@ describe 'Brackets' do
         expect(brackets("{{{{")).to eq 0
       end
     end
+
+    context 'Empty' do
+      it 'Empty String' do
+        expect(brackets("")).to eq 1
+      end
+    end
   end
 end
