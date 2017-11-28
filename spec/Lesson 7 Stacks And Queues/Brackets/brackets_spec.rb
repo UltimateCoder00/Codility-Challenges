@@ -64,6 +64,22 @@ describe 'Brackets' do
   end
 
   describe 'Performance Tests' do
+    context 'Large1' do
+      it 'Simple Large Positive Test, 100K ("s followed by 100K )"s' do
+        s = '('*100000 + ')'*100000
+        expect(brackets(s)).to be_a Integer
+      end
+
+      it ')(' do
+        expect(brackets(")(")).to be_a Integer
+      end
+
+      it 'Simple Large Positive Test, 7006 ("s followed by 7006 )"s' do
+        s = '('*7006 + ')'*7006
+        expect(brackets(s)).to be_a Integer
+      end
+    end
+
     context 'Large2' do
       it 'Simple Large Negative Test, 10K+1 ("s Followed By 10K )"s' do
         s = '('*10001 + ')'*10000
