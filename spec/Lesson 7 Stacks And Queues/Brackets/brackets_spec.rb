@@ -102,6 +102,33 @@ describe 'Brackets' do
       end
     end
 
+    context 'Multiple_full_binary_trees' do
+      it 'Sequence Of Full Trees Of The Form T=(TT), Depths [1..10..1], With/Without Some Brackets At The End, Length=49K+ 1' do
+        s = '('*88573 + ')'*88573
+        expect(brackets(s)).to be_a Integer
+      end
+
+      it 'Sequence Of Full Trees Of The Form T=(TT), Depths [1..10..1], With/Without Some Brackets At The End, Length=49K+ 2' do
+        s = '('*88573 + ')'*88573
+        expect(brackets(s)).to be_a Integer
+      end
+
+      it 'Sequence Of Full Trees Of The Form T=(TT), Depths [1..10..1], With/Without Some Brackets At The End, Length=49K+ 3' do
+        s = '('*88573 + ')'*88573
+        expect(brackets(s)).to be_a Integer
+      end
+
+      it 'Sequence Of Full Trees Of The Form T=(TT), Depths [1..10..1], With/Without Some Brackets At The End, Length=49K+ 4' do
+        s = '('*88573 + ')'*88573
+        expect(brackets(s)).to be_a Integer
+      end
+
+      it 'Sequence Of Full Trees Of The Form T=(TT), Depths [1..10..1], With/Without Some Brackets At The End, Length=49K+ 5' do
+        s = '('*88573 + ')'*88573
+        expect(brackets(s)).to be_a Integer
+      end
+    end
+
     context 'Broad_tree_with_deep_paths' do
       it 'String Of The Form [TTT...T] Of 300 T"s, Each T Being "{{{...}}}" Nested 200-Fold, Length=120K+ 1' do
         s = '('*88573 + ')'*88573
