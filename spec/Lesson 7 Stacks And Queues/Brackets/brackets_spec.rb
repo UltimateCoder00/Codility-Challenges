@@ -101,5 +101,17 @@ describe 'Brackets' do
         expect(brackets(s)).to be_a Integer
       end
     end
+
+    context 'Broad_tree_with_deep_paths' do
+      it 'String Of The Form [TTT...T] Of 300 T"s, Each T Being "{{{...}}}" Nested 200-Fold, Length=120K+ 1' do
+        s = '('*88573 + ')'*88573
+        expect(brackets(s)).to be_a Integer
+      end
+
+      it 'String Of The Form [TTT...T] Of 300 T"s, Each T Being "{{{...}}}" Nested 200-Fold, Length=120K+ 2' do
+        s = '('*88573 + ')'*88573
+        expect(brackets(s)).to be_a Integer
+      end
+    end
   end
 end
