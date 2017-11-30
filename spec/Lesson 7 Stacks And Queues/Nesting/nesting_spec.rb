@@ -41,5 +41,19 @@ describe 'Nesting' do
         expect(nesting(")(")).to eq 0
       end
     end
+
+    context 'Small_random' do
+      it 'Small Random 1' do
+        expect(nesting("())((((()())())()))(")).to eq 0
+      end
+
+      it 'Small Random 2' do
+        expect(nesting("()()()(()(())()())()")).to eq 1
+      end
+
+      it 'Small Random 3' do
+        expect(nesting(")())))())(((((()()()")).to eq 0
+      end
+    end
   end
 end
