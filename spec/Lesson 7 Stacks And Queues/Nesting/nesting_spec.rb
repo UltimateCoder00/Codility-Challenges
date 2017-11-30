@@ -11,7 +11,7 @@ describe 'Nesting' do
     end
   end
 
-  describe 'Example Tests' do
+  describe 'Correctness Tests' do
     context 'Negative_match' do
       it 'Invalid Structure, But The Number Of Parentheses Matches 1' do
         expect(nesting("))((")).to eq 0
@@ -19,6 +19,12 @@ describe 'Nesting' do
 
       it 'Invalid Structure, But The Number Of Parentheses Matches 2' do
         expect(nesting("())(()")).to eq 0
+      end
+    end
+
+    context 'Empty' do
+      it 'Empty String' do
+        expect(nesting("")).to eq 1
       end
     end
   end

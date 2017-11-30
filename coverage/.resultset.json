@@ -26,11 +26,17 @@
         null,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 7 Stacks And Queues/Nesting/nesting.rb": [
         1,
-        4,
+        5,
         4,
         3,
         2,
@@ -57,6 +63,6 @@
         null
       ]
     },
-    "timestamp": 1512061514
+    "timestamp": 1512061585
   }
 }
