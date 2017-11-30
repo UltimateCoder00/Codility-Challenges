@@ -27,5 +27,19 @@ describe 'Nesting' do
         expect(nesting("")).to eq 1
       end
     end
+
+    context 'Simple_grouped' do
+      it 'Simple Grouped Positive Test, Length=22' do
+        expect(nesting("()(()())((()())(()()))")).to eq 1
+      end
+
+      it 'Simple Grouped Negative Test, Length=22' do
+        expect(nesting("()(()()(((()())(()()))")).to eq 0
+      end
+
+      it 'Simple Grouped Positive' do
+        expect(nesting(")(")).to eq 0
+      end
+    end
   end
 end
