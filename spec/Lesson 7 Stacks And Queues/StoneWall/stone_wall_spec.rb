@@ -9,8 +9,14 @@ describe 'StoneWall' do
 
   describe 'Correctness Tests' do
     context 'Simple1' do
-      it 'Example' do
+      it 'Simple 1' do
         expect(stone_wall([1,2,3,3,2,1])).to eq 3
+      end
+    end
+
+    context 'Simple2' do
+      it 'Simple 2' do
+        expect(stone_wall([1,1,1,2,3,3,2,1,2,3,3,3])).to eq 5
       end
     end
   end
