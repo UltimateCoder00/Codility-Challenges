@@ -90,5 +90,17 @@ describe 'StoneWall' do
         expect(stone_wall(array)).to be_a Integer
       end
     end
+
+    context 'Large_increasing_decreasing' do
+      it 'Large Increasing' do
+        array = [*1..100000]
+        expect(stone_wall(array)).to be_a Integer
+      end
+
+      it 'Large Decreasing' do
+        array = [*1..100000].reverse
+        expect(stone_wall(array)).to be_a Integer
+      end
+    end
   end
 end
