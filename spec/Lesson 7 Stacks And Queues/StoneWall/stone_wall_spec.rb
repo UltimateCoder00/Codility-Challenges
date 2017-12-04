@@ -54,4 +54,20 @@ describe 'StoneWall' do
       end
     end
   end
+
+  describe 'Performance Tests' do
+    context 'Medium1' do
+      it 'Medium 1' do
+        array = Array.new(200) { rand(1..5) }
+        expect(stone_wall(array)).to be_a Integer
+      end
+    end
+
+    context 'Medium2' do
+      it 'Medium 2' do
+        array = Array.new(500) { rand(1..10) }
+        expect(stone_wall(array)).to be_a Integer
+      end
+    end
+  end
 end
