@@ -83,5 +83,12 @@ describe 'StoneWall' do
         expect(stone_wall(array)).to be_a Integer
       end
     end
+
+    context 'Large_piramid' do
+      it 'Large_piramid' do
+        array = [*1..50000] + [*1..49999].reverse
+        expect(stone_wall(array)).to be_a Integer
+      end
+    end
   end
 end
