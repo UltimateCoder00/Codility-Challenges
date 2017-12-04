@@ -76,5 +76,12 @@ describe 'StoneWall' do
         expect(stone_wall(array)).to be_a Integer
       end
     end
+
+    context 'Medium4' do
+      it 'Medium 4' do
+        array = Array.new(500) { rand(1..100) }
+        expect(stone_wall(array)).to be_a Integer
+      end
+    end
   end
 end
