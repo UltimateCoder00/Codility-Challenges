@@ -109,5 +109,12 @@ describe 'StoneWall' do
         expect(stone_wall(array)).to be_a Integer
       end
     end
+
+    context 'Large_up_to_100' do
+      it 'Large Up To 100' do
+        array = Array.new(100000) { rand(1..100) }
+        expect(stone_wall(array)).to be_a Integer
+      end
+    end
   end
 end
