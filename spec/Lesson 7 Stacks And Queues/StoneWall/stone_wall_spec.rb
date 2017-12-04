@@ -35,5 +35,23 @@ describe 'StoneWall' do
         expect(stone_wall([2,3,2,1])).to eq 3
       end
     end
+
+    context 'Boundary_cases' do
+      it 'Boundary_cases 1' do
+        expect(stone_wall([1])).to eq 1
+      end
+
+      it 'Boundary_cases 2' do
+        expect(stone_wall([1,1,1])).to eq 1
+      end
+
+      it 'Boundary_cases 3' do
+        expect(stone_wall([1000000000])).to eq 1
+      end
+
+      it 'Boundary_cases 4' do
+        expect(stone_wall([1,1000000000,1])).to eq 2
+      end
+    end
   end
 end
