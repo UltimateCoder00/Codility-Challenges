@@ -25,5 +25,15 @@ describe 'StoneWall' do
         expect(stone_wall([2,5,1,4,6,7,9,10,1])).to eq 8
       end
     end
+
+    context 'Simple4' do
+      it 'Simple4 1' do
+        expect(stone_wall([3,2,1])).to eq 3
+      end
+
+      it 'Simple4 2' do
+        expect(stone_wall([2,3,2,1])).to eq 3
+      end
+    end
   end
 end
