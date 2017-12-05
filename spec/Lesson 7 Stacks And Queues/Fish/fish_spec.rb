@@ -84,7 +84,7 @@ describe 'Fish' do
       end
     end
 
-    context 'Medium_random' do
+    context 'Large_random' do
       it 'Small Medium Test, N = ~100,000' do
         array1 = Array.new(100000) { rand(999000000..1000000000)}
         array2 = Array.new(100000) { rand(0..1)}
