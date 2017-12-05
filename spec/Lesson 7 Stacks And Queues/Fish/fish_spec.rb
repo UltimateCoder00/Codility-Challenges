@@ -74,4 +74,14 @@ describe 'Fish' do
       end
     end
   end
+
+  describe 'Performance Tests' do
+    context 'Medium_random' do
+      it 'Small Medium Test, N = ~5,000' do
+        array1 = Array.new(5000) { rand(10000000..10010000)}
+        array2 = Array.new(5000) { rand(0..1)}
+        expect(fish(array1, array2)).to be_a Integer
+      end
+    end
+  end
 end
