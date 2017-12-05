@@ -107,5 +107,13 @@ describe 'Fish' do
         expect(fish(array1, array2)).to be_a Integer
       end
     end
+
+    context 'Extreme_range2' do
+      it 'All Fish Flowing In The Same Direction' do
+        array1 = Array.new(100000) { rand(990000000..1000000000)}
+        array2 = [0]*100000
+        expect(fish(array1, array2)).to be_a Integer
+      end
+    end
   end
 end
