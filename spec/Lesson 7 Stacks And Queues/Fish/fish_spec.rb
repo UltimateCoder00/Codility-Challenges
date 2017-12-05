@@ -91,5 +91,21 @@ describe 'Fish' do
         expect(fish(array1, array2)).to be_a Integer
       end
     end
+
+    context 'Extreme_range1' do
+      it 'All Except One Fish Flowing In The Same Direction 1' do
+        array1 = Array.new(100000) { rand(1..100001)}
+        array2 = [0]*99999
+        array2.insert(rand(0...99999), 1)
+        expect(fish(array1, array2)).to be_a Integer
+      end
+
+      it 'All Except One Fish Flowing In The Same Direction 2' do
+        array1 = Array.new(100000) { rand(1..100000)}
+        array2 = [1]*99999
+        array2.insert(rand(0...99999), 0)
+        expect(fish(array1, array2)).to be_a Integer
+      end
+    end
   end
 end
