@@ -38,19 +38,25 @@
         null,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 7 Stacks And Queues/Fish/fish.rb": [
         1,
-        7,
-        12,
-        null,
-        12,
-        26,
         8,
+        15,
+        null,
+        15,
+        44,
+        23,
+        7,
         5,
-        3,
-        3,
+        5,
         2,
         2,
         2,
@@ -61,13 +67,13 @@
         null,
         null,
         null,
-        12,
+        15,
         null,
         null,
-        7,
+        8,
         null
       ]
     },
-    "timestamp": 1512490919
+    "timestamp": 1512491063
   }
 }
