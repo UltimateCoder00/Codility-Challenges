@@ -83,5 +83,13 @@ describe 'Fish' do
         expect(fish(array1, array2)).to be_a Integer
       end
     end
+
+    context 'Medium_random' do
+      it 'Small Medium Test, N = ~100,000' do
+        array1 = Array.new(100000) { rand(999000000..1000000000)}
+        array2 = Array.new(100000) { rand(0..1)}
+        expect(fish(array1, array2)).to be_a Integer
+      end
+    end
   end
 end
