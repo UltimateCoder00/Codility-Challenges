@@ -39,5 +39,15 @@ describe 'Fish' do
         expect(fish([8,6,5,3,2,4,7], [1,1,1,0,0,1,1])).to eq 5
       end
     end
+
+    context 'Simple2' do
+      it 'Simple Test 1' do
+        expect(fish([8,6,5,3,2,4,7], [1,1,1,1,1,0,0])).to eq 1
+      end
+
+      it 'Simple Test 1' do
+        expect(fish([8,6,4,2,1,3,5], [1,1,1,1,1,0,0])).to eq 2
+      end
+    end
   end
 end
