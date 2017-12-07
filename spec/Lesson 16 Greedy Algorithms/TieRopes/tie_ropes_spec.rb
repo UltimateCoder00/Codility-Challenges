@@ -52,5 +52,15 @@ describe 'TieRopes' do
         expect(tie_ropes(3, [1,1])).to eq 0
       end
     end
+
+    context 'Small_functional' do
+      it 'Small Functional Tests 1' do
+        expect(tie_ropes(5, [1,2,1,5,2,3,1,1,1,1])).to eq 2
+      end
+
+      it 'Small Functional Tests 2' do
+        expect(tie_ropes(10, [3,3,2,1,2,1,1,1,8,12])).to eq 3
+      end
+    end
   end
 end
