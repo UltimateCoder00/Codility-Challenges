@@ -116,5 +116,25 @@ describe 'TieRopes' do
         expect(tie_ropes(k, array)).to be_a Integer
       end
     end
+
+    context 'Large_random' do
+      it 'Large Range Test, Length = ~100,000 1' do
+        k = 55
+        array = Array.new(100000) { rand(1..10) }
+        expect(tie_ropes(k, array)).to be_a Integer
+      end
+
+      it 'Large Range Test, Length = ~100,000 2' do
+        k = 50000
+        array = [1]*100000
+        expect(tie_ropes(k, array)).to be_a Integer
+      end
+
+      it 'Large Range Test, Length = ~100,000 3' do
+        k = 2000
+        array = Array.new(100000) { rand(1..100000) }
+        expect(tie_ropes(k, array)).to be_a Integer
+      end
+    end
   end
 end
