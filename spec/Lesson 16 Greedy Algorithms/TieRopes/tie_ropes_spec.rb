@@ -136,5 +136,31 @@ describe 'TieRopes' do
         expect(tie_ropes(k, array)).to be_a Integer
       end
     end
+
+    context 'Large_answer' do
+      it 'Test With Large Answer, Length = ~100,000 1' do
+        k = 1000000000
+        array = [1000000000]*100000
+        expect(tie_ropes(k, array)).to be_a Integer
+      end
+
+      it 'Test With Large Answer, Length = ~100,000 2' do
+        k = 1
+        array = [1000000000]*100000
+        expect(tie_ropes(k, array)).to be_a Integer
+      end
+
+      it 'Test With Large Answer, Length = ~100,000 3' do
+        k = 1000000000
+        array = Array.new(80010) { rand(1..1000000000) }
+        expect(tie_ropes(k, array)).to be_a Integer
+      end
+
+      it 'Test With Large Answer, Length = ~100,000 4' do
+        k = 1000000000
+        array = Array.new(100000) { rand(1..1000000000) }
+        expect(tie_ropes(k, array)).to be_a Integer
+      end
+    end
   end
 end
