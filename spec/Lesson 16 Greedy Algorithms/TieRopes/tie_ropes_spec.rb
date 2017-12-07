@@ -95,4 +95,26 @@ describe 'TieRopes' do
       end
     end
   end
+
+  describe 'Performance Tests' do
+    context 'Medium_random' do
+      it 'Chaotic Medium Sequences Length = ~5,000 1' do
+        k = 1000000000
+        array = Array.new(5000) { rand(1..1000000000) }
+        expect(tie_ropes(k, array)).to be_a Integer
+      end
+
+      it 'Chaotic Medium Sequences Length = ~5,000 2' do
+        k = 10
+        array = Array.new(5000) { rand(1..2) }
+        expect(tie_ropes(k, array)).to be_a Integer
+      end
+
+      it 'Chaotic Medium Sequences Length = ~5,000 3' do
+        k = 500
+        array = Array.new(5000) { rand(1..2) }
+        expect(tie_ropes(k, array)).to be_a Integer
+      end
+    end
+  end
 end
