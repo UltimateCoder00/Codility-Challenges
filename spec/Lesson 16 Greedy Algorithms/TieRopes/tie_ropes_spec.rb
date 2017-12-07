@@ -4,7 +4,7 @@ describe 'TieRopes' do
 
   describe 'Example Test' do
     it 'Example' do
-      expect(tie_ropes(4, [1,2,3,4,1,1,3])).to eq 4
+      expect(tie_ropes(4, [1,2,3,4,1,1,3])).to eq 3
     end
   end
 end
