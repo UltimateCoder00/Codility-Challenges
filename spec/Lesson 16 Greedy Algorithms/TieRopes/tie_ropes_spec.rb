@@ -30,5 +30,27 @@ describe 'TieRopes' do
         expect(tie_ropes(2, [1])).to eq 0
       end
     end
+
+    context 'Double' do
+      it 'Two Elements 1' do
+        expect(tie_ropes(1000000000, [1000000000, 1000000000])).to eq 2
+      end
+
+      it 'Two Elements 2' do
+        expect(tie_ropes(1000000000, [1000000000, 999999999])).to eq 1
+      end
+
+      it 'Two Elements 3' do
+        expect(tie_ropes(2, [1,2])).to eq 1
+      end
+
+      it 'Two Elements 4' do
+        expect(tie_ropes(2, [2,1])).to eq 1
+      end
+
+      it 'Two Elements 5' do
+        expect(tie_ropes(3, [1,1])).to eq 0
+      end
+    end
   end
 end
