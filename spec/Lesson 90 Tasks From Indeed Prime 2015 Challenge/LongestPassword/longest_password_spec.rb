@@ -107,4 +107,14 @@ describe 'LongestPassword' do
       expect(longest_password("!a?d0 ad0 ?@0")).to eq 3
     end
   end
+
+  context 'Odd_length' do
+    it "It's Sufficient To Test Validity Of Characters And If Length Of Word Is Odd 1" do
+      expect(longest_password("ab0_00 abc_00 ab+000 ab+c00 0a00b 0ad0b 0ab? 04d?")).to eq 5
+    end
+
+    it "It's Sufficient To Test Validity Of Characters And If Length Of Word Is Odd 2" do
+      expect(longest_password("abc00 ab000 abc000 aded00")).to eq 5
+    end
+  end
 end
