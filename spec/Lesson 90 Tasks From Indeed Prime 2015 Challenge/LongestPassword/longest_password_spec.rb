@@ -154,4 +154,21 @@ describe 'LongestPassword' do
       expect(longest_password(s)).to eq 19
     end
   end
+
+  context 'large_random' do
+    it 'Random Tests 1' do
+      s = "776 G PIsyltL6i 267 nZ5C x1p X eci5h32 s9XSD9qYj4 2 Uik0accdKz Oe7DY58T8Q qBTSzosnS td5 F6 E3wtyc 2 13822 CDcG7 pHYG 0xVCi Rz7AqcN 6Kw KCfWD2oCAU EjkLHMP i77QOe nJ335 HI"
+      expect(longest_password(s)).to eq 9
+    end
+
+    it 'Random Tests 2' do
+      s = "G677XL`1 237516678 0dVh$W =<ejX+ 9sZ4 55h8L fiGfZ8BClM $\"tR `<#1|S[!O 9\"f>y 938 nUm=jJ\"v )7z@P6Lvem AgQdNTW/6~ 1 B> gZ77934 KDa0 [q 678y694T9 2r^g 08324 G)1k:c"
+      expect(longest_password(s)).to eq 9
+    end
+
+    it 'Random Tests 3' do
+      s = "6N{uz:tihNEO)qy\\]*utBvjPis2Rn@{Qvt4ha=czgY\\>AZe[l<xZ#UrJn`(LB+A\\<LLDVspn\";PWRL`'iI&wgXZ~QXP%[yU$![W0Z0A:Zp5%lTGISUK=gwZ/U*Oy)h,NL3_u4D]7up+z=U&d83:p6mm{K"
+      expect(longest_password(s)).to eq -1
+    end
+  end
 end
