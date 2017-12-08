@@ -79,4 +79,18 @@ describe 'LongestPassword' do
       expect(longest_password("d7K758nU1K42d214804s53oJC5r289w")).to eq 31
     end
   end
+
+  context 'Even_letters' do
+    it 'All Words Have Even Number Of Letters 1' do
+      expect(longest_password("abcd0 abcd00 abcd000 abcd0000")).to eq 7
+    end
+
+    it 'All Words Have Even Number Of Letters 2' do
+      expect(longest_password("9999 999 00 0")).to eq 3
+    end
+
+    it 'All Words Have Even Number Of Letters 3' do
+      expect(longest_password("!a?d8 ad8 ?@8")).to eq 3
+    end
+  end
 end
