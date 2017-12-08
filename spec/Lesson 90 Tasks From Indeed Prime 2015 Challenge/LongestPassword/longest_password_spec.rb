@@ -155,7 +155,7 @@ describe 'LongestPassword' do
     end
   end
 
-  context 'large_random' do
+  context 'Large_random' do
     it 'Random Tests 1' do
       s = "776 G PIsyltL6i 267 nZ5C x1p X eci5h32 s9XSD9qYj4 2 Uik0accdKz Oe7DY58T8Q qBTSzosnS td5 F6 E3wtyc 2 13822 CDcG7 pHYG 0xVCi Rz7AqcN 6Kw KCfWD2oCAU EjkLHMP i77QOe nJ335 HI"
       expect(longest_password(s)).to eq 9
@@ -169,6 +169,33 @@ describe 'LongestPassword' do
     it 'Random Tests 3' do
       s = "6N{uz:tihNEO)qy\\]*utBvjPis2Rn@{Qvt4ha=czgY\\>AZe[l<xZ#UrJn`(LB+A\\<LLDVspn\";PWRL`'iI&wgXZ~QXP%[yU$![W0Z0A:Zp5%lTGISUK=gwZ/U*Oy)h,NL3_u4D]7up+z=U&d83:p6mm{K"
       expect(longest_password(s)).to eq -1
+    end
+  end
+
+  context 'Maximum' do
+    it 'Biggest Possible Tests With Mixed Types Of Words 1' do
+      s = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 5 a444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444"
+      expect(longest_password(s)).to eq 1
+    end
+
+    it 'Biggest Possible Tests With Mixed Types Of Words 2' do
+      s = "{#Ou +/ _;A9H+H{\\{ 5VD74 CTe7Dr1d8 x! i l5U52 3K530eS4V |S([XiPk 9 pd,Rr~yp 840 gT K,g1C%S uBS90N M'C~$V* $:=LYg\\ 8968q1O 77 768 ^ 9 3 =,tD !~8z]Vk#qc eTMd]`\"7C %p2?$u 9 ,GYAR, \\f&E 709 b,T Oq Wyho;0"
+      expect(longest_password(s)).to eq 9
+    end
+
+    it 'Biggest Possible Tests With Mixed Types Of Words 3' do
+      s = "5i2ajG2Lj1ysypjRMH1tzEvZLv33Icq1rYJCL5DcaxbviGP5Mf8ADcdOsdaTzsQr5wa2Iu9e8FpuuuvHVrkPGk0EdnnlSNeYcLxeughrZy5wJe0IflYZ2TiX9p3YWXFHsvbhfFC1PGiXIY8aKUV9oozop9MbFvz4LatOyKZ4GLyeK5Zd0xvIcWXBDbZ8AlQso7CXXG79"
+      expect(longest_password(s)).to eq -1
+    end
+
+    it 'Biggest Possible Tests With Mixed Types Of Words 3' do
+      s = "892o99889455807767e838080323163L4096322617471G911F7963T0354WP102C012268326Rh9Z7990X843n2d44U99662950824037Wk604455179rL537z87175812396676e33425g30p845j7E9553237139E846821611480f3M5668327999516K588751"
+      expect(longest_password(s)).to eq 199
+    end
+
+    it 'Biggest Possible Tests With Mixed Types Of Words 3' do
+      s = "}@6056998902196414120277695348331842561390371380189 U4D051178100N99x1Zj4KmN5I4E2666304C910d8D ~(},<%*:(-;-}`-'[\\#^qX0N9yMYeuXl4tv92A4Pm02k5hAvYR7J4 6R22z5855r9c20864p9t870b7i2OV9908cm652881%\"\"^+\"*,"
+      expect(longest_password(s)).to eq 41
     end
   end
 end
