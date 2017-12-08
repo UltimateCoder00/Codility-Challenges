@@ -117,4 +117,20 @@ describe 'LongestPassword' do
       expect(longest_password("abc00 ab000 abc000 aded00")).to eq 5
     end
   end
+
+  context 'All_alphanumerical' do
+    it 'All Words Contain Only Alphanumerical Characters 1' do
+      expect(longest_password("alsdk98jfla a234df38234 a49g3 1283asLd asdf48")).to eq 5
+    end
+
+    it 'All Words Contain Only Alphanumerical Characters 2' do
+      s = "ad8zSozu5e 3lG1G IDBCHL9Ppb 438 zTi5C 2mM4 uM2hci Qvq zR10177Sh z6eo28 JyVIXRYhvz 232 6t6lRA296 9 z"
+      expect(longest_password(s)).to eq 9
+    end
+
+    it 'All Words Contain Only Alphanumerical Characters 3' do
+      s = "495H7r4 621 9Vcy9w7 3911443 08745724 5647 142 28 9963519 056 18883977 3188641556 780949 097M7771C p28n8RU68 81848028 16"
+      expect(longest_password(s)).to eq 9
+    end
+  end
 end
