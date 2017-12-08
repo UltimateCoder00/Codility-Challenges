@@ -27,4 +27,26 @@ describe 'LongestPassword' do
       end
     end
   end
+
+  context 'One_character' do
+    it 'One Character Words 1' do
+      expect(longest_password("a")).to eq -1
+    end
+
+    it 'One Character Words 2' do
+      expect(longest_password("0")).to eq 1
+    end
+
+    it 'One Character Words 3' do
+      expect(longest_password("#")).to eq -1
+    end
+
+    it 'One Character Words 4' do
+      expect(longest_password("[ F")).to eq -1
+    end
+
+    it 'One Character Words 5' do
+      expect(longest_password("W i k ? 5 + a")).to eq 1
+    end
+  end
 end

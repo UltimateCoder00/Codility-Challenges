@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "C:/Files/Dropbox/Projects/Codility-Challenges/spec/Lesson 16 Greedy Algorithms/TieRopes/tie_ropes_spec.rb": [
+      "C:/Files/Dropbox/Projects/Codility-Challenges/spec/Lesson 90 Tasks From Indeed Prime 2015 Challenge/LongestPassword/longest_password_spec.rb": [
         1,
         null,
         1,
@@ -30,42 +30,48 @@
         1,
         null,
         null,
+        null,
+        null,
+        1,
         1,
         1,
         null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
         null,
         null,
         null
       ],
-      "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 16 Greedy Algorithms/TieRopes/tie_ropes.rb": [
+      "C:/Files/Dropbox/Projects/Codility-Challenges/lib/Lesson 90 Tasks From Indeed Prime 2015 Challenge/LongestPassword/longest_password.rb": [
         1,
-        6,
+        10,
+        19,
         null,
-        6,
-        12,
-        null,
-        12,
-        4,
-        4,
+        3,
         null,
         null,
-        8,
-        null,
-        8,
+        1,
+        19,
+        19,
+        19,
+        10,
         7,
-        7,
-        null,
-        7,
-        5,
-        5,
-        null,
-        null,
-        null,
-        null,
-        6,
         null
       ]
     },
-    "timestamp": 1512665627
+    "timestamp": 1512742977
   }
 }
