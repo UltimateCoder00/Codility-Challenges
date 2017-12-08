@@ -49,4 +49,34 @@ describe 'LongestPassword' do
       expect(longest_password("W i k ? 5 + a")).to eq 1
     end
   end
+
+  context 'One_word' do
+    it 'Tests That Contains One Word only 1' do
+      expect(longest_password("zaq123edc")).to eq 9
+    end
+
+    it 'Tests That Contains One Word only 2' do
+      expect(longest_password("zaq!2#edc")).to eq -1
+    end
+
+    it 'Tests That Contains One Word only 3' do
+      expect(longest_password("zxcasdqwe123")).to eq -1
+    end
+
+    it 'Tests That Contains One Word only 4' do
+      expect(longest_password("4adf4dsk45")).to eq -1
+    end
+
+    it 'Tests That Contains One Word only 5' do
+      expect(longest_password("qWeRtYuIoP97531")).to eq 15
+    end
+
+    it 'Tests That Contains One Word only 6' do
+      expect(longest_password('<\"w-w9@s&!^p>XWBqzDYuUBPF:Z@P1')).to eq -1
+    end
+
+    it 'Tests That Contains One Word only 7' do
+      expect(longest_password("d7K758nU1K42d214804s53oJC5r289w")).to eq 31
+    end
+  end
 end
