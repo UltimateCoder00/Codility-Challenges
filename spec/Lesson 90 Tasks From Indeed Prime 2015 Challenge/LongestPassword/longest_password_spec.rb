@@ -133,4 +133,25 @@ describe 'LongestPassword' do
       expect(longest_password(s)).to eq 9
     end
   end
+
+  context 'Extra_characters' do
+    it 'Valid Passwords Joined With Some Invalid Characters 1' do
+      expect(longest_password("4 '(:,#>~_,!?_\\]=}|:*__?48tZXRQEmMyGpuEQeOQCG4bVnxk a0b")).to eq 3
+    end
+
+    it 'Valid Passwords Joined With Some Invalid Characters 2' do
+      s = '{(*\\U073m753M1p 7vzk9X3lloIGvutil yRdiV1SHymCMcCYJ8o4\"*{' + "`-\\,/LpU3vbT"
+      expect(longest_password(s)).to eq 17
+    end
+
+    it 'Valid Passwords Joined With Some Invalid Characters 3' do
+      s = "02864ex7p93DR1jGK0144C1132V )!~)_\\}|?-#0nnWWHRL40vZ2a4"
+      expect(longest_password(s)).to eq 27
+    end
+
+    it 'Valid Passwords Joined With Some Invalid Characters 4' do
+      s = "word_that_suits_requirements_when_we_omit_special_characters1 2another-word-with-special-characters correctAnswerr13579 always_bad_answer!"
+      expect(longest_password(s)).to eq 19
+    end
+  end
 end
