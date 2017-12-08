@@ -93,4 +93,18 @@ describe 'LongestPassword' do
       expect(longest_password("!a?d8 ad8 ?@8")).to eq 3
     end
   end
+
+  context 'Odd_digits' do
+    it 'All Words Have Odd Number Of Digits 1' do
+      expect(longest_password("ab000 abc000 abcd000 abcde000")).to eq 7
+    end
+
+    it 'All Words Have Odd Number Of Digits 2' do
+      expect(longest_password("0abd 0ab 0a 0")).to eq 3
+    end
+
+    it 'All Words Have Odd Number Of Digits 3' do
+      expect(longest_password("!a?d0 ad0 ?@0")).to eq 3
+    end
+  end
 end
