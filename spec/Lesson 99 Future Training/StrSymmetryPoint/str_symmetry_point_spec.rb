@@ -50,5 +50,19 @@ describe 'StrSymmetryPoint' do
         expect(str_symmetry_point("a")).to eq 0
       end
     end
+
+    context 'Three_chars' do
+      it '3 Characters (Multiple Runs) 1' do
+        expect(str_symmetry_point("abc")).to eq -1
+      end
+
+      it '3 Characters (Multiple Runs) 2' do
+        expect(str_symmetry_point("aba")).to eq 1
+      end
+
+      it '3 Characters (Multiple Runs) 3' do
+        expect(str_symmetry_point("aaa")).to eq 1
+      end
+    end
   end
 end
