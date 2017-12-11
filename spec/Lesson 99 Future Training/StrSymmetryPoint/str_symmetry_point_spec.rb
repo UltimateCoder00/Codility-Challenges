@@ -74,5 +74,11 @@ describe 'StrSymmetryPoint' do
         expect(str_symmetry_point("aaaaaaaaaaaaaaa")).to eq 7
       end
     end
+
+    context 'Alphabet_symmetric' do
+      it 'Nontrivial Symmetry, N = 51' do
+        expect(str_symmetry_point("abcdefghijklmnopqrstuvwxyzyxwvutsrqponmlkjihgfedcba")).to eq 25
+      end
+    end
   end
 end
