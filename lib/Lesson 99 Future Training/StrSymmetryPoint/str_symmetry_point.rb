@@ -28,6 +28,7 @@ def str_symmetry_point(s)
       last -= 1
       next
     else
+      return -1 if i < array.length / 2
       break
     end
   end
