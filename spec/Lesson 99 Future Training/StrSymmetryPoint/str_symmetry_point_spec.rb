@@ -64,5 +64,15 @@ describe 'StrSymmetryPoint' do
         expect(str_symmetry_point("aaa")).to eq 1
       end
     end
+
+    context 'Letters_a' do
+      it 'Letters "a" Only 1' do
+        expect(str_symmetry_point("aaaaaaaaaa")).to eq -1
+      end
+
+      it 'Letters "a" Only 2' do
+        expect(str_symmetry_point("aaaaaaaaaaaaaaa")).to eq 7
+      end
+    end
   end
 end
