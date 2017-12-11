@@ -80,5 +80,15 @@ describe 'StrSymmetryPoint' do
         expect(str_symmetry_point("abcdefghijklmnopqrstuvwxyzyxwvutsrqponmlkjihgfedcba")).to eq 25
       end
     end
+
+    context 'Nonsymmetric_inside' do
+      it 'Mismatch Close To The Middle, N = 43 1' do
+        expect(str_symmetry_point("abbaabbaabbaabbaabbaabcabbaabbaabbaabbaabba")).to eq -1
+      end
+
+      it 'Mismatch Close To The Middle, N = 43 2' do
+        expect(str_symmetry_point("barakarab")).to eq 4
+      end
+    end
   end
 end
