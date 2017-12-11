@@ -22,5 +22,19 @@ describe 'StrSymmetryPoint' do
         expect(str_symmetry_point("a")).to eq 0
       end
     end
+
+    context 'Symmetric' do
+      it 'Short Symmetric Strings 1' do
+        expect(str_symmetry_point("ala")).to eq 1
+      end
+
+      it 'Short Symmetric Strings 2' do
+        expect(str_symmetry_point("abba")).to eq -1
+      end
+
+      it 'Short Symmetric Strings 3' do
+        expect(str_symmetry_point("steponopets")).to eq 5
+      end
+    end
   end
 end
