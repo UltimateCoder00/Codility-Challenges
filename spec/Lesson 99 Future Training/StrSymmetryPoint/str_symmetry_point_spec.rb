@@ -139,5 +139,21 @@ describe 'StrSymmetryPoint' do
         expect(str_symmetry_point(s)).to be_a Integer
       end
     end
+
+    context 'Big_nonsymmetric' do
+      it 'Nonsymmetric String, N = ~1M 1' do
+        s = "abcde"*1000000 + "cba"
+        expect(str_symmetry_point(s)).to be_a Integer
+      end
+
+      it 'Nonsymmetric String, N = ~1M 2' do
+        s = "y" + "abcde"*1000000 + "ba"
+        expect(str_symmetry_point(s)).to be_a Integer
+      end
+
+      it 'Nonsymmetric String, N = ~1M 3' do
+        expect(str_symmetry_point("abbba")).to be_a Integer
+      end
+    end
   end
 end
