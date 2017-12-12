@@ -132,5 +132,12 @@ describe 'StrSymmetryPoint' do
         expect(str_symmetry_point(s)).to be_a Integer
       end
     end
+
+    context 'Large_symmetric3' do
+      it 'Symmetric String, N=1M+' do
+        s = "abcde"*500000 + "aaa" + "edcba"*500000
+        expect(str_symmetry_point(s)).to be_a Integer
+      end
+    end
   end
 end
