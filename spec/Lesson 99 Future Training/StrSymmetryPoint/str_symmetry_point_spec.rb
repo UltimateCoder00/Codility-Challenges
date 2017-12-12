@@ -155,5 +155,37 @@ describe 'StrSymmetryPoint' do
         expect(str_symmetry_point("abbba")).to be_a Integer
       end
     end
+
+    context 'Extreme_size' do
+      it 'N = ~2M 1' do
+        s = "a"*1999993
+        expect(str_symmetry_point(s)).to be_a Integer
+      end
+
+      it 'N = ~2M 2' do
+        s = "b"*1999993
+        expect(str_symmetry_point(s)).to be_a Integer
+      end
+
+      it 'N = ~2M 3' do
+        s = "a"*1999991
+        expect(str_symmetry_point(s)).to be_a Integer
+      end
+
+      it 'N = ~2M 4' do
+        s = "a"*2000000
+        expect(str_symmetry_point(s)).to be_a Integer
+      end
+
+      it 'N = ~2M 5' do
+        s = "b"*2000000
+        expect(str_symmetry_point(s)).to be_a Integer
+      end
+
+      it 'N = ~2M 6' do
+        s = "a"*1999999
+        expect(str_symmetry_point(s)).to be_a Integer
+      end
+    end
   end
 end
