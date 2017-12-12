@@ -101,4 +101,22 @@ describe 'StrSymmetryPoint' do
       end
     end
   end
+
+  describe 'Proformance Tests' do
+    context 'Large_nonsymmetric' do
+      it 'Nonsymmetric String, N = 100k+ + [aba]' do
+        s = "abcde"*20000 + "aba"
+        expect(str_symmetry_point(s)).to be_a Integer
+      end
+
+      it 'Nonsymmetric String, N = 100k+ + [aba]' do
+        s = "y" + "abcde"*19999 + "abcdaba"
+        expect(str_symmetry_point(s)).to be_a Integer
+      end
+
+      it 'One Character Strings' do
+        expect(str_symmetry_point("abuba")).to be_a Integer
+      end
+    end
+  end
 end
