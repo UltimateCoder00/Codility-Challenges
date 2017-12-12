@@ -121,7 +121,14 @@ describe 'StrSymmetryPoint' do
 
     context 'Large_symmetric1' do
       it 'Symmetric String, N=100k' do
-        s = "zzxxq"*10000 + "zzz" + "qxxzz"*10000 
+        s = "zzxxq"*10000 + "zzz" + "qxxzz"*10000
+        expect(str_symmetry_point(s)).to be_a Integer
+      end
+    end
+
+    context 'Large_symmetric2' do
+      it 'Symmetric String, N=200k' do
+        s = "a"*200001
         expect(str_symmetry_point(s)).to be_a Integer
       end
     end
