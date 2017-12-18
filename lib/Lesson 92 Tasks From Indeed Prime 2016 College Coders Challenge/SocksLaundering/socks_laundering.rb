@@ -1,7 +1,22 @@
 def socks_laundering(k, c, d)
+  count = 0
+
+  if k >= d.length
+    array = (c + d).sort
+
+    (array.length - 1).downto(1) do |i|
+      if array[i] == array[i-1]
+        array.delete_at(i)
+        array.delete_at(i-1)
+        count += 1
+      end
+    end
+
+    return count
+  end
+
   c.sort!
   d.sort!
-  count = 0
 
   (c.length - 1).downto(1) do |i|
     if c[i] == c[i-1]
@@ -25,5 +40,6 @@ def socks_laundering(k, c, d)
 
   return count + k if g.length >= k
   h = d - f - g
+
   count
 end
