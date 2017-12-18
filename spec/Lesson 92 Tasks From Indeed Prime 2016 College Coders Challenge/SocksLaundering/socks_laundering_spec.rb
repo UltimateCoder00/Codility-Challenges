@@ -76,5 +76,15 @@ describe 'SocksLaundering' do
         expect(socks_laundering(4, [2,3,4,5], [6,7,8,9])).to eq 0
       end
     end
+
+    context 'All_clean' do
+      it 'There Are No Dirty Socks Taken After Laundry 1' do
+        expect(socks_laundering(10, [1,1,2,2,3,3,7], [4,5,6])).to eq 3
+      end
+
+      it 'There Are No Dirty Socks Taken After Laundry 2' do
+        expect(socks_laundering(20, [2,2,2,2,9], [3,4,5,6,7])).to eq 2
+      end
+    end
   end
 end
