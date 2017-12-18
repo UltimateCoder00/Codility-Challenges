@@ -38,5 +38,19 @@ describe 'SocksLaundering' do
         expect(socks_laundering(0, [2,2,2,2,4], [3,1,3,3])).to eq 2
       end
     end
+
+    context 'Odd_clean_with_odd_dirty' do
+      it 'Tests Causing Solution That"s Only Pairing Clean Socks Of Odd Count With Dirty Socks Of Odd Count To Fail 1' do
+        expect(socks_laundering(1, [1,1,3], [3,3,2])).to eq 2
+      end
+
+      it 'Tests Causing Solution That"s Only Pairing Clean Socks Of Odd Count With Dirty Socks Of Odd Count To Fail 2' do
+        expect(socks_laundering(3, [2,3,4], [2,2,3,3,4,4])).to eq 3
+      end
+
+      it 'Tests Causing Solution That"s Only Pairing Clean Socks Of Odd Count With Dirty Socks Of Odd Count To Fail 3' do
+        expect(socks_laundering(5, [2,3,4], [2,2,2,2,2])).to eq 3
+      end
+    end
   end
 end
