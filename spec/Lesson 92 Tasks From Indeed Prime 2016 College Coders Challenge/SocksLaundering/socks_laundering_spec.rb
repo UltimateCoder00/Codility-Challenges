@@ -28,5 +28,15 @@ describe 'SocksLaundering' do
         expect(socks_laundering(1, [1,2,3,4], [1,5])).to eq 1
       end
     end
+
+    context 'No_laundry' do
+      it 'Tests Where K = 0 1' do
+        expect(socks_laundering(0, [1,2,3,4], [3,2,1,5])).to eq 0
+      end
+
+      it 'Tests Where K = 0 2' do
+        expect(socks_laundering(0, [2,2,2,2,4], [3,1,3,3])).to eq 2
+      end
+    end
   end
 end
