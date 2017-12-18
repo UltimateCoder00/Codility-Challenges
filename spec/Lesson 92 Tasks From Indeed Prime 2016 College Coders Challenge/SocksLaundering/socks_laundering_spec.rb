@@ -86,5 +86,25 @@ describe 'SocksLaundering' do
         expect(socks_laundering(20, [2,2,2,2,9], [3,4,5,6,7])).to eq 2
       end
     end
+
+    context 'Odd_even_dirty_check' do
+      it 'There Are No Dirty Socks Taken After Laundry 1' do
+        expect(socks_laundering(2, [1], [3,2,5,5])).to eq 1
+      end
+
+      it 'There Are No Dirty Socks Taken After Laundry 2' do
+        expect(socks_laundering(6, [1,2], [1,3,3,3,2,5,5])).to eq 4
+      end
+    end
+
+    context 'Random_few_colors' do
+      it 'Randomly Generated Tests With Only A Couple Of Colors 1' do
+        expect(socks_laundering(8, [3,2,1,3,3,2,3,1], [3,2,3,2,1,3,3,3])).to eq 7
+      end
+
+      it 'Randomly Generated Tests With Only A Couple Of Colors 2' do
+        expect(socks_laundering(6, [3,4,3,1,1,4,2,2,2,3], [4,4,4,1,2,1,1,1,3,2])).to eq 8
+      end
+    end
   end
 end
