@@ -7,4 +7,16 @@ describe 'SocksLaundering' do
       expect(socks_laundering(2, [1,2,1,1], [1,4,3,2,4])).to eq 3
     end
   end
+
+  describe 'Correctness Tests' do
+    context 'Smallest' do
+      it 'Smallest Possible Tests 1' do
+        expect(socks_laundering(1, [1], [4])).to eq 0
+      end
+
+      it 'Smallest Possible Tests 2' do
+        expect(socks_laundering(1, [5], [5])).to eq 1
+      end
+    end
+  end
 end
