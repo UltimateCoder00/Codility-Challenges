@@ -18,5 +18,15 @@ describe 'SocksLaundering' do
         expect(socks_laundering(1, [5], [5])).to eq 1
       end
     end
+
+    context 'Small_simple' do
+      it 'Small Simple Tests, Easy To Solve Even With Heuristic Approach 1' do
+        expect(socks_laundering(5, [1,1,3,4], [3,3,3,5])).to eq 3
+      end
+
+      it 'Small Simple Tests, Easy To Solve Even With Heuristic Approach 2' do
+        expect(socks_laundering(1, [1,2,3,4], [1,5])).to eq 1
+      end
+    end
   end
 end
