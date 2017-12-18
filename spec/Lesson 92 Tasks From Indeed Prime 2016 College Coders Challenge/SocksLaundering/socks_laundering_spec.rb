@@ -52,5 +52,15 @@ describe 'SocksLaundering' do
         expect(socks_laundering(5, [2,3,4], [2,2,2,2,2])).to eq 3
       end
     end
+
+    context 'Saving_one_used_dirty_check' do
+      it 'Tests Causing Solution That"s Not Saving If Dirty Sock Was Used To Pair With Clean Sock To Fail 1' do
+        expect(socks_laundering(5, [1,1,2], [2,2,3])).to eq 2
+      end
+
+      it 'Tests Causing Solution That"s Not Saving If Dirty Sock Was Used To Pair With Clean Sock To Fail 2' do
+        expect(socks_laundering(6, [1,2,4,3,3,6], [1,1,2,2,4,4,5])).to eq 4
+      end
+    end
   end
 end
