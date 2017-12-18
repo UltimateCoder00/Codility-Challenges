@@ -62,5 +62,19 @@ describe 'SocksLaundering' do
         expect(socks_laundering(6, [1,2,4,3,3,6], [1,1,2,2,4,4,5])).to eq 4
       end
     end
+
+    context 'All_dirty' do
+      it 'There Are No Clean Socks Taken 1' do
+        expect(socks_laundering(5, [1,2,3,4], [5,5,6,6,7,7])).to eq 2
+      end
+
+      it 'There Are No Clean Socks Taken 2' do
+        expect(socks_laundering(3, [1,2], [8,8,8,8,9])).to eq 1
+      end
+
+      it 'There Are No Clean Socks Taken 3' do
+        expect(socks_laundering(4, [2,3,4,5], [6,7,8,9])).to eq 0
+      end
+    end
   end
 end
