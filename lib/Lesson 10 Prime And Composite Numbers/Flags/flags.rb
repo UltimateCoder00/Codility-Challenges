@@ -1,0 +1,3 @@
+def flags(a)
+
+end
