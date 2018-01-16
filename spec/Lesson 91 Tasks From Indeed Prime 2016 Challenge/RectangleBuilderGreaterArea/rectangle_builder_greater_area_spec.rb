@@ -65,4 +65,14 @@ describe 'RectangleBuilderGreaterArea' do
       expect(rectangle_builder_greater_area([1,2,3,5,8,13,21,34,55,1,2,3,5,8,13,21,34,55], 103)).to eq 15
     end
   end
+
+  context 'Small_repetitions' do
+    it 'A Few Repeated Values, N <= 50 1' do
+      expect(rectangle_builder_greater_area([2,3,5,7,2,3,5,7,2,3,5,7,2,3,5,7,2,3,5,7,2,3,5,7,2,3,5,7,2,3,5,7,2,3,5,7,2,3,5,7], 10)).to eq 7
+    end
+
+    it 'A Few Repeated Values, N <= 50 2' do
+      expect(rectangle_builder_greater_area([1,3,8,1,3,8,1,3,8,1,3,8,1,3,8,1,3,8,1,3,8,1,3,8,1,3,8,1,3,8,1,3,8,1,3,8,1,3,8,1,3,8,1,3,8], 42)).to eq 1
+    end
+  end
 end
