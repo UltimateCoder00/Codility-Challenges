@@ -29,16 +29,26 @@ describe 'RectangleBuilderGreaterArea' do
   end
 
   context 'Squares' do
-    it 'Corner Cases, N <= 5 1' do
+    it 'Includes Squares, N <= 20 1' do
       expect(rectangle_builder_greater_area([6,6,6,6,6,6], 10)).to eq 1
     end
 
-    it 'Corner Cases, N <= 5 2' do
+    it 'Includes Squares, N <= 20 2' do
       expect(rectangle_builder_greater_area([1,1,4,4,8,8,1,1,4,4,8,8], 15)).to eq 3
     end
 
-    it 'Corner Cases, N <= 5 3' do
+    it 'Includes Squares, N <= 20 3' do
       expect(rectangle_builder_greater_area([1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5], 25)).to eq 1
+    end
+  end
+
+  context 'Simple' do
+    it 'Simple Tests, N <= 20 1' do
+      expect(rectangle_builder_greater_area([3,8,9,5,8,8,9,3,8,5,10], 20)).to eq 6
+    end
+
+    it 'Simple Tests, N <= 20 2' do
+      expect(rectangle_builder_greater_area([2,3,2,3,2,3,2,3], 9)).to eq 1
     end
   end
 end
