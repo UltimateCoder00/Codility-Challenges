@@ -75,4 +75,27 @@ describe 'RectangleBuilderGreaterArea' do
       expect(rectangle_builder_greater_area([1,3,8,1,3,8,1,3,8,1,3,8,1,3,8,1,3,8,1,3,8,1,3,8,1,3,8,1,3,8,1,3,8,1,3,8,1,3,8,1,3,8,1,3,8], 42)).to eq 1
     end
   end
+
+  context 'Small_random' do
+    it 'Random Values, N <= 50 1' do
+      array = [4, 7, 4, 10, 6, 4, 11, 10, 11, 8, 3, 5, 3, 10, 1, 10, 3, 4, 8, 9,
+                7, 7, 8, 8, 2, 4, 1, 7, 4, 3, 4, 12, 2, 11, 11, 3, 10, 3, 8, 2,
+                4, 6, 5, 10, 8, 1, 7, 2, 3, 5]
+      expect(rectangle_builder_greater_area(array, 1)).to eq 52
+    end
+
+    it 'Random Values, N <= 50 2' do
+      array = [4, 7, 4, 10, 6, 4, 11, 10, 11, 8, 3, 5, 3, 10, 1, 10, 3, 4, 8, 9,
+                7, 7, 8, 8, 2, 4, 1, 7, 4, 3, 4, 12, 2, 11, 11, 3, 10, 3, 8, 2,
+                4, 6, 5, 10, 8, 1, 7, 2, 3, 5]
+      expect(rectangle_builder_greater_area(array, 25)).to eq 25
+    end
+
+    it 'Random Values, N <= 50 3' do
+      array = [4, 7, 4, 10, 6, 4, 11, 10, 11, 8, 3, 5, 3, 10, 1, 10, 3, 4, 8, 9,
+                7, 7, 8, 8, 2, 4, 1, 7, 4, 3, 4, 12, 2, 11, 11, 3, 10, 3, 8, 2,
+                4, 6, 5, 10, 8, 1, 7, 2, 3, 5]
+      expect(rectangle_builder_greater_area(array, 144)).to eq 0
+    end
+  end
 end
