@@ -27,4 +27,18 @@ describe 'RectangleBuilderGreaterArea' do
       end
     end
   end
+
+  context 'Squares' do
+    it 'Corner Cases, N <= 5 1' do
+      expect(rectangle_builder_greater_area([6,6,6,6,6,6], 10)).to eq 1
+    end
+
+    it 'Corner Cases, N <= 5 2' do
+      expect(rectangle_builder_greater_area([1,1,4,4,8,8,1,1,4,4,8,8], 15)).to eq 3
+    end
+
+    it 'Corner Cases, N <= 5 3' do
+      expect(rectangle_builder_greater_area([1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5], 25)).to eq 1
+    end
+  end
 end
