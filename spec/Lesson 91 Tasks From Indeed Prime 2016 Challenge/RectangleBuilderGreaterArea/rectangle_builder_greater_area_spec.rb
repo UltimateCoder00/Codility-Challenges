@@ -51,4 +51,18 @@ describe 'RectangleBuilderGreaterArea' do
       expect(rectangle_builder_greater_area([2,3,2,3,2,3,2,3], 9)).to eq 1
     end
   end
+
+  context 'Fib' do
+    it 'Fibonacci numbers, N <= 20 1' do
+      expect(rectangle_builder_greater_area([1,1,2,3,5,8,13,21,34,55], 1)).to eq 0
+    end
+
+    it 'Fibonacci numbers, N <= 20 2' do
+      expect(rectangle_builder_greater_area([1,2,3,5,8,13,21,34,55,1,2,3,5,8,13,21,34,55], 100)).to eq 16
+    end
+
+    it 'Fibonacci numbers, N <= 20 3' do
+      expect(rectangle_builder_greater_area([1,2,3,5,8,13,21,34,55,1,2,3,5,8,13,21,34,55], 103)).to eq 15
+    end
+  end
 end
