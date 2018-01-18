@@ -119,4 +119,26 @@ describe 'RectangleBuilderGreaterArea' do
       expect(rectangle_builder_greater_area(array, 2048)).to eq 42
     end
   end
+
+  describe 'Performance Tests' do
+    context 'Medium_random' do
+      it 'Random Values, N <= 20,000 1' do
+        x = 1
+        array = Array.new(20000) { rand(1..5000) }
+        expect(rectangle_builder_greater_area(array, x)).to be_a Integer
+      end
+
+      it 'Random Values, N <= 20,000 2' do
+        x = 6200100
+        array = Array.new(20000) { rand(1..5000) }
+        expect(rectangle_builder_greater_area(array, x)).to be_a Integer
+      end
+
+      it 'Random Values, N <= 20,000 3' do
+        x = 25000000
+        array = Array.new(20000) { rand(1..5000) }
+        expect(rectangle_builder_greater_area(array, x)).to be_a Integer
+      end
+    end
+  end
 end
