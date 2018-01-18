@@ -154,5 +154,25 @@ describe 'RectangleBuilderGreaterArea' do
         expect(rectangle_builder_greater_area(array, x)).to be_a Integer
       end
     end
+
+    context 'Large_random' do
+      it 'Random Values, N <= 100,000 1' do
+        x = 1
+        array = Array.new(100000) { rand(1..25000) }
+        expect(rectangle_builder_greater_area(array, x)).to be_a Integer
+      end
+
+      it 'Random Values, N <= 100,000 2' do
+        x = 155027401
+        array = Array.new(100000) { rand(1..25000) }
+        expect(rectangle_builder_greater_area(array, x)).to be_a Integer
+      end
+
+      it 'Random Values, N <= 100,000 3' do
+        x = 625000000
+        array = Array.new(100000) { rand(1..25000) }
+        expect(rectangle_builder_greater_area(array, x)).to be_a Integer
+      end
+    end
   end
 end
