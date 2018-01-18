@@ -142,6 +142,26 @@ describe 'RectangleBuilderGreaterArea' do
         expect(rectangle_builder_greater_area(array, x)).to be_a Integer
       end
     end
+
+    context 'Max' do
+      it 'Continuous Values, N <= 100,000 1' do
+        x = 1
+        array = Array.new(100000) { rand(1..99999) }
+        expect(rectangle_builder_greater_area(array, x)).to be_a Integer
+      end
+
+      it 'Continuous Values, N <= 100,000 2' do
+        x = 1
+        array = Array.new(100000) { rand(1..99997) }
+        expect(rectangle_builder_greater_area(array, x)).to be_a Integer
+      end
+
+      it 'Continuous Values, N <= 100,000 3' do
+        x = 1000000000
+        array = Array.new(100000) { rand(1..99999) }
+        expect(rectangle_builder_greater_area(array, x)).to be_a Integer
+      end
+    end
   end
 
   describe 'Performance Tests' do
