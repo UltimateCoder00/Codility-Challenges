@@ -140,5 +140,19 @@ describe 'RectangleBuilderGreaterArea' do
         expect(rectangle_builder_greater_area(array, x)).to be_a Integer
       end
     end
+
+    context 'Large_continuous' do
+      it 'Continuous Values, Each Appears 4 Times, N <= 80,000 1' do
+        x = 2500
+        array = Array.new(79996) { rand(1..19999) }
+        expect(rectangle_builder_greater_area(array, x)).to be_a Integer
+      end
+
+      it 'Continuous Values, Each Appears 4 Times, N <= 80,000 2' do
+        x = 1000000000
+        array = Array.new(80000) { rand(999980001..1000000000) }
+        expect(rectangle_builder_greater_area(array, x)).to be_a Integer
+      end
+    end
   end
 end
