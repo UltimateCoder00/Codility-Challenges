@@ -1,27 +1,20 @@
 def rectangle_builder_greater_area(a, x)
-  b = a.sort
-  c = b.reject { |n| b.count(n) == 1}
-  d = c.uniq
-  e = d.reverse
-  f = []
+  b = a.reject { |n| a.count(n) == 1}.sort
+  c = b.uniq.reverse
+  d = []
 
-  for i in 0...e.length
-    if c.count(e[i]) > 3
-      f << e[i]
-      f << e[i]
-    else
-      f << e[i]
-    end
+  for i in 0...c.length
+    b.count(c[i]) > 3 ? d += [c[i],c[i]] : d << c[i]
   end
 
-  g = []
+  e = []
 
   count = 0
-  for i in 0...(f.length-1)
-    for j in (i+1)...f.length
-      if f[i] * f[j] >= x
-        unless g.include?([f[i],f[j]])
-          g << [f[i],f[j]]
+  for i in 0...(d.length-1)
+    for j in (i+1)...d.length
+      if d[i] * d[j] >= x
+        unless e.include?([d[i],d[j]])
+          e << [d[i],d[j]]
           count += 1
         end
       else
