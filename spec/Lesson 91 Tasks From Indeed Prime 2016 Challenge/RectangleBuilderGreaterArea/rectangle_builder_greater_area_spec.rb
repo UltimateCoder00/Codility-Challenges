@@ -134,6 +134,14 @@ describe 'RectangleBuilderGreaterArea' do
         expect(rectangle_builder_greater_area(array, x)).to be_a Integer
       end
     end
+
+    context 'Large_repetitions' do
+      it 'Many Repeated Values, N <= 100,000' do
+        x = 42
+        array = Array.new(100000) { rand(2..18) }
+        expect(rectangle_builder_greater_area(array, x)).to be_a Integer
+      end
+    end
   end
 
   describe 'Performance Tests' do
