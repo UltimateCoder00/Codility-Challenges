@@ -120,6 +120,22 @@ describe 'RectangleBuilderGreaterArea' do
     end
   end
 
+  describe 'Correctness/Performance Tests' do
+    context 'Medium_continuous' do
+      it 'Continuous Values, Each Appears 4 Times, N <= 2,000 1' do
+        x = 2500
+        array = Array.new(2000) { rand(1..500) }
+        expect(rectangle_builder_greater_area(array, x)).to be_a Integer
+      end
+
+      it 'Continuous Values, Each Appears 4 Times, N <= 2,000 2' do
+        x = 1000000000
+        array = Array.new(2000) { rand(999999501..1000000000) }
+        expect(rectangle_builder_greater_area(array, x)).to be_a Integer
+      end
+    end
+  end
+
   describe 'Performance Tests' do
     context 'Medium_random' do
       it 'Random Values, N <= 20,000 1' do
