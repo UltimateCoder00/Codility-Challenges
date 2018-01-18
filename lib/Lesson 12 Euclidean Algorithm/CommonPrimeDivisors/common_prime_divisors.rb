@@ -1,44 +1,63 @@
 require 'prime'
 
 def common_prime_divisors(a, b)
-  count = 0
+  common_prime_divisors = 0
 
   for i in 0...a.length
     maxValue = [a[i],b[i]].max
     minValue = [a[i],b[i]].min
 
-    if maxValue != minValue
-      next if Prime.prime?(maxValue)
-    end
+    next if skip?(minValue, maxValue)
 
-    breaking = 0
-
-    for j in (minValue+1)...maxValue
-      if maxValue % j == 0
-        if Prime.prime?(j)
-          breaking = 1
-        end
-      end
-    end
-
-    next if breaking == 1
-
-    for k in 1..minValue
-      if Prime.prime?(k)
-        if maxValue % k == 0
-          if minValue % k != 0
-            break
-          end
-        else
-          if minValue % k == 0
-            break
-          end
-        end
-      end
-
-      count += 1 if k == minValue
-    end
+    common_prime_divisors += counting(minValue, maxValue)
   end
 
-  count
+  common_prime_divisors
+end
+
+def prime?(number)
+  Prime.prime?(number)
+end
+
+def divisible?(numerator, denominator)
+  numerator % denominator == 0
+end
+
+def skip?(minValue, maxValue)
+  skip_condition1?(minValue, maxValue) || skip_condition2?(minValue, maxValue)
+end
+
+def skip_condition1?(minValue, maxValue)
+  maxValue != minValue && prime?(maxValue)
+end
+
+def skip_condition2?(minValue, maxValue)
+  for i in (minValue+1)...maxValue
+    return true if divisible?(maxValue, i) && prime?(i)
+  end
+
+  false
+end
+
+def counting(minValue, maxValue)
+  counter = 0
+
+  for i in 1..minValue
+    break if break?(minValue, maxValue, i)
+    counter += 1 if i == minValue
+  end
+
+  counter
+end
+
+def break?(minValue, maxValue, i)
+  break_condition1?(minValue, maxValue, i) && break_condition2?(i)
+end
+
+def break_condition1?(minValue, maxValue, i)
+  divisible?(maxValue, i) ? !divisible?(minValue,i) : divisible?(minValue, i)
+end
+
+def break_condition2?(i)
+  prime?(i)
 end
