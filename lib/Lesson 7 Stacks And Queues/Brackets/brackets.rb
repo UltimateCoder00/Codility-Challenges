@@ -1,18 +1,37 @@
 def brackets(s)
-  return 1 if s.length == 0
-
   brackets_array = s.chars
-  return 0 if brackets_array.length % 2 == 1
   open_bracket_chars = ['(', '[', '{']
   close_bracket_chars = [')', ']', '}']
 
-  return 0 if close_bracket_chars.include? brackets_array[0]
-  return 0 if open_bracket_chars.include? brackets_array[-1]
+  return 0 if not_properly_nested?(brackets_array, open_bracket_chars, close_bracket_chars)
+  properly_nested?(brackets_array, open_bracket_chars, close_bracket_chars)
+end
 
+def not_properly_nested?(brackets_array, open_bracket_chars, close_bracket_chars)
+  array_length_odd?(brackets_array) || array_starts_with_wrong_parentheses?(brackets_array, close_bracket_chars) || array_ends_with_wrong_parentheses?(brackets_array, open_bracket_chars) || array_has_equal_matching_open_and_close_parentheses?(brackets_array, open_bracket_chars, close_bracket_chars)
+end
+
+def array_length_odd?(brackets_array)
+  brackets_array.length % 2 == 1
+end
+
+def array_starts_with_wrong_parentheses?(brackets_array, close_bracket_chars)
+  close_bracket_chars.include? brackets_array[0]
+end
+
+def array_ends_with_wrong_parentheses?(brackets_array, open_bracket_chars)
+  open_bracket_chars.include? brackets_array[-1]
+end
+
+def array_has_equal_matching_open_and_close_parentheses?(brackets_array, open_bracket_chars, close_bracket_chars)
   3.times do |i|
-    return 0 if brackets_array.count(open_bracket_chars[i]) != brackets_array.count(close_bracket_chars[i])
+    return true if brackets_array.count(open_bracket_chars[i]) != brackets_array.count(close_bracket_chars[i])
   end
 
+  false
+end
+
+def properly_nested?(brackets_array, open_bracket_chars, close_bracket_chars)
   test_array = [brackets_array[0]]
 
   count = 1
