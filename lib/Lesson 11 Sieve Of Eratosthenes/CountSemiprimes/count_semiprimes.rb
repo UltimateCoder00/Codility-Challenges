@@ -1,14 +1,18 @@
 require 'prime'
 
 def count_semiprimes(n, p, q)
-  array = []
+  array = get_prime_array(n)
+  array_of_semiprimes(array, p, q)
+end
 
+def get_prime_array(n, array=[])
   for i in 1..n
     array << i if Prime.prime?(i)
   end
+  array
+end
 
-  array2 = []
-
+def array_of_semiprimes(array, p, q, return_array=[])
   for i in 0...p.length
     number = 0
 
@@ -27,8 +31,8 @@ def count_semiprimes(n, p, q)
       end
     end
 
-    array2 << number
+    return_array << number
   end
 
-  array2
+  return_array
 end
