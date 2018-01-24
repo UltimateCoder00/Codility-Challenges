@@ -20,17 +20,20 @@ end
 def count_fish(a, b)
   while true
     count = a.count
-
-    for i in 0...a.length
-      next unless b[i] == 1 && b[i+1] == 0 && a[i] != a[i+1]
-
-      a[i] > a[i+1] ? k = i+1 : k = i
-      a.delete_at(k)
-      b.delete_at(k)
-    end
-
+    a, b = remove_fish(a, b)
     break if a.count == count
   end
 
   a.count
+end
+
+def remove_fish(a, b)
+  for i in 0...a.length
+    next unless b[i] == 1 && b[i+1] == 0 && a[i] != a[i+1]
+    a[i] > a[i+1] ? k = i+1 : k = i
+    a.delete_at(k)
+    b.delete_at(k)
+  end
+
+  [a, b]
 end
