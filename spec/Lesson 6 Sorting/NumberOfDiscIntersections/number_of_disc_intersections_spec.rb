@@ -37,5 +37,17 @@ describe 'NumberOfDiscIntersections' do
         expect(number_of_disc_intersections(array)).to eq 6
       end
     end
+
+    context 'Extreme_small' do
+      it 'Empty' do
+        array = []
+        expect(number_of_disc_intersections(array)).to eq 0
+      end
+
+      it '[10]' do
+        array = [10]
+        expect(number_of_disc_intersections(array)).to eq 0
+      end
+    end
   end
 end
