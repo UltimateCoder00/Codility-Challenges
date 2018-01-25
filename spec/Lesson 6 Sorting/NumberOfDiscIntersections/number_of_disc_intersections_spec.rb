@@ -117,5 +117,12 @@ describe 'NumberOfDiscIntersections' do
         expect(number_of_disc_intersections(array)).to be_a Integer
       end
     end
+
+    context '10M_intersections' do
+      it '10.000.000 Intersections' do
+        array = Array.new(9499) { rand(0..10000000) }
+        expect(number_of_disc_intersections(array)).to be_a Integer
+      end
+    end
   end
 end
