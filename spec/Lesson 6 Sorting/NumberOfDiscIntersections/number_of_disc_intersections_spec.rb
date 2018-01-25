@@ -75,5 +75,17 @@ describe 'NumberOfDiscIntersections' do
         expect(number_of_disc_intersections(array)).to eq 1169
       end
     end
+
+    context 'Overflow' do
+      it 'Arithmetic Overflow Tests 1' do
+        array = [1,2147483647,0]
+        expect(number_of_disc_intersections(array)).to eq 2
+      end
+
+      it 'Arithmetic Overflow Tests 2' do
+        array = [2147483647,2147483647]
+        expect(number_of_disc_intersections(array)).to eq 1
+      end
+    end
   end
 end
