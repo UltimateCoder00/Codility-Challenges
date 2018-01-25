@@ -96,5 +96,12 @@ describe 'NumberOfDiscIntersections' do
         expect(number_of_disc_intersections(array)).to be_a Integer
       end
     end
+
+    context 'Medium2' do
+      it 'Medium' do
+        array = Array.new(2000) { rand(0..2000) }
+        expect(number_of_disc_intersections(array)).to be_a Integer
+      end
+    end
   end
 end
