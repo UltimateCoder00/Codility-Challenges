@@ -65,5 +65,15 @@ describe 'NumberOfDiscIntersections' do
         expect(number_of_disc_intersections(array)).to eq 176
       end
     end
+
+    context 'Small3' do
+      it 'Small' do
+        array = [7, 31, 8, 36, 30, 19, 31, 28, 2, 27, 31, 26, 44, 37, 19, 11, 6,
+                  41, 35, 31, 22, 25, 11, 27, 7, 31, 32, 34, 12, 4, 16, 35, 26,
+                  38, 21, 20, 46, 8, 10, 30, 32, 22, 28, 22, 34, 45, 42, 32, 23,
+                  48]
+        expect(number_of_disc_intersections(array)).to eq 1169
+      end
+    end
   end
 end
