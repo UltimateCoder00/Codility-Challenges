@@ -124,5 +124,17 @@ describe 'NumberOfDiscIntersections' do
         expect(number_of_disc_intersections(array)).to be_a Integer
       end
     end
+
+    context 'Big1' do
+      it 'Big1 1' do
+        array = Array.new(40000) { rand(0..500) }
+        expect(number_of_disc_intersections(array)).to be_a Integer
+      end
+
+      it 'Big1 2' do
+        array = [1,1,1]
+        expect(number_of_disc_intersections(array)).to be_a Integer
+      end
+    end
   end
 end
