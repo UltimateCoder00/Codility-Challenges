@@ -88,4 +88,13 @@ describe 'NumberOfDiscIntersections' do
       end
     end
   end
+
+  describe 'Performance Tests' do
+    context 'Medium1' do
+      it 'Medium' do
+        array = Array.new(1000) { rand(0..999) }
+        expect(number_of_disc_intersections(array)).to be_a Integer
+      end
+    end
+  end
 end
