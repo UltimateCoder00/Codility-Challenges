@@ -148,5 +148,17 @@ describe 'NumberOfDiscIntersections' do
         expect(number_of_disc_intersections(array)).to be_a Integer
       end
     end
+
+    context 'Big3' do
+      it 'Big3 1' do
+        array = [0]*50000
+        expect(number_of_disc_intersections(array)).to be_a Integer
+      end
+
+      it 'Big3 2' do
+        array = [1,1,1]
+        expect(number_of_disc_intersections(array)).to be_a Integer
+      end
+    end
   end
 end
