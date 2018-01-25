@@ -30,5 +30,12 @@ describe 'NumberOfDiscIntersections' do
         expect(number_of_disc_intersections(array)).to eq 3
       end
     end
+
+    context 'Simple3' do
+      it 'Simple' do
+        array = [1,0,1,0,1]
+        expect(number_of_disc_intersections(array)).to eq 6
+      end
+    end
   end
 end
