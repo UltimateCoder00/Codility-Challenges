@@ -4,9 +4,7 @@ def rectangle_builder_greater_area(a, x)
 end
 
 def array(b, c, d=[])
-  for i in 0...c.length
-    b.count(c[i]) > 3 ? d += [c[i],c[i]] : d << c[i]
-  end
+  c.length.times { |i| b.count(c[i]) > 3 ? d += [c[i],c[i]] : d << c[i] }
   d
 end
 
