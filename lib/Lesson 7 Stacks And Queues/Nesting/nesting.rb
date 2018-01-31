@@ -24,21 +24,14 @@ def obvious_wrong_nesting_condition3?(string)
   string.count('(') != string.count(')')
 end
 
-def correct_nesting?(string)
-  brackets_array = string.chars
-
-  test_array = [brackets_array[0]]
-  count = 1
-
+def correct_nesting?(string, count=1, brackets_array=string.chars, test_array=[brackets_array[0]])
   for i in 1...brackets_array.length
-    if brackets_array[i] == '('
-      test_array << brackets_array[i]
-      count += 1
-      next
-    end
-
-    return false if test_array.count == 0
-    test_array.pop
-    count -= 1
+    return false if test_array.count == 0 unless correctly_open?(brackets_array[i])
+    correctly_open?(brackets_array[i]) ? test_array << brackets_array[i] : test_array.pop
+    correctly_open?(brackets_array[i]) ? count += 1 : count -= 1
   end
+end
+
+def correctly_open?(string)
+  string == '('
 end
