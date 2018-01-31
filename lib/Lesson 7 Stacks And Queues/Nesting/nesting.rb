@@ -1,12 +1,31 @@
 def nesting(s)
-  return 1 if s.length == 0
-  return 0 if s.length % 2 == 1
-  return 0 if s[0] == ')'
-  return 0 if s[-1] == '('
+  return 1 if empty_string?(s)
+  return 0 if obvious_wrong_nesting?(s)
+  correct_nesting?(s) == false ? 0 : 1
+end
 
-  brackets_array = s.chars
+def empty_string?(string)
+  string.length == 0
+end
 
-  return 0 if brackets_array.count('(') != brackets_array.count(')')
+def obvious_wrong_nesting?(string)
+  obvious_wrong_nesting_condition1?(string) || obvious_wrong_nesting_condition2?(string) || obvious_wrong_nesting_condition3?(string)
+end
+
+def obvious_wrong_nesting_condition1?(string)
+  string.length % 2 == 1
+end
+
+def obvious_wrong_nesting_condition2?(string)
+  string[0] == ')' || string[-1] == '('
+end
+
+def obvious_wrong_nesting_condition3?(string)
+  string.count('(') != string.count(')')
+end
+
+def correct_nesting?(string)
+  brackets_array = string.chars
 
   test_array = [brackets_array[0]]
   count = 1
@@ -16,13 +35,10 @@ def nesting(s)
       test_array << brackets_array[i]
       count += 1
       next
-    else
-      return 0 if test_array.count == 0
-
-      test_array.pop
-      count -= 1
     end
-  end
 
-  1
+    return false if test_array.count == 0
+    test_array.pop
+    count -= 1
+  end
 end
