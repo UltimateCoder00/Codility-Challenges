@@ -6,6 +6,8 @@ def nesting(s)
 
   brackets_array = s.chars
 
+  return 0 if brackets_array.count('(') != brackets_array.count(')')
+
   test_array = [brackets_array[0]]
   count = 1
 
