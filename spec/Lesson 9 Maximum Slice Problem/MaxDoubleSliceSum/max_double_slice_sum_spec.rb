@@ -44,5 +44,11 @@ describe 'MaxDoubleSliceSum' do
         expect(max_double_slice_sum([-4,-5,-1,-5,-7,-19,-11])).to eq 0
       end
     end
+
+    context 'Positive' do
+      it 'All Positive Numbers' do
+        expect(max_double_slice_sum([6,1,5,6,4,2,9,4])).to eq 26
+      end
+    end
   end
 end
