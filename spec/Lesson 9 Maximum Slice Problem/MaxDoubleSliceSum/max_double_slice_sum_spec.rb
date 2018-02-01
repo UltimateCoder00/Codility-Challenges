@@ -22,5 +22,15 @@ describe 'MaxDoubleSliceSum' do
         expect(max_double_slice_sum([5,17,0,3])).to eq 17
       end
     end
+
+    context 'Simple2' do
+      it 'Second Simple Test 1' do
+        expect(max_double_slice_sum([5,0,1,0,5])).to eq 1
+      end
+
+      it 'Second Simple Test 2' do
+        expect(max_double_slice_sum([-8,10,20,-5,-7,-4])).to eq 30
+      end
+    end
   end
 end
