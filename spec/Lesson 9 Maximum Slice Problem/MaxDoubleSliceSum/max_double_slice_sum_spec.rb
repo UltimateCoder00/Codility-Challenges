@@ -34,8 +34,14 @@ describe 'MaxDoubleSliceSum' do
     end
 
     context 'Simple3' do
-      it 'Second Simple Test 1' do
+      it 'Third Simple Test' do
         expect(max_double_slice_sum([1,3,4,2,-3,4,-10,1,1,4,-2,4,1])).to eq 18
+      end
+    end
+
+    context 'Negative' do
+      it 'All Negative Numbers' do
+        expect(max_double_slice_sum([-4,-5,-1,-5,-7,-19,-11])).to eq 0
       end
     end
   end
