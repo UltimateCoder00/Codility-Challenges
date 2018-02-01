@@ -3,11 +3,7 @@ def count_distinct_slices(m, a)
 
   for i in 0...a.length
     for j in i...a.length
-      if a[i..j].uniq == a[i..j]
-        count += 1
-      else
-        break
-      end
+      a[i..j].uniq == a[i..j] ? count += 1 : break
     end
   end
 
