@@ -32,5 +32,11 @@ describe 'MaxDoubleSliceSum' do
         expect(max_double_slice_sum([-8,10,20,-5,-7,-4])).to eq 30
       end
     end
+
+    context 'Simple3' do
+      it 'Second Simple Test 1' do
+        expect(max_double_slice_sum([1,3,4,2,-3,4,-10,1,1,4,-2,4,1])).to eq 18
+      end
+    end
   end
 end
