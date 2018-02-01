@@ -50,5 +50,11 @@ describe 'MaxDoubleSliceSum' do
         expect(max_double_slice_sum([6,1,5,6,4,2,9,4])).to eq 26
       end
     end
+
+    context 'Extreme_triplet' do
+      it 'Three Elements' do
+        expect(max_double_slice_sum([5,5,5])).to eq 0
+      end
+    end
   end
 end
