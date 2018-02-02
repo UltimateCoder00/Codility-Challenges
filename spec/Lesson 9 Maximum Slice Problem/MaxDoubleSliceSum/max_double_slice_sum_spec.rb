@@ -86,5 +86,12 @@ describe 'MaxDoubleSliceSum' do
         expect(max_double_slice_sum(array)).to be_a Integer
       end
     end
+
+    context 'Large_random' do
+      it 'Random, Length = ~100,000' do
+        array = Array.new(99999) { rand(-10000..9999) }
+        expect(max_double_slice_sum(array)).to be_a Integer
+      end
+    end
   end
 end
