@@ -79,5 +79,12 @@ describe 'MaxDoubleSliceSum' do
         expect(max_double_slice_sum(array)).to be_a Integer
       end
     end
+
+    context 'Large_ones' do
+      it 'Random Numbers From -1 To 1, Length = ~100,000' do
+        array = Array.new(100000) { rand(-1..1) }
+        expect(max_double_slice_sum(array)).to be_a Integer
+      end
+    end
   end
 end
