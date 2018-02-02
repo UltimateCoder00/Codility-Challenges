@@ -65,5 +65,12 @@ describe 'MaxDoubleSliceSum' do
         expect(max_double_slice_sum(array)).to be_a Integer
       end
     end
+
+    context 'Small_random2' do
+      it 'Random, Numbers Form -30 To 30, Length = 300' do
+        array = Array.new(300) { rand(-30..30) }
+        expect(max_double_slice_sum(array)).to be_a Integer
+      end
+    end
   end
 end
