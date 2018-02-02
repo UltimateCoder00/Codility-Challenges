@@ -1,24 +1,25 @@
 def genomic_range_query(s, p, q)
-  s.gsub!("A","1")
-  s.gsub!("C","2")
-  s.gsub!("G","3")
-  s.gsub!("T","4")
+  impact_factor_array(turn_into_array_integers(replace_characters(s)), p, q)
+end
 
-  s = s.split("").map(&:to_i)
+def replace_characters(array)
+  replacements = [ ["A","1"], ["C","2"], ["G","3"], ["T","4"] ]
+  replacements.each {|replacement| array.gsub!(replacement[0], replacement[1])}
+  array
+end
 
-  array = []
+def turn_into_array_integers(array)
+  array.split("").map(&:to_i)
+end
 
+def impact_factor_array(s, p, q, array=[])
   for i in 0...p.length
-    if s[p[i]..q[i]].include?(1)
-      array << 1
-    elsif s[p[i]..q[i]].include?(2)
-      array << 2
-    elsif s[p[i]..q[i]].include?(3)
-      array << 3
-    else
-      array << 4
+    [1,2,3,4].each do |val|
+      if s[p[i]..q[i]].include?(val)
+        array << val
+        break
+      end
     end
   end
-
   array
 end
