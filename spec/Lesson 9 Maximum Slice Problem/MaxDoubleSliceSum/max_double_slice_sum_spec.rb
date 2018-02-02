@@ -100,5 +100,17 @@ describe 'MaxDoubleSliceSum' do
         expect(max_double_slice_sum(array)).to be_a Integer
       end
     end
+
+    context 'Large_sequence' do
+      it 'Many The Same Small Sequences, Length = ~100,000 1' do
+        array = Array.new(89991) { rand(-10..5) }
+        expect(max_double_slice_sum(array)).to be_a Integer
+      end
+
+      it 'Many The Same Small Sequences, Length = ~100,000 2' do
+        array = Array.new(98989) { rand(-20..8) }
+        expect(max_double_slice_sum(array)).to be_a Integer
+      end
+    end
   end
 end
