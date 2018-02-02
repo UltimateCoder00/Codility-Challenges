@@ -72,5 +72,12 @@ describe 'MaxDoubleSliceSum' do
         expect(max_double_slice_sum(array)).to be_a Integer
       end
     end
+
+    context 'Medium_range' do
+      it '-1000,...,1000' do
+        array = Array.new(2001) { rand(-1000..1000) }
+        expect(max_double_slice_sum(array)).to be_a Integer
+      end
+    end
   end
 end
