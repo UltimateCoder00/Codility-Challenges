@@ -93,5 +93,12 @@ describe 'MaxDoubleSliceSum' do
         expect(max_double_slice_sum(array)).to be_a Integer
       end
     end
+
+    context 'Extreme_maximal' do
+      it 'All Maximal Values, Length = ~100,000' do
+        array = [10000]*100000
+        expect(max_double_slice_sum(array)).to be_a Integer
+      end
+    end
   end
 end
