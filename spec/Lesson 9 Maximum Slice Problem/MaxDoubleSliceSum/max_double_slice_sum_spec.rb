@@ -57,4 +57,13 @@ describe 'MaxDoubleSliceSum' do
       end
     end
   end
+
+  describe 'Performance Tests' do
+    context 'Small_random1' do
+      it 'Random, Numbers Form -10**4 To 10**4, Length = 70' do
+        array = Array.new(70) { rand(-10000..10000) }
+        expect(max_double_slice_sum(array)).to be_a Integer
+      end
+    end
+  end
 end
