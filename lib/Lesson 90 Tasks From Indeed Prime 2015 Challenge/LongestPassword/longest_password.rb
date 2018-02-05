@@ -6,9 +6,7 @@ def longest_password(s)
 end
 
 def password_correct?(password)
-  return false unless password_integers_condition_correct?(password)
-  return false unless password_letters_condition_correct?(password)
-  total_password_length_correct?(password) ? true : false
+  all_password_conditions_satisfied(password) ? true : false
 end
 
 def password_integers_length(password)
@@ -29,4 +27,8 @@ end
 
 def total_password_length_correct?(password)
   password_integers_length(password) + password_letters_length(password) == password.length
+end
+
+def all_password_conditions_satisfied(password)
+  password_integers_condition_correct?(password) && password_letters_condition_correct?(password) && total_password_length_correct?(password)
 end
