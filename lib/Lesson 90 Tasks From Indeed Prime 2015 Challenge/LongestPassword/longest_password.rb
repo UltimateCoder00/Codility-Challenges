@@ -5,10 +5,28 @@ def longest_password(s)
   -1
 end
 
-def password_correct?(pass)
-  num_length = pass.delete("^0-9").length
-  str_length = pass.delete("^a-z").length
-  return false unless num_length % 2 == 1
-  return false unless str_length % 2 == 0
-  num_length + str_length == pass.length ? true : false
+def password_correct?(password)
+  return false unless password_integers_condition_correct?(password)
+  return false unless password_letters_condition_correct?(password)
+  total_password_length_correct?(password) ? true : false
+end
+
+def password_integers_length(password)
+  password.delete("^0-9").length
+end
+
+def password_letters_length(password)
+  password.delete("^a-z").length
+end
+
+def password_integers_condition_correct?(password)
+  password_integers_length(password) % 2 == 1
+end
+
+def password_letters_condition_correct?(password)
+  password_letters_length(password) % 2 == 0
+end
+
+def total_password_length_correct?(password)
+  password_integers_length(password) + password_letters_length(password) == password.length
 end
