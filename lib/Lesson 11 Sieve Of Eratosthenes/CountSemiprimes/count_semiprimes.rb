@@ -32,8 +32,7 @@ end
 
 def counting_semiprimes(array, j, k, number=0)
   for l in k...array.length
-    next unless j == array[k]*array[l]
-    number += 1
+    j == array[k]*array[l] ? number += 1 : next
     break
   end
   number
