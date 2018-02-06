@@ -32,7 +32,7 @@ end
 
 def counting_semiprimes(array, j, k)
   for l in k...array.length
-    semi_prime?(array[k], array[l], j) ? (return 1) : next
+    return 1 if semi_prime?(array[k], array[l], j)
   end
   0
 end
