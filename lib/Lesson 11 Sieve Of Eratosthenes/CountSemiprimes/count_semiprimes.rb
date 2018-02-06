@@ -19,14 +19,7 @@ def array_of_semiprimes(array, p, q, return_array=[])
     for j in p[i]..q[i]
       for k in 0...(array.length-1)
         number2 = number
-
-        for l in k...array.length
-          if j == array[k]*array[l]
-            number += 1
-            break
-          end
-        end
-
+        number += counting_semiprimes(array, j, k)
         break if number2 != number
       end
     end
@@ -35,4 +28,13 @@ def array_of_semiprimes(array, p, q, return_array=[])
   end
 
   return_array
+end
+
+def counting_semiprimes(array, j, k, number=0)
+  for l in k...array.length
+    next unless j == array[k]*array[l]
+    number += 1
+    break
+  end
+  number
 end
