@@ -13,10 +13,15 @@ end
 
 def count_intersections(a, array1, array2, count=0)
   for j in 0...a.length-1
-    for i in j+1...a.length
-      count += 1 if check_radii_intersection_conditions(array2[i], array1[j], array2[j], array1[i])
-      return -1 if count > 10000000
-    end
+    count += count_intersections_inner_loop(a, array1, array2, j)
+    return -1 if count > 10000000
+  end
+  count
+end
+
+def count_intersections_inner_loop(a, array1, array2, j, count=0)
+  for i in j+1...a.length
+    count += 1 if check_radii_intersection_conditions(array2[i], array1[j], array2[j], array1[i])
   end
   count
 end
