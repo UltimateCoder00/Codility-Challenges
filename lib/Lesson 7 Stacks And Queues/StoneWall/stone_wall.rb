@@ -18,14 +18,8 @@ end
 def count(h, count=0)
   while true
     break if h_empty?(h)
-
-    if h[0] == 0
-      h.shift
-      next
-    end
-
-    count += 1
-    h = update_array(h[1..-1], h[0])
+    h[0] == 0 ? h.shift : h = update_array(h[1..-1], h[0])
+    count += 1 unless h[0] == 0
   end
   count
 end
