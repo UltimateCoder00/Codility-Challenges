@@ -18,9 +18,13 @@ end
 def count(h, count=0)
   until h_empty?(h)
     h[0] == 0 ? h.shift : h = update_array(h[1..-1], h[0])
-    count += 1 unless h[0] == 0
+    count += counter(h[0])
   end
   count
+end
+
+def counter(a)
+  a == 0 ? 0 : 1
 end
 
 def update_array(h, value)
