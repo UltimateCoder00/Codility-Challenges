@@ -16,8 +16,7 @@ def simple_condition2?(array)
 end
 
 def count(h, count=0)
-  while true
-    break if h_empty?(h)
+  until h_empty?(h)
     h[0] == 0 ? h.shift : h = update_array(h[1..-1], h[0])
     count += 1 unless h[0] == 0
   end
