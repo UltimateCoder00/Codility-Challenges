@@ -27,5 +27,27 @@ describe 'ArrayInversionCount' do
         expect(array_inversion_count(array)).to eq 21
       end
     end
+
+    context 'Extreme_0_inv' do
+      it '[0]' do
+        array = [0]
+        expect(array_inversion_count(array)).to eq 0
+      end
+
+      it '[]' do
+        array = []
+        expect(array_inversion_count(array)).to eq 0
+      end
+
+      it '[1,2,3]' do
+        array = [1,2,3]
+        expect(array_inversion_count(array)).to eq 0
+      end
+
+      it '[1,1,1]' do
+        array = [1,1,1]
+        expect(array_inversion_count(array)).to eq 0
+      end
+    end
   end
 end
