@@ -12,22 +12,25 @@ def get_prime_array(n, array=[])
   array
 end
 
-def array_of_semiprimes(array, p, q, return_array=[])
+def array_of_semiprimes(array, p, q, array_of_semiprimes=[])
   for i in 0...p.length
-    number = 0
+    array_of_semiprimes << count_number(i, array, p, q)
+  end
+  array_of_semiprimes
+end
 
-    for j in p[i]..q[i]
-      for k in 0...(array.length-1)
-        number2 = number
-        number += counting_semiprimes(array, j, k)
-        break if number2 != number
-      end
+def count_number(i, array, p, q)
+  number = 0
+
+  for j in p[i]..q[i]
+    for k in 0...(array.length-1)
+      number2 = number
+      number += counting_semiprimes(array, j, k)
+      break if number2 != number
     end
-
-    return_array << number
   end
 
-  return_array
+  number
 end
 
 def counting_semiprimes(array, j, k)
