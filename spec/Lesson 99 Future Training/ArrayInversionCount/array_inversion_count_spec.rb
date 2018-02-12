@@ -14,5 +14,11 @@ describe 'ArrayInversionCount' do
         expect(array_inversion_count([5,4,3,2,1])).to eq 10
       end
     end
+
+    context 'Simple2' do
+      it 'Simple' do
+        expect(array_inversion_count([10,2,1,4,1,-1,19,1])).to eq 16
+      end
+    end
   end
 end
