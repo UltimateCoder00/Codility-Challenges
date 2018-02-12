@@ -1,7 +1,9 @@
 def array_inversion_count(a)
   count = 0
-  for i in 0...a.length
-    count += a[(i+1)..-1].reject { |x| a[i] <= x }.count
-  end
+  a.each_with_index { |val, i| count += count_inversions(a[(i+1)..-1], val) }
   count
+end
+
+def count_inversions(array, k)
+  array.reject { |x| k <= x }.count
 end
