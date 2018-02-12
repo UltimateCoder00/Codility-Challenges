@@ -95,5 +95,12 @@ describe 'ArrayInversionCount' do
         expect(array_inversion_count(array)).to be_a Integer
       end
     end
+
+    context 'Big1' do
+      it 'n=10000' do
+        array = Array.new(10000) { rand(0..99986) }
+        expect(array_inversion_count(array)).to be_a Integer
+      end
+    end
   end
 end
