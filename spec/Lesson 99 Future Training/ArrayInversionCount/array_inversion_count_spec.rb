@@ -116,5 +116,22 @@ describe 'ArrayInversionCount' do
         expect(array_inversion_count(array)).to be_a Integer
       end
     end
+
+    context 'Big_monotonic' do
+      it 'Long Descending And Non-Ascending Sequence 1' do
+        array = Array.new(44721) { rand(1..44721) }
+        expect(array_inversion_count(array)).to be_a Integer
+      end
+
+      it 'Long Descending And Non-Ascending Sequence 2' do
+        array = Array.new(44721) { rand(2..44721) }
+        expect(array_inversion_count(array)).to be_a Integer
+      end
+
+      it 'Long Descending And Non-Ascending Sequence 3' do
+        array = Array.new(44722) { rand(1..44722) }
+        expect(array_inversion_count(array)).to be_a Integer
+      end
+    end
   end
 end
