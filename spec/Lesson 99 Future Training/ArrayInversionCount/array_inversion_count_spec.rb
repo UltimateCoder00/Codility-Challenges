@@ -87,4 +87,13 @@ describe 'ArrayInversionCount' do
       end
     end
   end
+
+  describe 'Performance Tests' do
+    context 'Medium3' do
+      it 'n=1000' do
+        array = Array.new(1000) { rand(0..1000) }
+        expect(array_inversion_count(array)).to be_a Integer
+      end
+    end
+  end
 end
