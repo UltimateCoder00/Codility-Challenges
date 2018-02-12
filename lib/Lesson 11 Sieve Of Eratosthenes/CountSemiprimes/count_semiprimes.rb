@@ -21,15 +21,18 @@ end
 
 def count_number(i, array, p, q)
   number = 0
-
   for j in p[i]..q[i]
-    for k in 0...(array.length-1)
-      number2 = number
-      number += counting_semiprimes(array, j, k)
-      break if number2 != number
-    end
+    number = count_number_inner_loop(j, array, number)
   end
+  number
+end
 
+def count_number_inner_loop(j, array, number)
+  for k in 0...(array.length-1)
+    number2 = number
+    number += counting_semiprimes(array, j, k)
+    break if number2 != number
+  end
   number
 end
 
