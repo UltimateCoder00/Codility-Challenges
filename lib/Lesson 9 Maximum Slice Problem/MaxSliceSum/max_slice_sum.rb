@@ -2,9 +2,14 @@ def max_slice_sum(a)
   count = a[0]
   for i in 0...a.length
     for j in i...a.length
-      count = a[i..j].inject(0){|sum,x| sum + x } if count < a[i..j].inject(0){|sum,x| sum + x }
+      array_sum = array_sum(a, i, j)
+      count = array_sum if count < array_sum
     end
   end
 
   count
+end
+
+def array_sum(a, i, j)
+  a[i..j].inject(:+)
 end
