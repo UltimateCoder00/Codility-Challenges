@@ -238,8 +238,9 @@ describe 'MaxSliceSum' do
       end
 
       context 'Blocks' do
-        it '[.....] to ...' do
-
+        it 'Blocks' do
+          array = Array.new(125251) { rand(1..501) }
+          expect(max_slice_sum(array)).to be_a Integer
         end
       end
 
