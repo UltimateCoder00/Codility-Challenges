@@ -8,8 +8,7 @@ end
 
 def max_slice_sum_inner_loop(a, i, count)
   for j in i...a.length
-    array_sum = array_sum(a, i, j)
-    count = array_sum if count < array_sum
+    count = [count, array_sum(a, i, j)].max
   end
   count
 end
