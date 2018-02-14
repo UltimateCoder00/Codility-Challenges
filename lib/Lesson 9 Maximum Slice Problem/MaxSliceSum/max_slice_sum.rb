@@ -1,18 +1,11 @@
 def max_slice_sum(a)
-  count = a[0]
+  max_ending = 0
+  max_slice = 0
+
   for i in 0...a.length
-    count = max_slice_sum_inner_loop(a, i, count)
+    max_ending = [0, max_ending + a[i]].max
+    max_slice = [max_slice, max_ending].max
   end
-  count
-end
 
-def max_slice_sum_inner_loop(a, i, count)
-  for j in i...a.length
-    count = [count, array_sum(a, i, j)].max
-  end
-  count
-end
-
-def array_sum(a, i, j)
-  a[i..j].inject(:+)
+  a.max < 0 ? a.max : max_slice
 end
