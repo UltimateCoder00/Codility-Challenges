@@ -214,41 +214,41 @@ describe 'MaxSliceSum' do
         expect(max_slice_sum(array)).to eq 550
       end
     end
+  end
 
-    describe 'Performance Tests' do
-      context 'High_low_1Kgarbage' do
-        it 'High Low 1KGarbage' do
-          array = [1000, -1001] + [1]*999
-          expect(max_slice_sum(array)).to be_a Integer
-        end
+  describe 'Performance Tests' do
+    context 'High_low_1Kgarbage' do
+      it 'High Low 1KGarbage' do
+        array = [1000, -1001] + [1]*999
+        expect(max_slice_sum(array)).to be_a Integer
       end
+    end
 
-      context '1Kgarbage_high_low' do
-        it '1KGarbage High Low' do
-          array = [1]*999 + [1000, -1001]
-          expect(max_slice_sum(array)).to be_a Integer
-        end
+    context '1Kgarbage_high_low' do
+      it '1KGarbage High Low' do
+        array = [1]*999 + [1000, -1001]
+        expect(max_slice_sum(array)).to be_a Integer
       end
+    end
 
-      context 'Growing_saw' do
-        it 'Growing Saw' do
-          array = Array.new(140) { rand(-8..10) }
-          expect(max_slice_sum(array)).to be_a Integer
-        end
+    context 'Growing_saw' do
+      it 'Growing Saw' do
+        array = Array.new(140) { rand(-8..10) }
+        expect(max_slice_sum(array)).to be_a Integer
       end
+    end
 
-      context 'Blocks' do
-        it 'Blocks' do
-          array = Array.new(125251) { rand(1..501) }
-          expect(max_slice_sum(array)).to be_a Integer
-        end
+    context 'Blocks' do
+      it 'Blocks' do
+        array = Array.new(125251) { rand(1..501) }
+        expect(max_slice_sum(array)).to be_a Integer
       end
+    end
 
-      context 'Growing_negative' do
-        it 'Growing Negative' do
-          array = [*-200000..-1]
-          expect(max_slice_sum(array)).to be_a Integer
-        end
+    context 'Growing_negative' do
+      it 'Growing Negative' do
+        array = [*-200000..-1]
+        expect(max_slice_sum(array)).to be_a Integer
       end
     end
   end
