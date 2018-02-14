@@ -217,8 +217,9 @@ describe 'MaxSliceSum' do
 
     describe 'Performance Tests' do
       context 'High_low_1Kgarbage' do
-        it '[.....] to ...' do
-
+        it 'High_low_1Kgarbage' do
+          array = [1000, -1001] + [1]*999
+          expect(max_slice_sum(array)).to be_a Integer
         end
       end
 
