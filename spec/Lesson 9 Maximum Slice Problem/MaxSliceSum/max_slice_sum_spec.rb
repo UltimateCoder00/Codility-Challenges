@@ -245,8 +245,9 @@ describe 'MaxSliceSum' do
       end
 
       context 'Growing_negative' do
-        it '[.....] to ...' do
-
+        it 'Growing Negative' do
+          array = [*-200000..-1]
+          expect(max_slice_sum(array)).to be_a Integer
         end
       end
     end
