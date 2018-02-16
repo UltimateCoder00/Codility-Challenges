@@ -5,7 +5,7 @@ def max_double_slice_sum(a)
     for j in (i+1)...(a.length-1)
       for k in (j+1)...a.length
         count = sum_array_elements(a, i, j) + sum_array_elements(a, j, k)
-        max = count if max < count
+        max = [max, count].max
       end
     end
   end
