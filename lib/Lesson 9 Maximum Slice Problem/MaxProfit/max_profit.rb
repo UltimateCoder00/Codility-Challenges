@@ -1,9 +1,14 @@
 def max_profit(a)
   return 0 if a.count == 0
 
-  count = 0
-  for i in 0...(a.length-1)
-    count = [count, a[(i+1)..-1].max - a[i]].max
+  max_profit = 0
+  lowest_price = a[0]
+
+  for i in 1...a.length
+    price = a[i]
+    lowest_price = [lowest_price, a[i]].min
+    max_profit = [max_profit, price - lowest_price].max
   end
-  count
+
+  max_profit
 end
