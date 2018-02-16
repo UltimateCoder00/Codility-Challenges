@@ -1,15 +1,6 @@
 def min_avg_two_slice(a)
-  arrays = method1(a)
-  array = arrays[0]
-  array2 = arrays[1]
-
-
-  array2[array.index(array.min)]
-end
-
-def method1(a)
-  array = []
-  array2 = []
+  min_average = (a[0] + a[1]) / 2.0
+  min_average_index = 0
 
   for i in 0...(a.length - 1)
     sum = a[i]
@@ -17,12 +8,14 @@ def method1(a)
     for j in (i+1)...(a.length)
       sum += a[j]
 
-      array << (sum / (j - i + 1.0))
-      array2 << i
+      if sum / (j - i + 1.0) < min_average
+        min_average = sum / (j - i + 1.0)
+        min_average_index = i
+      end
     end
   end
 
-  [array, array2]
+  min_average_index
 end
 
 def method2(a)
