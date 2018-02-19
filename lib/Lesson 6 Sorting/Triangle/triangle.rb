@@ -1,11 +1,9 @@
 def triangle(a)
-  triangle_plane(a.sort) == 1 ? 1 : 0
-end
-
-def triangle_plane(a)
+  a.sort!
   for i in 0...(a.length-2)
     return 1 if triangular?(a[i], a[i+1], a[i+2])
   end
+  0
 end
 
 def triangular?(a, b, c)
