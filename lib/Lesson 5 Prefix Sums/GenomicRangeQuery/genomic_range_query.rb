@@ -1,15 +1,14 @@
 def genomic_range_query(s, p, q)
   array = []
   for i in 0...p.length
-    if s[p[i]..q[i]].include?("A")
-      array << 1
-    elsif s[p[i]..q[i]].include?("C")
-      array << 2
-    elsif s[p[i]..q[i]].include?("G")
-      array << 3
-    else
-      array << 4
-    end
+    array << impact_factor(s[p[i]..q[i]])
   end
   array
+end
+
+def impact_factor(string)
+  return 1 if string.include?("A")
+  return 2 if string.include?("C")
+  return 3 if string.include?("G")
+  return 4
 end
