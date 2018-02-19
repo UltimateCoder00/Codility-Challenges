@@ -21,17 +21,9 @@ def triangle_plane3(a, i, j)
 end
 
 def triangular?(a, b, c)
-  triangular_condition1(a, b, c) && triangular_condition2(a, b, c) && triangular_condition3(a, b, c)
+  triangular_condition(a, b, c) && triangular_condition(a, c, b) && triangular_condition(b, c, a)
 end
 
-def triangular_condition1(a, b, c)
-  a + b > c ? true : false
-end
-
-def triangular_condition2(a, b, c)
-  a + c > b ? true : false
-end
-
-def triangular_condition3(a, b, c)
-  b + c > a ? true : false
+def triangular_condition(x, y, z)
+  x + y > z ? true : false
 end
