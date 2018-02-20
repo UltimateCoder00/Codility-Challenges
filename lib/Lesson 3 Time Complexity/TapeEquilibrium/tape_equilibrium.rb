@@ -1,15 +1,21 @@
 def tape_equilibrium(a)
-  array = []
+  start_sum, end_sum = sum_array_parts(a)
+  min_difference = calculate_difference(start_sum, end_sum)
 
-  part1_sum = 0
-  part2_sum = a.inject(0, :+)
+  for i in 1...a.length
+    start_sum += a[i]
+    end_sum -= a[i]
 
-  for i in 0...a.length
-    part1_sum += a[i]
-    part2_sum -= a[i]
-
-    array << [part1_sum, part2_sum]
+    min_difference = [min_difference, calculate_difference(start_sum, end_sum)].min
   end
 
-  array.map! { |x| (x[0] - x[1]).abs }.min
+  min_difference
+end
+
+def sum_array_parts(a)
+  [a.first, a.inject(0, :+) - a.first]
+end
+
+def calculate_difference(start_sum, end_sum)
+  (start_sum-end_sum).abs
 end
