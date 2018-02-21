@@ -5,30 +5,23 @@ def passing_cars(a)
 end
 
 def remove_redundant_elements(array)
-  array = remove_starting_1_elements(array)
-  array = remove_ending_0_elements(array)
+  remove_ending_0_elements(remove_starting_1_elements(array))
 end
 
 def remove_starting_1_elements(array)
   for i in 0..array.length
-    array[0] == 1 ? array.shift : break
+    array[0] == 1 ? array.shift : (return array)
   end
-
-  array
 end
 
 def remove_ending_0_elements(array)
   for i in 0..array.length
-    array.last == 0 ? array.pop : break
+    array.last == 0 ? array.pop : (return array)
   end
-
-  array
 end
 
 def counter(a)
-  count = 0
-  count_ones = 0
-  sum = 0
+  count = count_ones = sum = 0
 
   (a.size-1).downto(0) do |i|
     if a[i] == 1
