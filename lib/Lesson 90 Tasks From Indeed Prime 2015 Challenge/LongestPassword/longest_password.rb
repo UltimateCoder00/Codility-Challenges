@@ -22,7 +22,7 @@ def password_integers_condition_correct?(password)
 end
 
 def password_letters_condition_correct?(password)
-  password_letters_length(password) % 2 == 0
+  password_letters_length(password).even?
 end
 
 def total_password_length_correct?(password)
