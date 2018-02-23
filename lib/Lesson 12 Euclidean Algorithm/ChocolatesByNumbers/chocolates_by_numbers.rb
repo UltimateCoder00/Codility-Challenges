@@ -7,13 +7,8 @@ def chocolates_by_numbers(n, m)
   loop do
     count += 1
     array[i] = nil
-    if i + m <= n
-      i = i + m
-    else
-      i = (i + m) % n
-    end
-
-    break if array[i] == nil
+    i + m <= n ? i = i + m : i = (i + m) % n
+    break if array[i].nil?
   end
 
   count
