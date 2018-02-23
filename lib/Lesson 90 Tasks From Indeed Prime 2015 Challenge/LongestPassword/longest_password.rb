@@ -18,7 +18,7 @@ def password_letters_length(password)
 end
 
 def password_integers_condition_correct?(password)
-  password_integers_length(password) % 2 == 1
+  password_integers_length(password).odd?
 end
 
 def password_letters_condition_correct?(password)
