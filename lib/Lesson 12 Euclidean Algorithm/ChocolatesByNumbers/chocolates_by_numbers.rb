@@ -1,14 +1,18 @@
 def chocolates_by_numbers(n, m)
   count = 0
+  return 1 if n == 1
+  return n if m == 1
 
-  array = [*0...n]
+  array = []
   i = 0
 
   loop do
+    array << i
     count += 1
-    array[i] = nil
-    i + m <= n ? i = i + m : i = (i + m) % n
-    break if array[i].nil?
+    division = (n - i - 1) / m
+    count += division
+    i = ( division*m + m + i ) % n
+    break if array.include?(i)
   end
 
   count
