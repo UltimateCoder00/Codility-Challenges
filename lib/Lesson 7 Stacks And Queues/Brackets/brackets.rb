@@ -12,7 +12,7 @@ def not_properly_nested?(brackets_array, open_bracket_chars, close_bracket_chars
 end
 
 def array_length_odd?(brackets_array)
-  brackets_array.length % 2 == 1
+  brackets_array.length.odd?
 end
 
 def array_starts_with_wrong_parentheses?(brackets_array, close_bracket_chars)
