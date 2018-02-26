@@ -6,6 +6,5 @@ def dominator(a)
     b << a[i]
   end
 
-  max_number = b.first
-  a.count(max_number) > (a.length / 2) ? a.index(max_number) : -1
+  a.count(b.first) > (a.length / 2) ? a.index(b.first) : -1
 end
