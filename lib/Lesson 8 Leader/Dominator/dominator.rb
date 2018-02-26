@@ -1,6 +1,21 @@
 def dominator(a)
-  max_number = a.max_by { |x| a.count(x) }
-  max_number_count = a.count(max_number)
-  b = a.reject { |x| x == max_number }
-  max_number_count > b.length ? a.index(max_number) : -1
+  return 0 if a.count == 1
+  return -1 if a.count == 2
+
+  b = [a.first]
+
+  for i in 1...a.length
+    if b.length <= 1
+      b << a[i]
+    else
+      if b[-1] != b[-2]
+        b.pop
+        b.pop
+      end
+      b << a[i]
+    end
+  end
+
+  max_number = b.first
+  a.count(max_number) > a.length/2 ? a.index(max_number) : -1
 end
