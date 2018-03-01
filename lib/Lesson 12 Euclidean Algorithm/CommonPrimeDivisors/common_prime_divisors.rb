@@ -41,7 +41,7 @@ end
 
 def counting(minValue, maxValue, counter = 0)
   for i in 1..minValue
-    break?(minValue, maxValue, i) ? break : (counter += 1 if i == minValue)
+    break?(minValue, maxValue, i) ? break : counter += count(i, minValue)
   end
 
   counter
@@ -57,4 +57,8 @@ end
 
 def break_condition2?(i)
   prime?(i)
+end
+
+def count(a, b)
+  a == b ? 1 : 0
 end
