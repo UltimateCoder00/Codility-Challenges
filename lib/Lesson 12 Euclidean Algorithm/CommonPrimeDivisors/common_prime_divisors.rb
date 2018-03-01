@@ -41,8 +41,7 @@ end
 
 def counting(minValue, maxValue, counter = 0)
   for i in 1..minValue
-    break if break?(minValue, maxValue, i)
-    counter += 1 if i == minValue
+    break?(minValue, maxValue, i) ? break : (counter += 1 if i == minValue)
   end
 
   counter
