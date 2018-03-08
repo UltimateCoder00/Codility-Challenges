@@ -4,7 +4,7 @@ describe 'MinAbsSum' do
 
   describe 'Example Test' do
     it 'Example' do
-      expect(min_abs_sum([1,5,2,-1])).to eq 0
+      expect(min_abs_sum([1,5,2,-2])).to eq 0
     end
   end
 end
