@@ -142,5 +142,16 @@ describe 'MinAbsSum' do
         expect(min_abs_sum([2,2,1])).to eq 1
       end
     end
+
+    context 'Big1' do
+      it 'Multiples Of 5 + 42' do
+        array = Array.new(400) { rand(-20..20)*5 } + [42]
+        expect(min_abs_sum(array)).to be_a Integer
+      end
+
+      it 'Big1' do
+        expect(min_abs_sum([2,-2,1])).to eq 1
+      end
+    end
   end
 end
