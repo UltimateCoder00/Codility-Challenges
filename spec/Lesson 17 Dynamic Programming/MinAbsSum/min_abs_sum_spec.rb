@@ -56,5 +56,15 @@ describe 'MinAbsSum' do
         expect(min_abs_sum([10,11,12,13,14])).to eq 6
       end
     end
+
+    context 'Extreme' do
+      it 'Empty' do
+        expect(min_abs_sum([])).to eq 0
+      end
+
+      it 'Single element' do
+        expect(min_abs_sum([7])).to eq 0
+      end
+    end
   end
 end
