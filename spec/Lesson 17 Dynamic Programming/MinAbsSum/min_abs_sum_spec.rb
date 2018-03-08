@@ -63,7 +63,7 @@ describe 'MinAbsSum' do
       end
 
       it 'Single element' do
-        expect(min_abs_sum([7])).to eq 0
+        expect(min_abs_sum([7])).to eq 7
       end
     end
 
