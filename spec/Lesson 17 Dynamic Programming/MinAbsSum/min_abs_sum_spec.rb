@@ -160,5 +160,16 @@ describe 'MinAbsSum' do
         expect(min_abs_sum(array)).to be_a Integer
       end
     end
+
+    context 'Big3' do
+      it 'Multiples Of 10' do
+        array = Array.new(20000) { rand(-7..9)*10 }
+        expect(min_abs_sum(array)).to be_a Integer
+      end
+
+      it 'Big3' do
+        expect(min_abs_sum([2,1,-2])).to eq 1
+      end
+    end
   end
 end
