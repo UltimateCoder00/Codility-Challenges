@@ -1,4 +1,6 @@
 def min_abs_sum(a)
+  return 0 if a.length.zero?
+  return a.pop.abs if a.length == 1
   min_abs_sum = a.first
 
   for i in 1...a.length
