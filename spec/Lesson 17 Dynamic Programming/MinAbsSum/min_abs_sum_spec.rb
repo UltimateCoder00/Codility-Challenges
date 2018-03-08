@@ -22,5 +22,15 @@ describe 'MinAbsSum' do
         expect(min_abs_sum([3,1])).to eq 2
       end
     end
+
+    context 'Simple2' do
+      it 'Simple2 1' do
+        expect(min_abs_sum([2,4,1])).to eq 1
+      end
+
+      it 'Simple2 2' do
+        expect(min_abs_sum([10,1,1,1,1,1,1])).to eq 4
+      end
+    end
   end
 end
