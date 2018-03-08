@@ -9,5 +9,5 @@ def min_abs_sum(a)
     end
   end
 
-  min_abs_sum
+  min_abs_sum.abs
 end
