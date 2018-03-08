@@ -66,5 +66,19 @@ describe 'MinAbsSum' do
         expect(min_abs_sum([7])).to eq 0
       end
     end
+
+    context 'Functional' do
+      it 'Small Functional Test 1' do
+        expect(min_abs_sum([18,99,-50,100,4,18,99,-50,100,4,18,99,-50,100,4,18,99,-50,100,4])).to eq 0
+      end
+
+      it 'Small Functional Test 2' do
+        expect(min_abs_sum([-100,3,2,4])).to eq 91
+      end
+
+      it 'Small Functional Test 3' do
+        expect(min_abs_sum([91,92,93,94,95,96,97])).to eq 82
+      end
+    end
   end
 end
