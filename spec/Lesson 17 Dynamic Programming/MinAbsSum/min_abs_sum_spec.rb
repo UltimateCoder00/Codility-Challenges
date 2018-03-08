@@ -46,5 +46,15 @@ describe 'MinAbsSum' do
         expect(min_abs_sum([7,2])).to eq 5
       end
     end
+
+    context 'Range' do
+      it 'range 2..20' do
+        expect(min_abs_sum([2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20])).to eq 1
+      end
+
+      it 'range 10..14' do
+        expect(min_abs_sum([10,11,12,13,14])).to eq 6
+      end
+    end
   end
 end
