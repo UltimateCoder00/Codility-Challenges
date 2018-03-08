@@ -153,5 +153,12 @@ describe 'MinAbsSum' do
         expect(min_abs_sum([2,-2,1])).to eq 1
       end
     end
+
+    context 'Big2' do
+      it 'All 4s And One 3' do
+        array = [4]*8000 + [3]
+        expect(min_abs_sum(array)).to be_a Integer
+      end
+    end
   end
 end
