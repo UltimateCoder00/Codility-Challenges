@@ -3,16 +3,20 @@ def prefix_set(array)
   unique_array = array.uniq.sort
 
   if unique_array.length < array.length / 10
-    ((unique_array.length - 1)..array.length).each do |index|
-      return index if array[0..index].uniq.sort == unique_array
-    end
+    compute_small_array(array, unique_array)
   else
-    (array.length - 1).downto(0) do |index|
-      if array.count(array[index]) == 1
-        return index
-      else
-        array.pop
-      end
-    end
+    compute_big_array(array)
+  end
+end
+
+def compute_small_array(array, unique_array)
+  ((unique_array.length - 1)..array.length).each do |index|
+    return index if array[0..index].uniq.sort == unique_array
+  end
+end
+
+def compute_big_array(array)
+  (array.length - 1).downto(0) do |index|
+    array.count(array[index]) == 1 ? (return index) : array.pop
   end
 end
