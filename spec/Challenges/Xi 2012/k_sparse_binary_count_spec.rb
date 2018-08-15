@@ -81,5 +81,31 @@ describe 'KSparseBinaryCount' do
         expect(k_sparse_binary_count('10101', '11011111', 8)).to eq 3
       end
     end
+
+    context 'Simple3' do
+      it 'Returns Result For Small Tests 1' do
+        expect(k_sparse_binary_count('1100100', '11001000', 1)).to eq 21
+      end
+
+      it 'Returns Result For Small Tests 2' do
+        expect(k_sparse_binary_count('1001001', '10010011', 1)).to eq 18
+      end
+
+      it 'Returns Result For Small Tests 3' do
+        expect(k_sparse_binary_count('1100100', '11001000', 2)).to eq 9
+      end
+
+      it 'Returns Result For Small Tests 4' do
+        expect(k_sparse_binary_count('1001001', '10010011', 2)).to eq 10
+      end
+
+      it 'Returns Result For Small Tests 5' do
+        expect(k_sparse_binary_count('1100100', '11001000', 3)).to eq 5
+      end
+
+      it 'Returns Result For Small Tests 6' do
+        expect(k_sparse_binary_count('1001001', '10010011', 3)).to eq 5
+      end
+    end
   end
 end
