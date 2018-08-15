@@ -135,5 +135,19 @@ describe 'KSparseBinaryCount' do
         expect(k_sparse_binary_count('1', '1000000000000', 3)).to eq 69
       end
     end
+
+    context 'Medium3' do
+      it 'Returns Result For Medium Tests, B <= 6,528 1' do
+        expect(k_sparse_binary_count('110101111011', '1100110000000', 1)).to eq 233
+      end
+
+      it 'Returns Result For Medium Tests, B <= 6,528 2' do
+        expect(k_sparse_binary_count('110101111011', '1100110000000', 2)).to eq 60
+      end
+
+      it 'Returns Result For Medium Tests, B <= 6,528 3' do
+        expect(k_sparse_binary_count('110101111011', '1100110000000', 3)).to eq 26
+      end
+    end
   end
 end
